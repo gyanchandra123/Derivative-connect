@@ -1,0 +1,28 @@
+.fields{
+  padding-top: 30px;
+  margin-left:90px;
+}
+
+.fields{
+  margin-left:90px;
+}
+
+.form-control{ border-radius:0px;size: 0px}
+.contorl-align-label{
+    margin-left:25px;
+    margin-top:12px;
+    text-align:left;
+  }
+ 
+  .header{
+    margin-left: 20px;
+  }
+  label{
+    font-weight: bold;
+  }
+
+  button a{
+    text-decoration: none;
+    font: bold;
+    color: black;
+  }

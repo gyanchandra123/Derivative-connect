@@ -1,0 +1,70 @@
+.container-bg{
+    background-color: lightgrey;      
+    height: 524px;
+    border-radius:2px;
+    margin:2px;
+ }
+
+ .bg-color-name{
+    background-color:slategrey;height: 30px;
+  }
+
+  .material-iconsA{
+    color:white;
+    margin-left: 6px;
+    margin-top: 2px;
+  }
+
+  .pag-text-align{
+    padding-left:-80px;
+    font-weight:600;
+    padding-top:3px;
+    font-size: 15px;
+    margin-left: -150px;
+    color:white;
+}
+
+.mat-iconB{
+    padding-left: 25px;
+    color: white;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+
+  .swapHeadingAlign{
+    margin-left:400px;
+    font-weight:600;
+  }
+
+  .paymentButton ,.paymentButtonB{
+    margin-left:951px;
+    background-color: blue;
+    color: white;
+  }
+
+  mat-icon{
+    margin-left:440px;
+  }
+  
+  .mat-icon {cursor: pointer;}
+    
+  .mat-icon:hover,.mat-icon:active {
+    color: black;   
+  }
+
+  .lastRow{
+    margin-bottom:10px;
+  }
+
+  .buttonDefault
+  { 
+  background: grey;
+  color: white;
+  /* margin-bottom: 10px;
+  margin-left:20px; */
+  font-weight:bold;
+    border-radius: 1px;
+    height: 32px;
+  box-shadow: 2px 4px #505255;
+  
+}

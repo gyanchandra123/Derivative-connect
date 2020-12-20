@@ -1,0 +1,16 @@
+.pointerCursor{
+    cursor: pointer;
+}
+
+.panel {
+    transition: box-shadow 0.5s ease-out, transform 0.3s ease-out;
+}
+
+.panel:hover {
+    box-shadow: 0 10px 5px 0.5px rgba(0, 0, 0, 0.5);
+    transform: scaleX(1) scaleY(1);
+}
+
+.panel-footer{
+    padding: 6px 11px;
+}

@@ -1,0 +1,41 @@
+<div class="row content-section">
+  <div class="col-sm-2">
+    <div class="left-nav sidebar" style="background-color:#7b8386;padding:40px 10px 0px 30px;height:630px">
+      <ul>
+
+        <li>
+          <button class="btn btn-default" style="width:116px" routerLink='list'
+            routerLinkActive="active">Profile-Add-list</button>
+        </li>
+
+        <li>
+          <button class="btn btn-default" [routerLink]="['./edit/0']" routerLinkActive="active">Profile-Create</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-10">
+    <nav class="navbar navbar-inverse">
+
+      <div class="navbar-header">
+
+        <ul class="nav navbar-nav">
+          <li> <button class="btn btn-default" [routerLink]="['./Firm-Account']"
+              routerLinkActive="active">FirmAccount</button></li>
+          <li> <button class="btn btn-default" [routerLink]="['./Customer-Account']"
+              routerLinkActive="active">CustomerAccount</button></li>
+          <li> <button class="btn btn-default" [routerLink]="['./Product']" routerLinkActive="active">Product</button>
+          </li>
+          <li> <button class="btn btn-default" [routerLink]="['./Location']" routerLinkActive="active">Location</button>
+          </li>
+          <li> <button class="btn btn-default" [routerLink]="['./Menu-Options']"
+              routerLinkActive="active">MenuOptions</button></li>
+          <li> <button class="btn btn-default" [routerLink]="['./Legal-Entity']"
+              routerLinkActive="active">LegalEntity</button></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="col-sm-10">
+    <router-outlet></router-outlet>
+  </div>

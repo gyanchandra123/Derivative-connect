@@ -1,0 +1,165 @@
+<div class="container">
+  <nav class="navbar navbar-inverse" style="background-color:rgb(82, 78, 78)">
+    <ul class="nav navbar-nav">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <span
+            class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1">New</a></li>
+          <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+              href="#">Save As<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">New Trade </a></li>
+              <li><a tabindex="-1" href="#">Template Trade</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Save &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctrl+s</a></li>
+          <li><a href="#">Delete</a></li>
+          <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+              href="#">Reload<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">Latest</a></li>
+              <li><a tabindex="-1" href="#">History</a></li>
+              <li><a tabindex="-1" href="#">Templates</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Approve</a></li>
+          <li><a href="#">Exit</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Business Event <span
+            class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Bought Back</a></li>
+          <li><a href="#">Partial Bought Back</a></li>
+          <li><a href="#">MO Maintenance</a></li>
+          <li><a href="#">Migration</a></li>
+          <li><a href="#">Assignment</a></li>
+          <li><a href="#">Partial Assignment</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Flow <span
+            class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Push to MO</a></li>
+          <li><a href="#">Push to FO</a></li>
+          <li><a href="#">Push to BO</a></li>
+          <li><a href="#">Withdraw</a></li>
+          <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+              href="#">Email<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">Send Ticket</a></li>
+              <li><a tabindex="-1" href="#">Send CashFlow</a></li>
+              <li><a tabindex="-1" href="#">Send Risk</a></li>
+              <li><a tabindex="-1" href="#">Send PV</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Analytics <span
+            class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Calculate PV
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F2</a>
+          </li>
+          <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+              href="#">Calculate Risk<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">Delta
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+D</a>
+              </li>
+              <li><a tabindex="-1" href="#">Gamma
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+G</a></li>
+              <li><a tabindex="-1" href="#">Vega
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+V</a>
+              </li>
+              <li><a tabindex="-1" href="#">Theta &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+T</a></li>
+            </ul>
+          <li><a href="#">Calculate PAA &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F10</a>
+          </li>
+          <li><a href="#">CashFlow Report &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F3</a></li>
+        </ul>
+      </li>
+    </ul>
+</nav>
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li><input type="text"></li>
+        <li><input type="text"></li>
+        <li><input type="text"></li>
+        <li><label class="label-control content">Market</label></li>
+        <li><select>
+          <option>Live</option>
+          <option>EndOfDay</option>
+          <option>Historic</option>
+        </select></li>
+        <li><label class="label-control content">Close Date</label></li>
+        <li><input type="text"  bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value="{{ now | date:'dd/MM/yyyy'}}"></li>
+      </ul>
+</nav>
+<div class="borderclass">
+  <div>
+<nav class="navbar navbar-inverse mynavhead" style="border-bottom:2px solid gray">
+  <ul class="nav navbar-nav">
+    <li><button class="btn btn-default" routerLink="/so-tradebasic" routerLinkActive="active" >TradeBasic</button></li>
+    <li><button class="btn btn-default" routerLink="/swapoption" routerLinkActive="active" >SwapOption</button></li>
+    <li><button class="btn btn-default" routerLink="/so-quickticket" routerLinkActive="active" >QuickTicket</button></li>
+  </ul>
+</nav>
+</div>
+   
+    <div class="clearfix"></div>
+   
+    <div class="col-sm-10 text-center">
+      <div class="form-group col-sm-2"> <br>
+        <label class="control-label" for="dob">Position Pay/Rec</label>
+      </div>
+      <p></p>
+      <div class="form-group col-sm-3">
+        <select class="form-control">
+          <option *ngFor="let pay of model.cmbQPaySide">{{pay}}</option>
+        </select>
+      </div>
+      <p></p>
+      <div class="form-group col-sm-3">
+        <select class="form-control">
+            <option *ngFor="let rec of model.cmbQRecSide">{{rec}}</option>
+
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-10 text-center">
+      <div class="form-group col-sm-2"> <br>
+        <label class="control-label" for="dob">Currency/Notional</label>
+      </div>
+      <div class="form-group col-sm-3">
+        <select class="form-control">
+          <option *ngFor="let cur of model.cmbQCurrency">{{cur}}</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-3">
+        <input type="text" class="form-control" id="dob" value={{model.txtQNotional}} >
+      </div>
+    </div>
+    <div class="col-sm-10 text-center">
+      <div class="form-group col-sm-2"> <br>
+        <label class="control-label" for="dob">Tenor</label>
+      </div>
+      <div class="form-group col-sm-3">
+        <input type="text" class="form-control" id="dob" value={{model.txtQTenor}}>
+      </div>
+    </div>
+    <div class="col-sm-10 text-center">
+      <div class="form-group col-sm-2"> <br>
+        <label class="control-label" for="dob">StartDate/EndDate</label>
+      </div>
+      <div class="form-group col-sm-3">
+        <input type="text" class="form-control" value={{model.txtQStartDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }">
+      </div>
+      <div class="form-group col-sm-3">
+        <input type="text" class="form-control" value={{model.txtEndDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }">
+      </div>
+    </div>
+    </div>
+  
+

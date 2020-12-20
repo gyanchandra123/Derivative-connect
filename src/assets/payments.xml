@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<payments>
+<DayCount>
+  <dc>Act/360</dc>
+  <dc>Act/365F</dc>
+  <dc>Act/365.25</dc>
+  <dc>Act/ActISDA</dc>
+  <dc>Act/ActISDA251</dc>
+  <dc>Equal</dc>
+  <dc>Bus/252</dc>
+  <dc>Bus/360</dc>
+  <dc>FULL</dc>
+  <dc>30B/360</dc>
+  <dc>30E/360</dc>
+  <dc>ISDA30E/360</dc>
+  <dc>30I/360</dc>
+  <dc>30S/360</dc>
+</DayCount>
+<DiscountCurve>
+ <disC>GBPLIBOR</disC>
+ <disC>GEKLIBOR</disC>
+ <disC>GHCLIBOR</disC>
+ <disC>GIPLIBOR</disC>
+ <disC>GMDLIBOR</disC>
+ <disC>GNFLIBOR</disC>
+ <disC>GRDLIBOR</disC>
+ <disC>GTQLIBOR</disC>
+ <disC>GWPSLIBOR</disC>
+ <disC>GYDLIBOR</disC>
+ <disC>HKDLIBOR</disC>
+ <disC>HNLLIBOR</disC>
+ <disC>HRDLIBOR</disC>
+ <disC>HRKLIBOR</disC>
+ <disC>HTGSLIBOR</disC>
+ <disC>HUFLIBOR</disC>
+ <disC>IDRLIBOR</disC>
+ <disC>IEPLIBOR</disC>
+ <disC>ILSLIBOR</disC>
+ <disC>INRLIBOR</disC>
+ <disC>IQDLIBOR</disC>
+ <disC>IRRLIBOR</disC>
+ <disC>ISKLIBOR</disC>
+ <disC>ITLLIBOR</disC>
+ <disC>JMDLIBOR</disC>
+ <disC>JODLIBOR</disC>
+ <disC>JPYLIBOR</disC>
+ <disC>KESLIBOR</disC>
+ <disC>KGSLIBOR</disC>
+ <disC>KHRKLIBOR</disC>
+</DiscountCurve>
+<PayBusDay>
+  <pbd>MOD</pbd>
+  <pbd>FOL</pbd>
+  <pbd>PRE</pbd>
+  <pbd>NONE</pbd>
+</PayBusDay>
+<PayCalendars>
+ <pc>LON</pc>
+ <pc>KUW</pc>
+ <pc>KaB</pc>
+ <pc>KpB</pc>
+<pc>KvB</pc>
+<pc>LUS</pc>
+<pc>LUX</pc>
+<pc>LmS</pc>
+<pc>LnS</pc>
+</PayCalendars>
+<PayFreq>2</PayFreq>
+<PayMarching>_backward</PayMarching>
+
+<PaymentConvention>IN_ARREARS</PaymentConvention>
+
+<PaymentConversionCurrency>GBP</PaymentConversionCurrency>
+
+<PaymentConversionIndex>NONE</PaymentConversionIndex>
+
+<PaymentConversionLag>-1</PaymentConversionLag>
+
+<PayRollDay>0</PayRollDay>
+<PayLag>0</PayLag>
+<PayRollWeek>0</PayRollWeek>
+
+<Schedule>
+<PV></PV>
+<Currency>GBP</Currency>
+<ParallelDelta></ParallelDelta>
+<Curve>GBPLIBOR</Curve>
+</Schedule>
+
+
+</payments>

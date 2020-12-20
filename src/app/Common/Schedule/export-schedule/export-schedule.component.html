@@ -1,0 +1,111 @@
+<!-- <div class="container1">
+    <div class="row horizontal">
+        <div class="col-sm-12">
+          <div class="col-sm-1 iconTop"><mat-icon color="primary">add_to_photos</mat-icon></div>
+          <div class="col-sm-10" ><b>Export Schedule</b> </div>
+          <div class="col-sm-1   row1"><mat-icon class="spacing onNoClick" (click)="onNoClick()"> 
+              &nbsp;&nbsp;&nbsp;&nbsp;  cancel</mat-icon></div>
+        </div>   
+      </div>
+   
+     <div class="row">
+       <div class="col-sm-2">
+       <b>Export</b> 
+       </div>
+
+     </div> 
+     <br>
+     <div class="row">
+       <div class="col-sm-10">
+        <form class="form-horizontal" (submit)="onSubmit()">        
+      
+         
+            <div class="form-group">
+      
+              <div class="row">
+                <div class="col-sm-2 labelIndent">
+                  <label for="inputPassword" class="control-label col-sm-12"> File</label>
+                </div>
+                <div class="col-sm-7 startDate">
+                  <input class="form-control" placeholder="enter start date" type="text" id="inputPassword">
+                </div>
+              </div> 
+      
+            </div> 
+      
+            <div class="row">
+              <div class="col-xs-3">
+                <button type="submit" mat-raised-button>Ok &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</button>
+              </div>
+              <div class="col-xs-3 col-xs-offset-2">
+                <button mat-raised-button (click)="onCancel()">Cancel &nbsp; &nbsp; &nbsp;</button>
+              </div>
+            </div>
+      
+          </form>
+     </div>
+    </div>
+</div>
+ -->
+
+ <div class="container1">
+  <div class="row headingA">
+    <div class="col-sm-1 ">
+      <i class="material-icons material-iconsA">
+        picture_in_picture
+      </i>
+    </div>
+
+    <div class="col-xs-10 centerText">
+      <b>Export Schedule</b>
+    </div>
+    <div class="col-sm-1">
+      <mat-icon class="mat-iconB" (click)="onCancelClick()">
+        backspace
+      </mat-icon>
+    </div>
+
+  </div>
+
+  <div class="container-bg">
+    <div class="row">
+      <div class="col-sm-2">
+        <b>Export</b>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-10 ">
+        <form class="form-horizontal" (submit)="onSubmit()">
+
+          <div class="form-group" style="width:-webkit-fill-available;">
+
+            <div class="row">
+              <div class="col-sm-6 labelIndent fontSize">
+                <label for="inputPassword" class="control-label col-sm-12 "> File</label>
+              </div>
+              <div class="col-sm-5 startDate">
+                <input class="form-control inputAlign inputTag" placeholder="enter file name" type="text" id="inputPassword">
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <div class="col-xs-3">
+              <button type="submit" mat-raised-button class="first-raised-button buttonDefault" >Ok </button>
+            </div>
+            <div class="col-xs-3 col-xs-offset-2 ">
+              <button mat-raised-button class="second-raised-button buttonDefault">Cancel &nbsp; &nbsp; &nbsp;</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <br>
+  </div>
+
+</div>

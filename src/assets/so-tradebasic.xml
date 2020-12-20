@@ -1,0 +1,22 @@
+<TradeVersion>1.0</TradeVersion>
+<Tenor>3</Tenor>
+<SubType>REGULAR</SubType>
+<TradeDate>22/02/2013</TradeDate>
+<Location>LON</Location>
+<EffectiveDate>22/02/2013</EffectiveDate>
+<TerminationDate>22/02/2016</TerminationDate>
+<Trader>Bollu, Nagesh</Trader>
+<SalesPerson>Bollu, Ram</SalesPerson>
+<FirmAccount>IRSWOGBP</FirmAccount>
+<TradeType>CUSTOMER</TradeType>
+<RiskPartyA>NA</RiskPartyA>
+<CustomerAccount>RBSNY</CustomerAccount>
+<LongName>ROYAL BANK OF SCOTTLAND NEW YORK</LongName>
+<BrokerAccount>HBGCINT</BrokerAccount>
+<EarlyTermDate>22/02/2016</EarlyTermDate>
+<EarlyTermReason>UNW</EarlyTermReason>
+<LegalEntity>IRDINRLE</LegalEntity>
+<ModificationReason>Assignment</ModificationReason>
+<ExternalSystem>Bloomberg</ExternalSystem>
+<Comments/>
+<ExternalRef>NA</ExternalRef>

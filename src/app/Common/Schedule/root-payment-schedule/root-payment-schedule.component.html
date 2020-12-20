@@ -1,0 +1,221 @@
+<!--The content below is only a placeholder and can be replaced.-->
+ 
+<!-- The table data-->
+  
+
+
+<div class="container-bg"> 
+   
+  <div class="bg-color-name">        
+   <div class="row">
+     <div class="col-sm-2">
+       <i class="material-icons material-iconsA">
+         picture_in_picture
+       </i>
+     </div>
+     <div class="col-sm-6 pag-text-align">
+       Swap Pay Schedule
+     </div>
+     <div class="col-sm-4">
+       <span>
+         <mat-icon class="mat-iconB" (click)="onCrossClick()">
+             backspace
+         </mat-icon>
+       </span>
+     </div>
+   </div>
+ <div class="clearfix"></div>
+ </div>
+ <!-- rgb(0, 33, 107)
+#00216b -->
+   <div style="background-color:#0021bb;height: 20px;">
+     <p>&nbsp;</p>
+   </div>
+   <br />
+   <div class="containerBox">
+ 
+     <div class="bg-color">
+       <div class="row">
+ 
+         <div class="col-sm-4">
+ 
+           <div class="form-horizontal">
+             <div class="form-group">
+               <label for="settlementPeriods" class="control-label col-sm-6 fontSize">Settlement Periods</label>
+               <div class="col-sm-4">
+                 <input class="form-control inputTag" value={{settlementPeriod}} placeholder=" " type="text"
+                   id="settlementPeriods">
+               </div>
+             </div>
+           </div>
+ 
+         </div>
+ 
+         <div class="col-sm-4">
+           <div class="form-horizontal">
+             <div class="form-group">
+               <label for="settlementPeriods" class="control-label col-sm-6 fontSize">Compounding periods</label>
+               <div class="col-sm-4">
+                 <input class="form-control inputTag" value={{compoundingPeriod}} placeholder=" " type="text"
+                   id="settlementPeriods">
+               </div>
+             </div>
+           </div>
+         </div>
+ 
+         <div class="col-sm-4">
+ 
+           <div class="form-horizontal">
+             <div class="form-group">
+               <label for="settlementPeriods" class="control-label col-sm-6 fontSize">Authorization periods</label>
+               <div class="col-sm-4">
+                 <input class="form-control inputTag" value={{AuthorizationPeriod}} placeholder=" " type="text"
+                   id="settlementPeriods">
+               </div>
+             </div>
+           </div>
+ 
+         </div>
+ 
+       </div>
+ 
+       <div class="row">
+         <div class="col-sm-4">
+           <div class="form-horizontal">
+             <div class="form-group">
+               <label for="settlementPeriods" class="control-label col-sm-6 fontSize">Total Payment Amount</label>
+               <div class="col-sm-6">
+                 <input class="form-control inputTag" placeholder="Total Payment Amount" type="text" id="settlementPeriods"
+                   value={{totalPaymentAmount}}>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="col-sm-4">
+           <div class="form-horizontal">
+             <div class="form-group">
+               <label for="settlementPeriods" class="control-label col-sm-6 fontSize">Total PV Amount</label>
+               <div class="col-sm-6">
+                 <input class="form-control inputTag" placeholder="Total PV Amount" value=67009 type="text" id="settlementPeriods"
+                   value={{totalPVAmount}}>
+               </div>
+             </div>
+           </div>
+         </div>
+ 
+       </div>
+ 
+      
+   <div class="dropdown" id="panel">
+         <button data-toggle="dropdown" color="primary"   class="btn btn-primary dropdown-toggle paymentButton">
+          Display Column   <span class="carat"></span>   
+         </button>
+        
+                  
+     <ul class="dropdown-menu paymentButtonB" style="padding: right -10px;; " >
+         <li><input type="checkbox" name="serialNumber">serial Number<br></li>
+         <li><input type="checkbox" name="CouponStartDate">Coupon Start Date<br></li>
+         <li><input type="checkbox" name="Amount">Amount<br> </li>
+         <li><input type="checkbox" name="CouponEndDate">Coupon End Date<br></li>
+         <li><input type="checkbox" name="PaymentDate">Payment Date<br> </li>
+         <li><input type="checkbox" name="PeriodRate">Period Rate<br> </li>
+         <li><input type="checkbox" name="Notional">Notional</li>
+     </ul>
+ </div>
+ 
+           
+       <br>
+       <!-- <div class="container ">
+           <table class="table  table-bordered   table-condensed    table-hover " >
+               
+               <tr class="tableHeadingColour">
+                   <th class="CouponStartDate">Coupon Start Date</th>
+                   <th class="Amount">Amount</th>
+                   <th class="CouponEndDate">Coupon End Date</th>
+                   <th class="PaymentDate">Payment Date</th>
+                   <th class="PeriodRate">Period Rate</th>
+                   <th class="Notional">Notional</th>
+               </tr>
+               
+               <tbody>
+               <tr>
+                   <td class="CouponStartDate">24/02/2015</td>   
+                   <td class="Amount">100000</td>  
+                   <td class="CouponEndDate">24/02/2018</td>  
+                   <td class="PaymentDate">24/02/2018</td>  
+                   <td class="PeriodRate">0.000045</td>  
+                   <td class="Notional">240000</td>
+               </tr> 
+               </tbody>
+            </table>
+           
+                 </div> -->
+      
+       <div class="table-scrollbar">
+       <table class="table table-bordered table-striped table-hover table-responsive-sm  ">
+         <thead>
+           <tr style="background-color:#343a40; color: #ffff;">
+             <th class="serialNumber">Sno:</th>
+             <th class="CouponStartDate">
+               Coupon Start Date
+             </th>
+             <th  class="Amount">
+               Amount
+             </th>
+             <th class="CouponEndDate">
+               Coupon End Date
+             </th>
+             <th class="PaymentDate">
+               Payment Date
+             </th>
+             <th class="PeriodRate">
+               Period Rate
+             </th>
+             <th class="Notional">
+               Notional
+             </th>
+           </tr>
+         </thead>
+         <tbody>
+         
+           <tr *ngFor="let x of insertedServicePaymentList, let i=index">
+             <td class="serialNumber">{{i+1}}</td>
+             <td class="CouponStartDate">{{x.couponStartDate}}</td>
+             <td  class="Amount">{{x.amount}}</td>
+             <td class="CouponEndDate">{{x.couponEndDate}}</td>
+             <td class="PaymentDate">{{x.paymentDate}}</td>
+             <td class="PeriodRate">{{x.periodRate}}</td>
+             <td class="Notional">{{x.notional}}</td>
+           </tr>
+         </tbody>
+ 
+       </table>
+      </div>
+     </div>
+   </div>
+ </div>
+ <!----------------- end of table here , start button part below-------------------------->
+ <br>
+ <div class="container downButton">
+   <div class="row">
+     <div class="col-sm-6 col-sm-offset-3 downTopButtons">
+       <span><button color="primary" mat-raised-button (click)="insert()" class="buttonDefault">Insert</button>&nbsp;</span>
+       <span><button color="primary" mat-raised-button class="buttonDefault">Delete</button>&nbsp;</span>
+       <span><button color="primary" mat-raised-button (click)="Resets()" class="buttonDefault">Resets</button>&nbsp;</span>
+       <span><button color="primary" mat-raised-button (click)="onStubResetsClick()" class="buttonDefault">Stub Resets</button>&nbsp;</span>
+       <span><button color="primary" mat-raised-button class="buttonDefault">Import</button>&nbsp;</span>
+       <span><button color="primary" mat-raised-button (click)="onExportClick()" class="buttonDefault">Export</button>&nbsp;</span>
+     </div>
+   </div>
+   <br><br>
+   <div class="row">
+     <div class="col-sm-3 col-sm-offset-4 downButtons ">
+       <span><button color="primary" mat-raised-button (click)="onOkclick()" class="buttonDefault">Ok</button>&nbsp;</span>
+       <span><button color="primary" mat-raised-button (click)="onCancelclick()" class="buttonDefault">Cancel</button>&nbsp;</span>
+       <span><button color="primary" mat-raised-button (click)="onHelpClick()" class="buttonDefault">Help</button>&nbsp;</span>
+     </div>
+   </div>
+   
+ 
+ </div>
+ 

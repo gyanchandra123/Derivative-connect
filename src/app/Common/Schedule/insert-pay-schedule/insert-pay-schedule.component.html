@@ -1,0 +1,88 @@
+<style>
+  .mat-dialog-container {
+    padding: 0px !important;
+  }
+</style>
+
+<div class="container1">   
+  <div class="row headingA">
+    <div class="col-sm-2 ">
+      <i class="material-icons material-iconsA">
+        picture_in_picture
+      </i>
+    </div>
+
+    <div class="col-sm-6 centerText" style="text-align:center ;margin-top: 3px;">
+      <b>Swap Pay Schedule</b>
+    </div>
+    <div class="col-sm-2">
+      <mat-icon class="mat-iconB" (click)="onCancelClick()">
+        backspace
+      </mat-icon>
+    </div>
+
+  </div>
+
+ 
+
+  <div class="container-bg">
+    <div class="row">
+      <div class="col-sm-2">
+        <b>Insert</b>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-10 ">
+        <form class="form-horizontal" (submit)="onSubmit()">
+
+          <div class="form-group" style="width:-webkit-fill-available;">
+
+            <div class="row">
+              <div class="col-sm-4 labelIndent">
+                <label for="inputPassword" class="control-label col-sm-12 label-padding  fontSize"> StartDate</label>
+              </div>
+              <div class="col-sm-6 startDate">
+                <input class="form-control inputField inputTag" placeholder="enter start date" type="text" id="inputPassword">
+              </div>
+            </div>
+
+            <div class="checkbox ">
+              <label for="inputPassword" class="control-label col-sm-offset-2 fontSize ">
+                <input type="checkbox" value="option1"><strong> Settlement</strong>
+              </label>
+            </div>
+
+            <div class="checkbox ">
+              <label for="inputPassword" class="control-label col-sm-offset-2 fontSize">
+                <input type="checkbox" value="option1"><strong> Compounding</strong>
+              </label>
+            </div>
+
+            <div class="checkbox ">
+              <label for="inputPassword" class="control-label col-sm-offset-2 fontSize">
+                <input type="checkbox" value="option1"><strong> Amortization</strong>
+              </label>
+            </div>
+
+          </div>
+
+          <br>
+
+          <div class="row">
+            <div class="col-xs-3">
+              <button type="submit" mat-raised-button class="first-raised-button buttonDefault">Ok </button>
+            </div>
+            <div class="col-xs-3 col-xs-offset-2 ">
+              <button mat-raised-button class="second-raised-button buttonDefault">Cancel &nbsp; &nbsp; &nbsp;</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <br>
+  </div>
+
+</div>

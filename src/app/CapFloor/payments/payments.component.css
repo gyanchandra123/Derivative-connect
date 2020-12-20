@@ -1,0 +1,35 @@
+
+.navbar-nav li{padding-left:20px}
+.form-control{ border-radius:0px;size: 0px}
+
+.contorl-align-label{
+    margin-left:25px;
+    margin-top:12px;
+    text-align:left;
+  }
+
+  .header{
+    margin-left: 10px;
+  }
+  label{
+    font-weight: bold;
+  }
+  .navbar{
+    margin-left:-30px;
+    border:none;
+    border-radius:0px;
+}
+
+.navbar-inverse ul li a{
+  text-decoration: none;
+  
+}
+
+button a{
+  text-decoration: none;
+  font: bold;
+  color: black;
+}
+.fields{
+  margin-left:90px;
+}

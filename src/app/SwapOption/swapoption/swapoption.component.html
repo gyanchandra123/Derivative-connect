@@ -1,0 +1,639 @@
+<div class="container">
+    <nav class="navbar navbar-inverse" style="background-color:rgb(82, 78, 78)">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions <span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1">New</a></li>
+                <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+                    href="#">Save As<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">New Trade </a></li>
+                    <li><a tabindex="-1" href="#">Template Trade</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Save &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctrl+s</a></li>
+                <li><a href="#">Delete</a></li>
+                <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+                    href="#">Reload<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">Latest</a></li>
+                    <li><a tabindex="-1" href="#">History</a></li>
+                    <li><a tabindex="-1" href="#">Templates</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Approve</a></li>
+                <li><a href="#">Exit</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Business Event <span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Bought Back</a></li>
+                <li><a href="#">Partial Bought Back</a></li>
+                <li><a href="#">MO Maintenance</a></li>
+                <li><a href="#">Migration</a></li>
+                <li><a href="#">Assignment</a></li>
+                <li><a href="#">Partial Assignment</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Flow <span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Push to MO</a></li>
+                <li><a href="#">Push to FO</a></li>
+                <li><a href="#">Push to BO</a></li>
+                <li><a href="#">Withdraw</a></li>
+                <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+                    href="#">Email<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">Send Ticket</a></li>
+                    <li><a tabindex="-1" href="#">Send CashFlow</a></li>
+                    <li><a tabindex="-1" href="#">Send Risk</a></li>
+                    <li><a tabindex="-1" href="#">Send PV</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Analytics <span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Calculate PV
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F2</a>
+                </li>
+                <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+                    href="#">Calculate Risk<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">Delta
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+D</a>
+                    </li>
+                    <li><a tabindex="-1" href="#">Gamma
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+G</a></li>
+                    <li><a tabindex="-1" href="#">Vega
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+V</a>
+                    </li>
+                    <li><a tabindex="-1" href="#">Theta &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+T</a></li>
+                  </ul>
+                <li><a href="#">Calculate PAA &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F10</a>
+                </li>
+                <li><a href="#">CashFlow Report &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F3</a></li>
+              </ul>
+            </li>
+          </ul>
+    </nav>
+    <nav class="navbar navbar-inverse">
+        <ul class="nav navbar-nav">
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li><label class="label-control content">Market</label></li>
+            <li><select>
+              <option>Live</option>
+              <option>EndOfDay</option>
+              <option>Historic</option>
+            </select></li>
+            <li><label class="label-control content">Close Date</label></li>
+            <li><input type="text"  bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value="{{ now | date:'dd/MM/yyyy'}}"></li>
+          </ul>
+      </nav>
+      
+      <div class="borderclass">
+        <div>
+      <nav class="navbar navbar-inverse mynavhead" style="border-bottom:2px solid gray">
+        <ul class="nav navbar-nav">
+          <li><button class="btn btn-default" routerLink="/so-tradebasic" routerLinkActive="active" >TradeBasic</button></li>
+          <li><button class="btn btn-default" routerLink="/swapoption" routerLinkActive="active" >SwapOption</button></li>
+          <li><button class="btn btn-default" routerLink="/so-quickticket" routerLinkActive="active" >QuickTicket</button></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <br>
+    <p></p>
+    <div class="form-group col-sm-1">
+        <div>
+      <label for="">ExpiryDate</label>
+    </div>
+  
+    <div>
+      <label for="lname">OptionPosition</label>
+    </div>
+    
+    <div>
+      <label for="">SwapLag</label>
+    </div>
+    
+    <div>
+      <label for="dob">VolId</label>
+    </div>
+    </div>
+    
+    <div class="form-group col-sm-2">
+     <div>
+      <input type="text" value={{model.txtExpiryDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"/>
+    </div>
+    <div>
+        <select class="">
+            <option selected *ngFor="let optionPosition of model.cmbOptionPosition">{{optionPosition}}</option>
+          </select>
+    </div>
+    <div>
+        <input type="text" class="" id="" placeholder="" value={{model.txtSwapLag}}>
+    </div>
+    <div>
+        <input type="text" value={{model.txtVolId}}>
+    </div>
+    </div>
+    <p></p>
+    <div class="form-group col-sm-1">
+     
+      <div>
+          <label for="fname">BuyFlag</label>
+      </div>
+     
+      <div>
+          <label for="dob">PricingMethod</label>
+      </div>
+    
+      <div>
+          <label for="">Strick</label>
+      </div>
+     
+      <div>
+          <label for="dob">ExerciseFlag</label>
+      </div>
+    </div>
+    <div class="form-group col-sm-2">
+      <div>
+          <select class="">
+              <option selected *ngFor="let buy of model.cmbBuyFlag">{{buy}}</option>
+            </select>
+      </div>
+      <div>
+          <select class="">
+              <option selected *ngFor="let optionMethod of model.cmbPricingMethod">{{ optionMethod }}</option>
+            </select>
+      </div>
+      <div>
+          <input type="text" id="" value={{model.txtStrike}}>
+      </div>
+      <div>
+          <select>
+              <option selected *ngFor="let flag of  model.cmbExercirseFlag ">{{ flag }}</option>
+            </select>
+      </div>
+    </div>
+    <p></p>
+    <div class="form-group col-sm-1">
+      
+      <div>
+      <label for="lname">OptionStyle</label>          
+      </div>
+      
+      <div>
+          <label for="">SwapEndDate</label>
+      </div>
+      
+      <div>
+          <label for="">SwapLagBusDay</label>
+      </div>
+      
+      <div>
+         <label for="dob">ExerciseType</label>
+      </div>
+    </div>
+    <div class="form-group col-sm-2">
+      <div>
+          <select class="">
+              <option selected *ngFor="let optionStyle of model.cmbOptionStyle">{{optionStyle}}</option>
+            </select>
+      </div>
+      <div>
+          <input type="text" class="" value={{model.txtSwapEndDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }">
+      </div>
+      <div>
+          <select class="">
+              <option *ngFor="let spbd of model.cmbSwapLagBusDay">{{ spbd }}</option>
+            </select>
+      </div>
+      <div>
+          <select class="">
+              <option selected *ngFor="let type of  model.cmbExerciseType ">{{ type }}</option>
+            </select>
+      </div>
+    </div>
+    <p></p>
+    <div class="form-group col-sm-1">
+     
+      <div>
+          <label for="dob">OptionType</label>
+      </div>
+      
+      <div>
+         <label for="">SwapRef</label>
+      </div>
+     
+      <div>
+          <label for="">SwapStartDate</label>
+      </div>
+    </div>
+    <div class="form-group col-sm-2">
+      <div>
+          <select>
+              <option selected *ngFor="let optionType of model.cmbOptionType">{{optionType}}</option>
+          </select>
+      </div>
+      <div>
+          <input type="text" value={{model.txtSwapRef}}>
+      </div>
+      <div>
+      <input type="text" value={{model.txtSwapStartDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }">
+      </div>
+    </div>
+  
+  
+    <div class="clearfix"></div>
+  
+    <div class="col-sm-5">
+      <div class="text-center">
+        <label>Pay</label>
+      </div>
+      <div class="col-sm-4"></div>
+      <div class="form-group col-sm-8">
+        <select class="form-control">
+          <option>1 of 1</option>
+          <option>1 of 2</option>
+
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-5">
+        <input type="text" class="form-control" id="fname" placeholder="" value=1>
+      </div>
+      <div class="form-group col-sm-7">
+        <select class="form-control">
+          <option *ngFor="let pay of model.cmbPay">{{pay}}</option>
+
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let cur of model.cmbPayCurrency">{{cur}}</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayTenor}}>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayNotional}}>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let ne of model.cmbPayNotionalExchange" selected>{{ne}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayStartDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }">
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayStartStub}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"> 
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-sm-12"></div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let sr of model.cmbPayStartDateRollFlag" selected>{{sr}}</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let er of model.cmbPayEndDateRollFlag" selected>{{er}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayEndDate}}  bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" >
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayEndStub}}  bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" >
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayFrontstubManual}}>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayBackStubManual}}>
+      </div>
+      <div class="clearfix"></div>
+      <hr>
+      <div class="form-group col-sm-4">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayFixedQuote}}>
+      </div>
+      <div class="form-group col-sm-3">
+        <input type="text" class="form-control" placeholder="" value={{model.txtPayGearFactor}}>
+      </div>
+      <div class="form-group col-sm-5">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPaySpread}}>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-sm-6"></div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let dc of model.cmbPayDayCount" selected>{{dc}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-sm-6"></div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let dcu of model.cmbPayDiscountCurve" selected>{{dcu}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let abd of model.cmbPayAccrualBusDay" selected>{{abd}}</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let ac of model.cmbPayAccrualCalendars" selected>{{ac}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let af of model.cmbPayAccrualFreq" selected>{{af}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let am of model.cmbPayAccrualMarching" selected>{{am}}</option>
+
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-3">
+        <select class="form-control">
+          <option *ngFor="let rollDay of model.cmbPayAccrualRollDay">{{rollDay}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let arw of model.cmbPayAccrualRollWeek">{{arw}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-3">
+        <select class="form-control">
+            <option *ngFor="let eom of model.cmbPayEndOfMonthIndicator">{{eom}}</option>
+        
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let c of model.cmbPayCompounding" selected>{{c}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+         
+          <option *ngFor="let freq of model.cmbPayCompFreq">{{freq}}</option>
+        
+        </select>
+      </div>
+
+    </div>
+
+    <div class="col-sm-2 text-center">
+  <div class="labelset">
+      <div class="col-sm-12">
+        <label class="label-control">Currency/Tenor</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">Notional/NotionalExchange</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">StartDate/EndDate</label>
+    </div>
+      <div class="col-sm-12">
+        <label class="label-control">StartRoll/EndRoll</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">EndDate/EndStub</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">StartStubM.Rate/EndStubM.Rate</label>
+      </div>
+  </div>
+      <div class="clearfix"></div>
+      <div class="mylabel">
+      <div class="col-sm-12">
+        <label class="label-control">FixedQuote/GearFactor/Spread</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">DayCount</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">DiscountCurve</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">AccuralBUsDay/Calendars</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">AccuralFreq/Marching</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">AccuralRollDay/RollWeek/EOM</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">CompoundingConv/CompFreq</label>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-sm-5">
+      <div class="text-center">
+        <label>Rec</label>
+      </div>
+      <div class="form-group col-sm-8">
+        <select class="form-control">
+          <option>1 of 1</option>
+          <option>1 of 2</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-5">
+        <input type="text" class="form-control" id="fname" placeholder="" value=1>
+      </div>
+      <div class="form-group col-sm-7">
+        <select class="form-control">
+          <option *ngFor="let rec of model.cmbRec">{{rec}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let cur of model.cmbRecCurrency" selected>{{cur}}</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecTenor}}>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecNotional}}>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let ne of model.cmbRecNotionalExchange" selected>{{ne}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecStartDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" >
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecStartStub}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" >
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-sm-12"></div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let sr of model.cmbRecStartDateRollFlag" selected>{{sr}}</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let er of model.cmbRecEndDateRollFlag" selected>{{er}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecEndDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" >
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecEndStub}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" >
+      </div>
+     
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecFrontStubManual}}>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecBackStubManual}}>
+      </div>
+      <div class="clearfix"></div>
+      <hr>
+      <div class="form-group col-sm-4">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecFixedQuote}}>
+      </div>
+      <div class="form-group col-sm-3">
+        <input type="text" class="form-control" placeholder="" value={{model.txtRecGearFactor}}>
+      </div>
+      <div class="form-group col-sm-5">
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecSpread}}>
+      </div>
+      <div class="clearfix"></div>
+     
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let dc of model.cmbRecDayCount" selected>{{dc}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+     
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let dcu of model.cmbRecDiscountCurve" selected>{{dcu}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let abd of model.cmbRecAccrualBusDay" selected>{{abd}}</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let ac of model.cmbRecAccrualCalendars" selected>{{ac}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let af of model.cmbRecAccrualFreq" selected>{{af}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let am of model.cmbRecAccrualMarching" selected>{{am}}</option>
+
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-3">
+        <select class="form-control">
+          <option *ngFor="let rollDay of model.cmbRecAccrualRollDay">{{rollDay}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let arw of model.cmbRecAccrualRollWeek" selected>{{arw}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-3">
+        <select class="form-control">
+            <option *ngFor="let eom of model.cmbRecEndOfMonthIndicator">{{eom}}</option>
+        
+         
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+          <option *ngFor="let c of model.cmbRecCompounding" selected>{{c}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control">
+            <option *ngFor="let freq of model.cmbRecCompFreq">{{freq}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+    <div class="container mynavbar">
+          <ul class="mynav">
+            <li><button class="btn btn-default" [routerLink]="['./so-payment']" routerLinkActive="active">Payment </button></li>
+            <li><button class="btn btn-default" [routerLink]="['./so-reset']" routerLinkActive="active">Reset </button></li>
+            <li><button class="btn btn-default" [routerLink]="['./so-amortisation']" routerLinkActive="active">Amortisation </button></li>
+          </ul>
+        </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+</div>
+    <div class="clearfix"></div>
+  <div class="col-sm-10 text-right">
+    <router-outlet name="so-sechdule"></router-outlet>
+  </div>

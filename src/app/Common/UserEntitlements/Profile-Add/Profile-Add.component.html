@@ -1,0 +1,52 @@
+<div class="row content-section">
+    <div class="borderclass  pre-scrollable ">
+
+        <!-- listing -->
+
+
+        <div class="form-group">
+        </div>
+
+        <div class="form-group">
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <input type="text" class="    inputSearch" placeholder="enter the search term"
+                        [(ngModel)]="searchTerm" style="width: 30%;">
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-primary center-block btn__changeName" (click)='changingEmployName()'>
+                        change employee name</button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+        <div class="error__Display" *ngIf='error'>
+            {{error}}
+        </div>
+
+        <div *ngFor='let eachEmployee of filteredEmployees'>
+            <app-display-employee [childEmployeesData]='eachEmployee' [searchTerm]='searchTerm'
+                (notifyDelete)="deleteNotifyEmployee($event)">
+            </app-display-employee>
+        </div>
+
+
+
+        <!-- listing  ; FILTERING USING PIPE-->
+       <!--  <div *ngFor="let employeeList of   employees | employeeFilter:searchTerm" (mousemove) = "onMOuseMove()">            
+                <div class="cursorPointer" (click)="onClick(employeeList)">
+                    <app-display-employees [employee]="employeeList">
+                    </app-display-employees>
+                </div>
+            </div> -->
+
+
+    </div>
+</div>

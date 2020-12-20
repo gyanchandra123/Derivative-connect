@@ -1,0 +1,151 @@
+<div class="row content-section">
+                <div class="borderclass">
+                <div class="col-sm-2" style="margin-top: 10px">
+                        <div><label>Login Name</label> </div>
+                        <div><label>First Name</label></div>
+                        <div><label>Business</label></div>
+                        <div><label>Last Modified</label></div>
+                </div>
+                <div class="col-sm-2">
+                        <div name="Login Name">
+                                <select class="form-control">
+                                        <option>{{model.txtLoginName}}</option>
+                                </select>
+                        </div>
+                        <div><input type="text" class="form-control" name="FirstName" value={{model.txtFirstName}}></div>
+                        <div  name="Business">
+                                <select class="form-control">
+                                        <option>{{model.Business}}</option>
+                                </select>
+                        </div>
+                        <div> <input type="date" class="form-control"></div>
+                                <!-- <input type="text" class="form-control" name="Last Modified" value={{model.txtLastModified}}> -->
+                       
+                </div>
+        
+                <div class="col-sm-2" style="margin-top: 10px">
+                      
+                        <div><label>Last Name</label> </div>
+                        <div><label>Department</label></div>
+                        <div><label>Last VerifiedBy</label></div>
+                </div>
+                <div class="col-sm-2">
+                      
+                        <div><input type="text" name="Last Name" class="form-control" value={{model.txtLastName}}></div>
+                        <div input name="Department">
+                                <select class="form-control">
+                                        <option *ngFor="let Department of model.Department">{{Department}}</option>
+                                </select>
+                        </div>
+                        <div><input type="text" name="Last VerifiedBy" class="form-control" value={{model.txtLastVerifiedBy}}></div>
+        
+                </div>
+                <div class="col-sm-2" style="margin-top: 10px">
+                       
+                        <div><label>Role</label> </div>
+                        <div><label>Last ModifiedBy</label></div>
+                        <div><label>Last Verified</label></div>
+                </div>
+                <div class="col-sm-2">
+                       
+                        <div input name="Role"> 
+                                <select class="form-control">
+                                        <option>{{model.Role}}</option>
+                                </select></div>
+                        <div><input type="text" name="Last ModifiedBy" class="form-control" value={{model.txtLastModifiedBy}}></div>
+                        
+                        <div><input type="date" class="form-control"></div>
+                                <!-- <input type="text" name="Last Verified" class="form-control" value={{model.txtLastVerified}}> -->
+                </div>
+        
+                <div class="clearfix"></div>
+                <div class="row" style="margin-top: 10px">
+                                <div class="col-sm-2"><label style="margin: 10px">Current Access</label></div>
+  <div class="check1 col-sm-10">
+    <input type="checkbox"> ALL<br>
+  </div>
+
+  <div class="clearfix"></div>
+ 
+  <div class="row"></div>
+  <div class="row">
+  <div class="col-sm-2"><button class="btn btn-primary" style="margin: 50px">Add</button></div>
+  <div class="check2 col-sm-10" style="margin-left:10px;margin-top:20px">
+    <div class="one col-sm-2">
+      <input type="checkbox"> ALL<br>
+      <input type="checkbox"> ABU<br>
+      <input type="checkbox"> ALM<br>
+      <input type="checkbox"> AMS<br>
+      <input type="checkbox"> AnB<br>
+      <input type="checkbox"> ATH<br>
+      <input type="checkbox"> AUK<br>
+      <input type="checkbox"> BEI<br>
+
+    </div>
+    <div class="two col-sm-2">
+
+      <input type="checkbox"> BHN<br>
+      <input type="checkbox"> BOM<br>
+      <input type="checkbox"> BRA<br>
+      <input type="checkbox"> BuB<br>
+      <input type="checkbox"> BUD<br>
+      <input type="checkbox"> CAI<br>
+      <input type="checkbox"> COB<br>
+      <input type="checkbox"> DAR<br>
+    </div>
+    <div class="three col-sm-2">
+
+      <input type="checkbox"> DUB<br>
+      <input type="checkbox"> ECU<br>
+      <input type="checkbox"> FFT<br>
+      <input type="checkbox"> FRA<br>
+      <input type="checkbox"> GAB<br>
+      <input type="checkbox"> HEL<br>
+      <input type="checkbox"> HKG<br>
+      <input type="checkbox"> IST<br>
+    </div>
+    <div class="four col-sm-2">
+
+
+
+      <input type="checkbox"> JER<br>
+      <input type="checkbox"> JOH<br>
+      <input type="checkbox"> KAR<br>
+      <input type="checkbox"> KpB<br>
+      <input type="checkbox"> KUW<br>
+      <input type="checkbox"> KvB<br>
+      <input type="checkbox"> LgB<br>
+      <input type="checkbox"> LIS<br>
+    </div>
+    <div class="five col-sm-2">
+
+      <input type="checkbox"> LON<br>
+      <input type="checkbox"> LUS<br>
+      <input type="checkbox"> LUX<br>
+      <input type="checkbox"> MAD<br>
+      <input type="checkbox"> MEX<br>
+      <input type="checkbox"> MwB<br>
+      <input type="checkbox"> NY<br>
+      <input type="checkbox"> OSL<br>
+    </div>
+    <div class="six col-sm-2">
+
+      <input type="checkbox"> PAR<br>
+      <input type="checkbox"> PrB<br>
+      <input type="checkbox"> RIY<br>
+      <input type="checkbox"> SEO<br>
+      <input type="checkbox"> SIN<br>
+      <input type="checkbox"> SoB<br>
+      <input type="checkbox"> SYD<br>
+</div>
+</div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+
+<router-outlet></router-outlet>

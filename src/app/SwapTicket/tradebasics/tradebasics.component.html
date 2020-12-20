@@ -1,0 +1,302 @@
+<form [formGroup]="completeForm" (ngsubmit)="onSubmit()">
+  <div class="container">
+    
+    <nav class="navbar navbar-inverse" style="background-color: #696969; margin-top: -18px">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="margin-left:-10px;margin-right:-30px">Actions <span
+              class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1">New</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+                href="#">Save As<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">New Trade </a></li>
+                <li><a tabindex="-1" href="#">Template Trade</a></li>
+              </ul>
+            </li>
+            <li><a routerLink="/save">Save &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctrl+s</a></li>
+            <li><a href="#">Delete</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+                href="#">Reload<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">Latest</a></li>
+                <li><a tabindex="-1" href="#">History</a></li>
+                <li><a tabindex="-1" href="#">Templates</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Approve</a></li>
+            <li><a href="#">Exit</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="margin-right:-30px">Business Event <span
+              class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Bought Back</a></li>
+            <li><a href="#">Partial Bought Back</a></li>
+            <li><a href="#">MO Maintenance</a></li>
+            <li><a href="#">Migration</a></li>
+            <li><a href="#">Assignment</a></li>
+            <li><a href="#">Partial Assignment</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="margin-right:-18px">Flow <span
+              class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Push to MO</a></li>
+            <li><a href="#">Push to FO</a></li>
+            <li><a href="#">Push to BO</a></li>
+            <li><a href="#">Withdraw</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+                href="#">Email<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">Send Ticket</a></li>
+                <li><a tabindex="-1" href="#">Send CashFlow</a></li>
+                <li><a tabindex="-1" href="#">Send Risk</a></li>
+                <li><a tabindex="-1" href="#">Send PV</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="margin-left:-10px;margin-right:-30px">Analytics <span
+              class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Calculate PV
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F2</a>
+            </li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+                href="#">Calculate Risk<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">Delta
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+D</a>
+                </li>
+                <li><a tabindex="-1" href="#">Gamma
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+G</a></li>
+                <li><a tabindex="-1" href="#">Vega
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+V</a>
+                </li>
+                <li><a tabindex="-1" href="#">Theta &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+T</a></li>
+              </ul>
+            <li><a href="#">Calculate PAA &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F10</a>
+            </li>
+            <li><a href="#">CashFlow Report &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F3</a></li>
+          </ul>
+        </li>
+      </ul>
+  </nav>
+  <nav class="navbar navbar-inverse " style="border-bottom:2px solid whitesmoke;margin-top:-10px">
+    <ul class="nav navbar-nav" style="padding-top:0px;margin-top:-10px">
+  
+      <li> <input type="text" class="form-control"></li>
+      <li> <input type="text" class="form-control"></li>
+      <li> <input type="text" class="form-control"></li>
+        <li class="content" style="margin-top:10px">
+            Market
+        </li>
+      <li>
+          <select class="form-control">
+              <option>Live</option>
+              <option>EndOfDay</option>
+              <option>Historic</option>
+            </select>
+       
+      </li>
+      <li class="content" style="margin-top:10px">
+           Today
+      </li>
+      <li>
+        <input type="text" class="form-control"  bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value="{{ now | date:'dd/MM/yyyy'}}">
+      </li>
+      
+    </ul>
+  </nav>
+  <div class="borderclass"style="margin-top:0px">
+    <div>
+  <nav class="navbar navbar-inverse mynavhead" style="border-bottom:2px solid gray">
+    <ul class="nav navbar-nav">
+      <li><button class="btn btn-default" style="margin-left:-8px" routerLink="/tradebasics" routerLinkActive="active" >TradeBasic</button></li>
+      <li><button class="btn btn-default" style="margin-left:-5px" routerLink="/swapticket" routerLinkActive="active" >SwapTicket</button></li>
+      <li><button class="btn btn-default" style="margin-left:-5px"  routerLink="/quicktickets" routerLinkActive="active" >QuickTicket</button></li>
+    </ul>
+  </nav>
+  </div>
+      <br>
+      <div class="clearfix"></div>
+     
+          <div class="col-sm-8"></div>
+             <div class="col-sm-1"> 
+                 <label class="text-right" style="padding-top:10px">Version</label>
+                 </div>
+                 <div class="col-sm-2 text-left"> 
+                  <input type="text" (change)="onSubmit()" formControlName="version" class="" value={{model.version}}>
+             </div>
+             <div class="clearfix"></div>
+            <div class="col-sm-5">
+              <div class="col-sm-4"><label class="control-label" id="fname">Product Class</label></div>
+              <div class="col-sm-8">
+                <select class="" (change)="onSubmit()" formControlName="product" >
+                  <option *ngFor="let product of model.productClass">{{product}}</option>
+                </select>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4">
+                <label class="control-label" id="fname">Tenor</label>
+              </div>
+              <div class="col-sm-8"> 
+                <input type="text" class="" (change)="onSubmit()" formControlName="tenor" value={{model.tenor}}>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label" id="fname">Effective Date</label></div>
+              <div class="col-sm-8"><input type="text" class="" (change)="onSubmit()" formControlName="effectivedate" value={{model.effectiveDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"></div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4"><label class="control-label">Trader</label></div>
+              <div class="col-sm-8"> 
+                <select class="" (change)="onSubmit()" formControlName="trader">
+                  <option *ngFor="let trader of model.trader">{{trader}}</option>
+                </select>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4"><label class="control-label">Firm Account</label></div>
+              <div class="col-sm-8"> 
+                  <select class="" (change)="onSubmit()" formControlName="firmaccount">
+                    <option *ngFor="let firm of model.firmAccount">{{firm}}</option>
+                  </select>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-4"><label class="control-label">Customer Account</label></div>
+                <div class="col-sm-8"> 
+                    <select class="" (change)="onSubmit()" formControlName="customeraccount">
+                      <option *ngFor="let custAccount of model.customerAccount">{{custAccount}}</option>
+                    </select>
+                 </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-4"><label class="control-label">Broker Account</label></div>
+                <div class="col-sm-8"> 
+                    <select class="" (change)="onSubmit()" formControlName="brokeraccount">
+                      <option *ngFor="let br of model.brokerAccount">{{br}}</option>
+                    </select>
+                  </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-4"><label class="control-label">Legal Entity</label></div>
+                <div class="col-sm-8"> 
+                    <select class="" (change)="onSubmit()" formControlName="legalentity">
+                      <option *ngFor="let legal of model.legalEntity">{{legal}}</option>
+                    </select>
+                  </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-4"> <label class="control-label">External System</label></div>
+                <div class="col-sm-8"> 
+                    <select class="" (change)="onSubmit()" formControlName="externalsystem">
+                      <option *ngFor="let externalSys of model.externalSystem">{{externalSys}}</option>
+                    </select>
+                  </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-4"> <label class="control-label">External Ref</label></div>
+                <div class="col-sm-8"> 
+                   
+                      <input type="text"  (change)="onSubmit()" formControlName="externalref" value="{{model.externalRef}}"/>
+                   
+                  </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-4"> <label class="control-label">Sub Type</label></div>
+                <div class="col-sm-8"> 
+                    <select class="" (change)="onSubmit()" formControlName="subtype">
+                      <option *ngFor="let sub of model.subType">{{sub}}</option>
+                    </select>
+                  </div>
+                 
+            </div>
+        
+            <div class="col-sm-2"> <div class="lineclass"></div></div>
+           <!--  <hr style="width: 1px; height: 100px; background: black; border: none;" /> -->
+           <div class="col-sm-5">
+              <div class="col-sm-4"> <label class="control-label">Location</label></div>
+              <div class="col-sm-8"> 
+                  <select class="" (change)="onSubmit()" formControlName="location">
+                    <option *ngFor="let loc of model.location">{{loc}}</option>
+                  </select>
+                </div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label">Trade Date</label></div>
+              <div class="col-sm-8"> <input type="text" (change)="onSubmit()" formControlName="tradedate" value={{model.tradeDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"></div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label">Termination Date</label></div>
+              <div class="col-sm-8"> <input type="text" (change)="onSubmit()" formControlName="terminationdate" value={{model.terminationDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"></div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label">Sales Person</label></div>
+              <div class="col-sm-8"> 
+                  <select class="" (change)="onSubmit()" formControlName="salesperson">
+                    <option *ngFor="let sales of model.salesPerson">{{sales}}</option>
+                  </select>
+                </div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label">Trade Type</label></div>
+              <div class="col-sm-8"> 
+                  <select class="" (change)="onSubmit()" formControlName="tradetype">
+                    <option *ngFor="let tradeType of model.tradeType">{{tradeType}}</option>
+                  </select>
+                </div>
+  <!--             <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label">Risk Party A</label></div>
+              <div class="col-sm-8"> 
+                  <select class="">
+                    <option></option>
+                  </select>
+                </div> -->
+              <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label">Long Name</label></div>
+              <div class="col-sm-8">  <input type="text" (change)="onSubmit()" formControlName="longname" value={{model.longName}}></div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label">Early Term Date</label></div>
+              <div class="col-sm-8"><input type="text"  (change)="onSubmit()" formControlName="earlytermdate" value={{model.earlyTermDate}} bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"></div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label">Early Term Reason</label></div>
+              <div class="col-sm-8"> 
+                  <select class="" (change)="onSubmit()" formControlName="termreason">
+                    <option *ngFor="let termReason of model.earlyTermReason">{{termReason}}</option>
+                  </select>
+                </div>
+                <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label">Mod Reason</label></div>
+              <div class="col-sm-8"> 
+                  <select class="" (change)="onSubmit()" formControlName="modreason">
+                    <option *ngFor="let mod of model.modReason">{{mod}}</option>
+                  </select>
+                </div>
+                <div class="clearfix"></div>
+              <div class="col-sm-4"> <label class="control-label">Comments</label></div>
+              <div class="col-sm-8"> <textarea cols="35" (change)="onSubmit()" formControlName="comments" rows="3">{{model.comments}}</textarea></div>
+              </div>           
+  </div>
+  <br>
+   <div class="clearfix"></div>
+      <div class="container mynavbar">
+          <ul class="mynav">
+                  <li>
+                      <button  class="btn btn-default" [routerLink]="['./additionalfield']" routerLinkActive="active">Additional Fields</button>
+                  </li>
+                  <li>
+                      <button  class="btn btn-default" [routerLink]="['./fees']" routerLinkActive="active">Fees</button>
+                  </li>
+                  <li>
+                      <button  class="btn btn-default" [routerLink]="['./salescredit']" routerLinkActive="active">Sales Credit</button>
+                  </li>
+                  <li>
+                    <button  class="btn btn-default" [routerLink]="['./margin']" routerLinkActive="active">Margin</button>
+                </li>
+                <li>
+                    <button  class="btn btn-default" [routerLink]="['./assignment']" routerLinkActive="active">Assignment</button>
+                </li>
+                <li>
+                    <button  class="btn btn-default" [routerLink]="['./partialassignment']" routerLinkActive="active">Partial Assignment</button>
+                </li>
+              
+          </ul>
+        </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+    </div>
+              
+           
+           

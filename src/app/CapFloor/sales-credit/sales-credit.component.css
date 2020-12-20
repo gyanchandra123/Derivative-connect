@@ -1,0 +1,11 @@
+.table-bordered{
+    border:2px solid;
+    
+}
+#fname{
+    border-radius: 0px;
+}
+
+.form-control{
+    border-radius: 0px;
+}

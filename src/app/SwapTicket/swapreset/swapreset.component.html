@@ -1,0 +1,208 @@
+<form [formGroup]="completeForm" (ngsubmit)="onSubmit()">
+  <div class="container" style="margin-left:-32px">
+      <div class="borderclass1" style="border:2px solid whitesmoke;height:320px">
+          <div *ngIf="model" style="padding-top:30px">
+        <div class="col-sm-5">
+             <div class="clearfix"></div>
+             <div class="form-group col-sm-6">
+              <select class="form-control" (change)="onSubmit()" formControlName="calendar">
+                <option *ngFor="let qc of model.cntPayQuoteCalender" selected>{{qc}}</option>
+                
+              </select>
+         </div>
+        
+             <div class="form-group col-sm-6">
+                   <input type="text" class="form-control"  placeholder="" value={{model.txtPayQuoteLag}} (change)="onSubmit()" formControlName="quotelag">
+            </div>
+           
+            <div class="clearfix"></div>
+           
+            <div class="form-group col-sm-4">
+               <select class="form-control" (change)="onSubmit()" formControlName="initialcalendars">
+                 <option *ngFor="let piqpc of model.cntPayInitialQuotePayCalendars" selected>{{piqpc}}</option>
+                
+               </select>
+             </div>
+             <div class="form-group col-sm-5">
+                <input type="text" class="form-control" (change)="onSubmit()" formControlName="quotedate"  placeholder="Datepicker" bsDatepicker   [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"  value={{model.txtPayInitialIntialPayQuoteDate}}>
+         </div>
+         <div class="form-group col-sm-3">
+          <input type="text" class="form-control" (change)="onSubmit()" formControlName="inquotelag" placeholder="" value={{model.txtPayIntialQuoteLag}}>
+   </div>
+          <div class="clearfix"></div>
+          <div class="form-group col-sm-4">
+              <select class="form-control" (change)="onSubmit()" formControlName="resetavg">
+                <option *ngFor="let ra of model.cmbPayResetAveragins" selected>{{ra}}</option>
+               
+              </select>
+            </div>
+            <div class="form-group col-sm-4">
+                <select class="form-control" (change)="onSubmit()" formControlName="resetconv">
+                  <option *ngFor="let rc of model.cmbPayResetConvention" selected>{{rc}}</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-4">
+                 <input type="text" class="form-control" (change)="onSubmit()" formControlName="ratecutoff" placeholder="" value={{model.txtPayRateCutOff}}>
+          </div>
+       <div class="clearfix"></div>
+       <div class="form-group col-sm-4">
+          <select class="form-control" (change)="onSubmit()" formControlName="busday">
+            <option *ngFor="let rbd of model.cmbPayResetBusDay" selected>{{rbd}}</option>
+           
+          </select>
+        </div>
+        <div class="form-group col-sm-4">
+            <select class="form-control" (change)="onSubmit()" formControlName="frequency">
+              <option *ngFor="let rbd of model.cmbPayResetFreq" selected>{{rbd}}</option>
+            
+            </select>
+          </div>
+          <div class="form-group col-sm-4">
+              <select class="form-control" (change)="onSubmit()" formControlName="marching">
+                <option *ngFor="let rf of model.cmbPayResetMarching" selected>{{rf}}</option>
+    
+              </select>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group col-sm-4">
+               <select class="form-control" (change)="onSubmit()" formControlName="rollday">
+                <option *ngFor="let rprd of model.cmbPayResetPayRollDay" selected>{{rprd}}</option>
+              </select>
+             </div>
+             <div class="form-group col-sm-4">
+                 <select class="form-control" (change)="onSubmit()" formControlName="rollweek">
+                   <option *ngFor="let rw of model.cmbPayResetRollWeek" selected>{{rw}}</option>
+                 
+                 </select>
+               </div>
+               <div class="form-group col-sm-4">
+                   <select class="form-control" (change)="onSubmit()" formControlName="resettype">
+                    <option *ngFor="let prt of model.cmbPayResetType" selected>{{prt}}</option>
+                    
+                   </select>
+                 </div>
+                 <div class="clearfix"></div>
+                 <div class="col-sm-4"></div>
+                 <div class="form-group col-sm-8">
+                    <select class="form-control" (change)="onSubmit()" formControlName="marketindex">
+                      <option *ngFor="let mi of model.cmbPayMarketIndex" >{{mi}}</option>
+                     
+                    </select>
+                  </div>
+                  
+      </div>
+      <div class="col-sm-2 text-center">
+          <div class="col-sm-12"></div>
+          <div class="col-sm-12"></div>
+          <div class="col-sm-12">
+              <label class="label-control">QuoteCalendars/Lag</label>
+          </div>
+          <div class="col-sm-12">
+             <label class="label-control">InitialQuoteCalendars/Date/Lag</label>
+         </div>
+         <div class="col-sm-12">
+             <label class="label-control">ResetAveraging/Convention/      RateCutOff</label>
+         </div>
+         <div class="col-sm-12">
+             <label class="label-control">ResetBusDay/Freq/Marching</label>
+         </div>
+         <div class="col-sm-12">
+             <label class="label-control">ResetRollDay/RollWeek/Type</label>
+         </div><br>
+         <div class="col-sm-12">
+            <label class="label-control">Market Index</label>
+        </div>
+      
+      </div>
+      <div class="col-sm-5">
+        <div class="clearfix"></div>
+        <div class="form-group col-sm-6">
+         <select class="form-control">
+           <option *ngFor="let qc of model.cntRecQuoteCalender" selected>{{qc}}</option>
+           
+         </select>
+    </div>
+   
+        <div class="form-group col-sm-6">
+              <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecQuoteLag}}>
+       </div>
+      
+       <div class="clearfix"></div>
+      
+       <div class="form-group col-sm-4">
+          <select class="form-control">
+            <option *ngFor="let pi of model.cntRecInitialQuotePayCalendars" selected>{{pi}}</option>
+           
+          </select>
+        </div>
+        <div class="form-group col-sm-5">
+           <input type="text" class="form-control" id="fname" placeholder="Datepicker" bsDatepicker    [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"  value={{model.txtRecIntialQuotePayDate}}>
+    </div>
+    <div class="form-group col-sm-3">
+     <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecIntialcQuoteLag}}>
+  </div>
+     <div class="clearfix"></div>
+     <div class="form-group col-sm-4">
+         <select class="form-control">
+           <option *ngFor="let ra of model.cmbRecResetAveragins" selected>{{ra}}</option>
+          
+         </select>
+       </div>
+       <div class="form-group col-sm-4">
+           <select class="form-control">
+             <option *ngFor="let rc of model.cmbRecResetConvention" selected>{{rc}}</option>
+           </select>
+         </div>
+         <div class="form-group col-sm-4">
+            <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecRateCutOff}}>
+     </div>
+  <div class="clearfix"></div>
+  <div class="form-group col-sm-4">
+     <select class="form-control">
+       <option *ngFor="let rbd of model.cmbRecResetBusDay" selected>{{rbd}}</option>
+      
+     </select>
+   </div>
+   <div class="form-group col-sm-4">
+       <select class="form-control">
+         <option *ngFor="let rrf of model.cmbRecResetFreq" selected>{{rrf}}</option>
+       
+       </select>
+     </div>
+     <div class="form-group col-sm-4">
+         <select class="form-control">
+           <option *ngFor="let rf of model.cmbRecResetMarching" selected>{{rf}}</option>
+  
+         </select>
+       </div>
+       <div class="clearfix"></div>
+       <div class="form-group col-sm-4">
+          <select class="form-control">
+            <option *ngFor="let rprd of model.cmbPayResetPayRollDay" selected>{{rprd}}</option>
+         </select>
+        </div>
+        <div class="form-group col-sm-4">
+            <select class="form-control">
+              <option *ngFor="let rw of model.cmbRecResetRollWeek" selected>{{rw}}</option>
+            
+            </select>
+          </div>
+          <div class="form-group col-sm-4">
+              <select class="form-control">
+                <option *ngFor="let prt of model.cmbPayResetType" selected>{{prt}}</option>
+               
+              </select>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-sm-4"></div>
+            <div class="form-group col-sm-8">
+               <select class="form-control">
+                 <option *ngFor="let mi of model.cmbRecMarketIndex" >{{mi}}</option>
+                
+               </select>
+             </div>
+             
+  </div>
+      </div>
+      </div>
+  

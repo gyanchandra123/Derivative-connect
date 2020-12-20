@@ -1,0 +1,121 @@
+<div class="container-bg">
+  <div class="bg-color-name">
+
+    <div class="row">
+
+      <div class="col-sm-2">
+        <i class="material-icons material-iconsA">
+          picture_in_picture
+        </i>
+      </div>
+      <div class="col-sm-6 pag-text-align">
+        Swap Payment Reset Schedule
+      </div>
+      <div class="col-sm-4">
+        <span>
+          <mat-icon class="mat-iconB" (click)="onCrossClick()">
+              backspace
+          </mat-icon>
+        </span>
+      </div>
+    </div>
+<div class="clearfix"></div>
+  </div>
+  
+  <div style="background-color:#0021bb;height: 20px;">
+    <p>&nbsp;</p>
+  </div>
+
+   
+  <br>
+  <div class="row">
+    <div class="col-sm-4 swapHeadingAlign">
+     Swap-Payment Reset Schedule
+    </div>
+     
+  </div>
+
+  <div class="dropdown" id="panel">
+    <button data-toggle="dropdown" color="primary"   class="btn btn-primary dropdown-toggle paymentButton">
+    Column Selection     <span class="carat"></span>   
+    </button>
+   
+             
+<ul class="dropdown-menu paymentButtonB">
+    <li><input type="checkbox" name="serialNumber">serial Number<br></li>
+    <li><input type="checkbox" name="QuoteDate">Quote Date<br></li>
+    <li><input type="checkbox" name="Rate">  Rate<br> </li>
+    <li> <input type="checkbox" name="RateIndexType">RateIndexType<br></li>
+    <li><input type="checkbox" name="RateSettingType">RateSettingType<br> </li>
+    <li>  <input type="checkbox" name="ResetStartDate"> ResetStartDate<br> </li>
+    <li> <input type="checkbox" name="ResetEndDate"> ResetEndDate</li>
+</ul>
+</div> 
+
+
+
+  <div style="height:381px; overflow-y:scroll;border: 1px solid #ccc">
+    <table class="table table-bordered table-striped table-hover table-responsive-sm ">
+      <thead>
+        <tr [ngStyle]="{'background-color':'#343a40','color':'#fff'}">
+          <th class="serialNumber">
+            Sl No.
+          </th>
+
+          <th class="QuoteDate">
+            Quote Date
+          </th>
+
+          <th  class="Rate">
+            Rate
+          </th>
+
+          <th  class="RateIndexType">
+            RateIndexType
+          </th>
+
+          <th  class="RateSettingType">
+            RateSettingType
+          </th>
+
+          <th  class="ResetStartDate">
+            ResetStartDate
+          </th>
+
+          <th  class="ResetEndDate">
+            ResetEndDate
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let x of ResetsServiceList, let i=index">
+          <td class="serialNumber">{{i+1}}</td>
+          <td class="QuoteDate">{{x.quoteDate}}</td>
+          <td class="Rate">{{x.rate}}</td>
+          <td class="RateIndexType">{{x.rateIndexType}}</td>
+          <td class="RateSettingType">{{x.rateSettingType}}</td>
+          <td class="ResetStartDate">{{x.resetStartDate}}</td>
+          <td class="ResetEndDate">{{x.resetEndDate}}</td>
+        </tr>
+      </tbody> 
+    </table>
+
+  </div>
+</div>
+<!----------------- end of table here , start button part below------------------------->
+
+ 
+<br>
+<div class="container">
+  <div class="row lastRow">
+    <div class="col-sm-6 col-sm-offset-3 bottomBorder">
+      <span><button color="primary" mat-raised-button (click)="okButton() " class="buttonDefault">Ok</button>&nbsp;</span>
+      <span><button color="primary" mat-raised-button (click)="onCancel()" class="buttonDefault">Cancel</button>&nbsp;</span>
+      <span><button color="primary" mat-raised-button (click)=" onInsertClick()" class="buttonDefault">Insert</button>&nbsp;</span>
+      <span><button color="primary" mat-raised-button class="buttonDefault">Delete</button>&nbsp;</span>
+      <span><button color="primary" mat-raised-button (click)="onHelpClick()" class="buttonDefault">Help</button>&nbsp;</span>
+    </div>
+  </div> 
+
+</div>

@@ -1,0 +1,254 @@
+<div *ngIf="obj">
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-lg-12" style="padding-left: 46%">
+        <label style="border-right: 5px solid black">Pay &nbsp;</label><label>&nbsp; Rec</label>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-5">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <label style="padding-top: 30px;">Sub Product</label>
+          </div>
+          <div class="col-lg-3">
+
+            <select name="cmbSubProductSwap" class="form-control" style="width:120px">
+              <option *ngFor="let subProduct of swapPay.subProduct">{{subProduct}}</option>
+            </select>
+          </div>
+
+          <div class="col-lg-2">
+            <select name="cmbPayCurrency" class="form-control" style="width:90px;margin-left: 20px;">
+              <option *ngFor="let currency of swapPay.payCurrency">{{currency}}</option>
+            </select>
+          </div>
+
+          <div class="col-lg-2">
+            <select name="cmbPayLegType" class="form-control" style="width:108px; margin-left: 35px;">
+              <option *ngFor="let payLegType of swapPay.payLegType">{{payLegType}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row" >
+          <div class="col-lg-3">
+            <input type="text" name="txtPayNotional" class="form-control" style="width: 120px;margin-left: 200px;">
+          </div>
+          <div class="col-lg-3">
+            <select name="cmbPayAccrualFreq" class="form-control" style="width: 120px;margin-left: 215px;">
+              <option *ngFor="let payAccrualFreq of swapPay.payAccrualFreq">{{payAccrualFreq}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <select name="cmbPayPayFreq" class="form-control" style="width: 120px;margin-left: 200px;">
+              <option *ngFor="let payPayFreq of swapPay.payPayFreq">{{payPayFreq}}</option>
+            </select>
+          </div>
+          <div class="col-lg-3">
+            <select name="cmbPayResetFreq" class="form-control" style="width: 120px;margin-left: 215px;">
+              <option *ngFor="let payResetFreq of swapPay.payResetFreq">{{payResetFreq}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <select name="cmbPayAmortType" class="form-control" style="width: 120px;margin-left: 329px;">
+              <option *ngFor="let payAmortType of swapPay.payAmortType">{{payAmortType}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <select name="cmbPayCompounding" class="form-control" style="width: 120px;margin-left: 200px;">
+              <option *ngFor="let payCompounding of swapPay.payCompounding">{{payCompounding}}</option>
+            </select>
+          </div>
+          <div class="col-lg-3">
+            <select name="cmbPayDiscountCurve" class="form-control" style="width: 120px;margin-left: 215px;">
+              <option *ngFor="let payDiscountCurve of swapPay.payDiscountCurve">{{payDiscountCurve}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <input type="text" name="txtPayFixedQuote" class="form-control" style="width: 120px;margin-left: 200px;">
+          </div>
+          <div class="col-lg-3">
+            <select name="cmbPayDayCount" class="form-control" style="width: 120px;margin-left: 215px;">
+              <option *ngFor="let payDayCount of swapPay.payDayCount">{{payDayCount}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+
+            <select name="cmbPayMarketIndex" class="form-control" style="width: 170px;margin-left: 280px;">
+              <option *ngFor="let payMarketIndex of swapPay.payMarketIndex">{{payMarketIndex}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3" style="margin-left: 300px;">
+            <button class="btn btn-default" style="margin-top: 20px;">Clear</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-2">
+        <br>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Currency/Leg Type</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>National/AccrualFreq</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Pay Freq/Rest Freq</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Amort Type</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Compounding/Discount</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>CurveFixedQuote/DayCount</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Market Index</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-5">
+        <div class="row">
+          <div class="col-lg-3">
+            <select name="cmbRecCurrency" class="form-control" style="width: 120px;margin-right: 250px;">
+              <option *ngFor="let recCurrency of swapRec.recCurrency">{{recCurrency}}</option>
+            </select>
+          </div>
+          <div class="col-lg-3">
+            <select name="cmbRecLegType" class="form-control" style="width: 120px;margin-right: 250px;">
+              <option *ngFor="let recLegType of swapRec.recLegType">{{recLegType}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <input type="text" name="txtRecNotional" class="form-control" style="width: 120px;margin-right: 250px;">
+          </div>
+          <div class="col-lg-3">
+            <select name="cmbRecAccrualFreq" class="form-control" style="width: 120px;margin-right: 250px;">
+              <option *ngFor="let recAccrualFreq of swapRec.recAccrualFreq">{{recAccrualFreq}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <select name="cmbRecPayFreq" class="form-control" style="width: 120px;margin-right: 250px;">
+              <option *ngFor="let recPayFreq of swapRec.recPayFreq">{{recPayFreq}}</option>
+            </select>
+          </div>
+          <div class="col-lg-3">
+            <select name="cmbRecResetFreq" class="form-control" style="width: 120px;margin-right: 250px;">
+              <option *ngFor="let recResetFreq of swapRec.recResetFreq">{{recResetFreq}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <select name="cmbRecAmortType" class="form-control" style="width: 120px;margin-right: 250px;">
+              <option *ngFor="let recAmortType of swapRec.recAmortType">{{recAmortType}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <select name="cmbRecCompounding" class="form-control" style="width: 120px;margin-right: 250px;">
+              <option *ngFor="let recCompounding of swapRec.recCompounding">{{recCompounding}}</option>
+            </select>
+          </div>
+          <div class="col-lg-3">
+            <select name="cmbRecDiscountCurve" class="form-control" style="width: 120px;margin-right: 250px;">
+              <option *ngFor="let recDiscountCurve of swapRec.recDiscountCurve">{{recDiscountCurve}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <input type="text" name="txtRecFixedQuote" class="form-control" style="width: 120px;margin-right: 250px;">
+          </div>
+          <div class="col-lg-3">
+            <select name="cmbRecDayCount" class="form-control" style="width: 120px;margin-right: 250px;">
+              <option *ngFor="let recDayCount of swapRec.recDayCount">{{recDayCount}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <select name="cmbPayMarketIndex" class="form-control" style="width: 170px;margin-right: 335px;">
+              <option *ngFor="let recMarketIndex of swapRec.recMarketIndex">{{recMarketIndex}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row" style="margin-right: 60px;">
+          <div class="col-lg-3">
+            <button class="btn btn-default" style="margin-top: 20px;">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>

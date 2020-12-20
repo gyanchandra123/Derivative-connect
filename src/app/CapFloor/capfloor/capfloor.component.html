@@ -1,0 +1,312 @@
+<form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
+<nav class="navbar navbar-inverse" style="background-color: #696969; margin-top: -20px">
+  <div class="container">
+    <div class="navbar-header">
+     </div>
+    <ul class="nav navbar-nav" >
+     
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" >Actions <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a  tabindex="-1">New</a></li>
+             <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Save As<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" >New Trade </a></li>
+              <li><a tabindex="-1" >Template Trade</a></li>
+            </ul>
+          </li>
+         <li><a routerLink="/savecap">Save &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctrl+s</a></li>
+          <li><a >Delete</a></li>
+          <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Reload<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" >Latest</a></li>
+              <li><a tabindex="-1" >History</a></li>
+              <li><a tabindex="-1" >Templates</a></li>
+            </ul>
+          </li>
+          <li><a >Approve</a></li>
+          <li><a >Exit</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a>Business Event <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a >Bought Back</a></li>
+          <li><a >Partial Bought Back</a></li>
+          <li><a >MO Maintenance</a></li>
+          <li><a >Migration</a></li>
+          <li><a >Assignment</a></li>
+          <li><a >Partial Assignment</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a>Flow <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a >Push to MO</a></li>
+          <li><a >Push to FO</a></li>
+          <li><a >Push to BO</a></li>
+          <li><a >Withdraw</a></li>
+          <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Email<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" >Send Ticket</a></li>
+              <li><a tabindex="-1" >Send CashFlow</a></li>
+              <li><a tabindex="-1" >Send Risk</a></li>
+              <li><a tabindex="-1" >Send PV</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown"><a>Analytics <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a >Calculate PV   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F2</a></li>
+          <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Calculate Risk<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" >Delta   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+D</a></li>
+              <li><a tabindex="-1" >Gamma   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+G</a></li>
+              <li><a tabindex="-1" >Vega   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+V</a></li>
+              <li><a tabindex="-1" >Theta  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+T</a></li>
+            </ul>
+          <li><a >Calculate PAA   &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F10</a></li>
+          <li><a >CashFlow Report   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F3</a></li>
+        </ul>
+      </li>
+      </ul>
+    </div>
+    </nav>
+
+    <div>
+        <nav class="navbar navbar-inverse " style="border-bottom:2px solid whitesmoke;margin-top:-20px">
+          <ul class="nav navbar-nav" style="padding-top:10px">
+
+            <li> <input type="text" class="form-control"></li>
+            <li> <input type="text" class="form-control"></li>
+            <li> <input type="text" class="form-control"></li>
+              <li class="content" style="margin-top:0px">
+                  Market
+              </li>
+            <li>
+                <select class="form-control">
+                    <option>Live</option>
+                    <option>EndOfDay</option>
+                    <option>Historic</option>
+                  </select>
+             
+            </li>
+            <li class="content" style="margin-top:0px">
+                 Today
+            </li>
+            <li>
+              <input type="text" class="form-control"  bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value="{{now | date:'dd/MM/yyyy'}}">
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    <div class="borderclass" style="margin-top: -20px">
+        <div>
+            <nav class="navbar navbar-inverse mynavhead" style="border-bottom:2px solid whitesmoke">
+              <ul class="nav navbar-nav">
+                <li><button class="btn btn-default" routerLink="/trade" routerLinkActive="active" style="margin-left:-10px;margin-right:-30px" >TradeBasic</button></li>
+                <li><button class="btn btn-default" routerLink="/cap" routerLinkActive="active" style="margin-right:5px;margin-left:25px">CapFloor</button></li>
+                <li><button class="btn btn-default" routerLink="/quickticket" routerLinkActive="active" style="margin-left:-10px">QuickTicket</button></li>
+              </ul>
+            </nav>
+          </div>
+    <div *ngIf="model">
+        <div class="fields">
+          <div class="row fonts">
+            <div class="row">
+           <div [ngClass]="['form-group']" >
+              <br>
+              <label class="control-label col-sm-3 contorl-align-label contorl-align-text " >Currency/Tenor
+                </label>
+                
+            <div class="col-sm-8">
+              <div class="form-inline">
+                  <select class="form-control col-sm-3" [ngStyle]="{'width.px':'163'}" formControlName="currencies" (change)="onSubmit()">
+                      <option *ngFor="let currency of model.cmbCurrency">{{currency}}</option>
+                      
+                    </select>
+                    <input type="text" value={{model.txtTenor}} class="form-control  col-sm-3"
+                    [ngStyle]="{'margin-left.px':'16'}" (change)="onSubmit()" formControlName="tenor">
+            </div>
+            </div>
+           </div>
+          </div>
+                 
+
+           <div class="row">
+              <div [ngClass]="['form-group']">
+                 
+                 <label class="control-label col-sm-3 contorl-align-label">Notional</label>
+                   
+               <div class="col-sm-2">
+                
+                    <input type="text" value={{model.txtNotional}} class="form-control" (change)="onSubmit()" formControlName="notional">
+               
+               </div>
+              </div>
+           
+          </div>
+
+
+          <div class="row">
+              <div [ngClass]="['form-group']">
+                 
+                 <label class="control-label col-sm-3 contorl-align-label">CFSubType</label>
+                   
+               <div class="col-sm-3">
+                 
+                    <select class="form-control" formControlName="cfsubtype" (change)="onSubmit()" >
+                        <option *ngFor="let cfType of model.cmbCfSubType">{{cfType}}</option>
+                        
+                      </select> 
+               
+               </div>
+              </div>
+           
+          </div>
+
+
+
+
+
+          <div class="row">
+              <div [ngClass]="['form-group']">
+                 
+                 <label class="control-label col-sm-3 contorl-align-label">CapStartDate/EndDate</label>
+                   
+               <div class="col-sm-8">
+                 <div class="form-inline">
+                    <input type="text" value={{model.txtCapsStartDate}} class="form-control" bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" (change)="onSubmit()" formControlName="CapStartDate">
+                    
+                    <input type="text" value={{model.txtCapsEndDate}} class="form-control" [ngStyle]="{'margin-left.px':'18'}" bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" (change)="onSubmit()" formControlName="capEndDate">
+               </div>
+               </div>
+              </div>
+           
+          </div>
+
+
+          <div class="row">
+              <div [ngClass]="['form-group']">
+                 
+                 <label class="control-label col-sm-3 contorl-align-label">CapStartRoll/EndRoll</label>
+                   
+               <div class="col-sm-8">
+                 <div class="form-inline">
+                    <select class="form-control" (change)="onSubmit()" formControlName="startRoll">
+                        <option *ngFor="let startroll of model.cmbStartDateRollFlag">{{startroll}}</option>  
+                      </select>
+
+                      <select class="form-control" [ngStyle]="{'margin-left.px':'20'}" (change)="onSubmit()" formControlName="endRoll">
+                          <option *ngFor="let endroll of model.cmbEndDateRollFlag">{{endroll}}</option>        
+                        </select> 
+               </div>
+               </div>
+              </div>
+           
+          </div>
+
+
+
+          <div class="row">
+              <div [ngClass]="['form-group']">
+                 
+                 <label class="control-label col-sm-3 contorl-align-label">StartStub/EndStub</label>
+                   
+               <div class="col-sm-8">
+                 <div class="form-inline">
+                    <input type="text" value={{model.txtStartStubDate}} class="form-control" bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" (change)="onSubmit()" formControlName="startStub">
+              
+                     <input type="text" value={{model.txtBackStubDate}} class="form-control" [ngStyle]="{'margin-left.px':'18'}" bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" (change)="onSubmit()" formControlName="endStub">
+               </div>
+               </div>
+              </div>
+           
+          </div>
+
+
+
+          <div class="row">
+              <div [ngClass]="['form-group']">
+                 
+                 <label class="control-label col-sm-3 contorl-align-label">StartStubM.Rate/EndStubM.Rate</label>
+                   
+               <div class="col-sm-8">
+                 <div class="form-inline">
+                    <input type="text" value={{model.txtFrontStubManualRate}} class="form-control" (change)="onSubmit()" formControlName="startStubM">  
+  
+                     <input type="text" value={{model.txtBackStubManualRate}} class="form-control" [ngStyle]="{'margin-left.px':'18'}" (change)="onSubmit()" formControlName="endStubM">
+               </div>
+               </div>
+              </div>
+           
+          </div>
+
+          
+          <div class="row">
+              <div [ngClass]="['form-group']">
+                 
+                 <label class="control-label col-sm-3 contorl-align-label">BuyFlag/CapFloorType</label>
+                   
+               <div class="col-sm-8">
+                 <div class="form-inline">
+                   
+                    <select class="form-control" (change)="onSubmit()" formControlName="buyFlag">
+                        <option  *ngFor="let buy of model.cmbBuyFlag">{{buy}}</option>
+                                                       
+                      </select> 
+                 
+                    <select class="form-control" [ngStyle]="{'margin-left.px':'16'}" (change)="onSubmit()" formControlName="capfloor">
+                        <option *ngFor="let capfloor of model.cmbCapFloorType">{{capfloor}}</option>
+  
+                      </select> 
+               </div>
+               </div>
+              </div>
+           
+          </div>
+
+
+
+         
+       
+  </div>
+<div>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+    
+  </form> 
+  
+ <div>
+  <div class="col-sm-2"></div>
+
+    <div class="col-sm-12">
+        <div>
+          <nav >
+              <div class="container-fluid">
+                <div class="navbar-header">
+                 </div>
+                <ul class="nav navbar-nav" id="myDIV" >
+                  <li ><button class="btn btn-default" style="margin-top: 10px;margin-left:-35px;margin-right:-30px" [routerLink]="['./payment']" routerLinkActive="active">Payment </button></li>
+                         
+                  <li ><button class="btn btn-default" style="margin-top: 10px;margin-left:25px;margin-right:5px" [routerLink]="['./reset']" routerLinkActive="active">Reset </button></li>
+                    <li><button class="btn btn-default" style="margin-top: 10px;margin-left:-10px" [routerLink]="['./amortization']" routerLinkActive="active">Amortisation </button></li>
+                        </ul>
+                        
+              </div>
+            
+              </nav>
+            </div>
+            <div>
+                      <router-outlet></router-outlet>
+                    </div>
+
+
+
+  </div>
+
+  <div class="col-sm-12"><router-outlet name="schedules"></router-outlet></div>
+</div>
+  

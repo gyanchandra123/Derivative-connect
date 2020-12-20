@@ -1,0 +1,12 @@
+button.btn.btn-default
+    { 
+		background:#a5a6a8; 
+		color: #000; 
+		margin-bottom: 10px;
+		margin-left:0px;
+		font-weight:bold;
+        border-radius: 0px;
+        border-right: 3px solid #434344;
+    box-shadow: 2px 4px #505255;
+    }
+    

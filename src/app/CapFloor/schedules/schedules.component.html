@@ -1,0 +1,62 @@
+<div class="form-group" style="border: 2px solid whitesmoke; 
+width:1140px;margin-left:-11px;height: 200px;">
+
+<div class="fields">
+  
+
+<div class="col-sm-8 text-right" >
+  <div class="text-center">
+    <button><a  routerLinkActive="active">SCHEDULE </a></button>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="row">
+        
+    <br>
+
+     <div [ngClass]="['form-group']" >
+        <br>
+        <label class="control-label col-sm-3 contorl-align-label contorl-align-text">PV/Currency</label>
+          <div class="col-sm-5">
+      <div class="col-sm-6"> 
+          <input class="form-control" type="text">
+        <!-- <input class="form-control" type="text"    value={{model.txtPV}}  [ngStyle]="{'margin-left.px':'-16'}  -->
+      </div>
+      <div class="col-sm-3">
+          <select class="form-control col-sm-4" [ngStyle]="{'margin-left.px':'-19'}">
+            <option *ngFor="let pvcur of model.scheduleCurrency">{{pvcur}}</option>
+          </select>
+      </div>
+    </div>
+        </div>
+        </div>
+
+
+    <div class="row">
+        
+       <div [ngClass]="['form-group']" >
+          <br>
+          <label class="control-label col-sm-3 contorl-align-label contorl-align-text">Parallel Delta/Curve</label>
+            <div class="col-sm-5">
+        <div class="col-sm-5"> 
+          <input class="form-control" type="text" >
+         <!--  <input class="form-control" type="text" value={{model.txtRecParallelDelta}}  [ngStyle]="{'margin-left.px':'-16'}"> -->
+        </div>
+        <div class="col-sm-4">
+            <select class="form-control " [ngStyle]="{'margin-left.px':'-19'}" >
+              <option *ngFor="let curpnl of model.scheduleCurve">{{curpnl}}</option>
+            </select>
+        </div>
+        </div>
+       
+      </div>
+  
+      </div>
+    </div>
+</div>
+
+
+
+    </div>

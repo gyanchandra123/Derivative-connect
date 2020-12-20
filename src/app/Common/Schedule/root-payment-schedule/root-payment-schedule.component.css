@@ -1,0 +1,222 @@
+.container-bg{
+    background-color: lightgrey;
+    height: 495px;
+    border: 2px solid green;
+    margin: 2px;
+    border-radius: 5px;
+ 
+ }
+ 
+  
+ 
+ .table-bordered {
+    border: 2px solid #fff !important;
+ }
+ .mainDivision {
+    background-color: lightgrey;
+    width:1250px;
+    height:500px;
+    border: 2px solid green;
+    padding: 25px;
+    margin: 25px;
+  }
+ 
+ .firstHeaderDiv{
+   background-color: rgb(114, 114, 190);
+    width:1140px;
+    height: 20px;
+ }
+ 
+ .SecondHeaderDiv{
+    background-color: rgb(195, 195, 224);
+    width:780px;
+    height:45px;  
+ }
+ 
+ .ThirdHeaderDiv{
+    background-color: rgb(195, 195, 224);
+    width:780px;
+    height:300px; 
+    margin-top:5px;
+ }
+ 
+ .fourthDivision{
+    margin-left:10px;
+    margin-top:5px;
+ }
+ 
+ .fifthDivision{
+    margin-left:-130px;
+ }
+ 
+ .cllas{
+    width:1140px;
+    height: 10px;
+ }
+ .mat-dialog-container{
+    overflow:hidden !important;
+    }
+ th, td {
+    
+    text-align: center;
+  }
+  
+ 
+  .tableHeading{
+    border: 1px solid black;
+  }
+ 
+  
+ 
+  .hrBorder{
+      border: 1px solid  red;
+      margin-top: -10px;
+  }
+  .modelHeading{
+      
+      text-align: center;
+      margin-top: 50px;
+  }
+  .mycss{
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  .textmain{
+      padding-left:40px
+  }
+ 
+  .textmain1{
+    padding-left: 200px;
+    padding-bottom: -20px
+  }
+ 
+  .startDate{
+      margin-left:-20px;
+  }
+ 
+  .navbara2{
+    justify-content: space-between;
+ 
+ }
+ span{
+    padding-right: 1rem;
+ }
+ 
+  
+ 
+ .mat-icon
+ {
+    margin-left: 466px;
+    cursor: pointer;
+ }
+ 
+ .mat-icon:hover,.mat-icon:active {
+    color:black;   
+  }
+ 
+  
+ 
+ .dropdown-menu
+ {
+    background-color:blue;
+   /*  min-width: 140px;  */    min-width: 200px; 
+    overflow-y: scroll;
+    
+ }
+ 
+ .paymentButton{
+    margin-bottom:-25px;
+    margin-left:948px; 
+    background-color: #0021bb;
+   
+    
+ }
+ 
+ .paymentButtonB{
+    margin-bottom:-15px;
+ /*    margin-left: 939px; */
+    margin-top:21px;   
+    margin-left: 929px;
+    background-color: #0021bb;
+    color: white;
+  /*   width:45px; */
+ }
+ 
+ .downButtons{
+    margin-top: -34px;
+ }
+ 
+ .downTopButtons{
+ margin-top: -11px;
+ }
+ 
+ .mat-raised-button{
+    background-color: grey;
+ }
+ 
+ .downButton{
+    margin-bottom:3px;
+ }
+  
+ 
+ /* ------------------------------- */
+ .bg-color-name{
+    background-color:slategrey;height: 30px;
+  }
+ 
+  .material-iconsA{
+    color:white;
+    margin-left: 6px;
+    margin-top: 2px;
+  }
+ 
+  
+  .pag-text-align{
+    padding-left:-80px;
+    font-weight:600;
+    padding-top:3px;
+    font-size: 15px;
+    margin-left: -150px;
+    color:white;
+ }
+ 
+ .mat-iconB{
+    padding-left:3px;
+    color: white;
+    margin-top: 3px;
+  }
+ 
+  .inputTag
+{
+   background-color:#fff;
+   width:100%;
+    height: 28px;
+    border-radius: 0px;
+    font-size:14px;
+    font-weight:bold;
+   box-shadow: 2px 3px #505255;
+}
+
+.buttonDefault
+    { 
+		background: grey;
+		color: white;
+		/* margin-bottom: 10px;
+		margin-left:20px; */
+		font-weight:normal;
+      border-radius: 1px;
+      height: 32px;
+    box-shadow: 2px 4px #505255;
+    margin-left:-7px;
+    
+	}
+   .table-scrollbar{
+      max-height:250px;
+      overflow-y:auto;
+      display:block;
+      
+      }
+
+      .fontSize{
+         font-size: 14px;
+      }

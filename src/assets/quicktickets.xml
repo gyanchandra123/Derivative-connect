@@ -1,0 +1,23 @@
+<quick>
+<Tenor>3</Tenor>
+<Position1><p>FIXED</p><p>FLOAT</p></Position1>
+<Position2><p>FLOAT</p><p>FIXED</p></Position2>
+<Notional>10000000</Notional>
+<Currency><Currency>AED</Currency>
+ <Currency>ATS</Currency>
+ <Currency>AUD</Currency>
+ <Currency>BEF</Currency>
+ <Currency>BGN</Currency>
+ <Currency>BHD</Currency>
+ <Currency>BRL</Currency>
+ <Currency>BWP</Currency>
+ <Currency>CAD</Currency>
+ <Currency>DEM</Currency>
+ <Currency>EGP</Currency>
+ <Currency>EUR</Currency>
+ <Currency>FIM</Currency>
+ <Currency14>GBP</Currency>
+ <Currency>INR</Currency></Currency>
+<StartDate>22/02/2013</StartDate>
+<EndDate>22/02/2013</EndDate>
+</quick>

@@ -1,0 +1,79 @@
+<payment>
+<PayBusDay>
+<pbd>MOD</pbd>
+<pbd>FOL</pbd>
+<pbd>PRE</pbd>
+<pbd>NONE</pbd>
+</PayBusDay>
+<PayCalendars>
+<pc>ABU</pc>
+<pc>ADE</pc>
+<pc>ALM</pc>
+<pc>AMS</pc>
+<pc>AUK</pc>
+<pc>AnB</pc>
+<pc>BAB</pc>
+<pc>BAR</pc>
+<pc>BAS</pc>
+<pc>LON</pc>
+</PayCalendars>
+<PayFreq>
+<pf>Once</pf>
+<pf>Annual</pf>
+<pf>Semiannual</pf>
+<pf>FourthMonthly</pf>
+<pf>Quarterly</pf>
+<pf>BiMonthly</pf>
+<pf>Monthly</pf>
+<pf>BiWeekly</pf>
+<pf>Weekly</pf>
+<pf>Daily</pf>
+</PayFreq>
+<PayMarching>
+<pm>Dof A</pm>
+<pm>Dof M</pm>
+<pm>Fwd</pm>
+<pm>Eom</pm>
+<pm>Bkwd</pm>
+<pm>IMM</pm>
+<pm>ED</pm>
+</PayMarching>
+<PaymentConvention>
+<pco>IN_ADVANCE</pco>
+<pco>IN_ARREARS</pco>
+</PaymentConvention>
+<PaymentConversionCurrency>
+<Currency>AED</Currency>
+ <Currency>ATS</Currency>
+ <Currency>AUD</Currency>
+ <Currency>BEF</Currency>
+ <Currency>BGN</Currency>
+ <Currency>BHD</Currency>
+ <Currency>BRL</Currency>
+ <Currency>BWP</Currency>
+ <Currency>CAD</Currency>
+ <Currency>DEM</Currency>
+ <Currency>EGP</Currency>
+ <Currency>EUR</Currency>
+ <Currency>FIM</Currency>
+ <Currency>GBP</Currency>
+ <Currency>INR</Currency>
+</PaymentConversionCurrency>
+<PaymentConversionIndex>
+<pci>AEDSWPTSIR</pci>
+<pci>NONE</pci>
+</PaymentConversionIndex>
+<PaymentConversionLag>-1</PaymentConversionLag>
+<PayRollDay>0</PayRollDay>
+<PayRollWeek>
+<prw>MONDAY</prw>
+<prw>TUESDAY</prw>
+<prw>WEDNESDAY</prw>
+<prw>THURSDAY</prw>
+<prw>FRIDAY</prw>
+<prw>SATURDAY</prw>
+<prw>SUNDAY</prw>
+<prw>NO_WEEKDAY</prw>
+</PayRollWeek>
+<PayLag>0</PayLag>
+</payment>

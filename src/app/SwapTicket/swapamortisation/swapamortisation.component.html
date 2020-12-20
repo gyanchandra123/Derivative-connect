@@ -1,0 +1,157 @@
+<form [formGroup]="completeForm" (ngsubmit)="onSubmit()">
+  <div class="container" style="margin-left:-32px">
+      <div class="borderclass1" style="border:2px solid whitesmoke;height:340px"><div class="col-sm-5 text-center">
+          <div *ngIf="model" style="padding-top:20px">
+        <div class="col-sm-6"></div>
+      <div class="form-group col-sm-6">
+          <select class="form-control" (change)="onSubmit()" formControlName="amorttype">
+            <option *ngFor="let cpat of model.cmbPayAmortType"selected>{{cpat}}</option>
+          </select>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12"></div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <input type="text" class="form-control" (change)="onSubmit()" formControlName="startdate" placeholder="Datepicker" bsDatepicker    [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"  value={{model.txtPayAmortStartDate}}>
+          </div>  
+          </div>
+         <div class="form-group col-sm-6">
+            <div class="form-group">
+                <input type="text" class="form-control" (change)="onSubmit()" formControlName="enddate" placeholder="Datepicker" bsDatepicker   [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"  value={{model.txtPayAmortEndDate}}>
+          </div>  
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-sm-12"></div>
+            <div class="form-group col-sm-6">
+                <select class="form-control" (change)="onSubmit()" formControlName="busday">
+                  <option *ngFor="let pabd of model.cmbPayAmortBusDay"selected>{{pabd}}</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-6">
+                  <select class="form-control" (change)="onSubmit()" formControlName="calendar">
+                    <option *ngFor="let cpac of model.cntPayAmortCalendars"selected>{{cpac}}</option>
+                  </select>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-12"></div>
+                <div class="form-group col-sm-6">
+                    <select class="form-control" (change)="onSubmit()" formControlName="frequency">
+                      <option *ngFor="let cpaf of model.cmbPayAmortFreq"selected>{{cpaf}}</option>
+                    </select>
+                  </div>
+            
+                  <div class="form-group col-sm-6">
+                      <select class="form-control" (change)="onSubmit()" formControlName="marching">
+                        <option *ngFor="let cpam of model.cmbPayAmortMarching"selected>{{cpam}}</option>
+                      </select>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12"></div>
+                    <div class="form-group col-sm-6">
+                        <select class="form-control" (change)="onSubmit()" formControlName="rollday">
+                          <option *ngFor="let cpard of model.cmbPayAmortRollDay"selected>{{cpard}}</option>
+                        </select>
+                      </div>
+                     
+                      <div class="form-group col-sm-6">
+                          <select class="form-control" (change)="onSubmit()" formControlName="rollweek">
+                            <option *ngFor="let cparw of model.cmbPayAmortRollWeek"selected>{{cparw}}</option>
+                          </select>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-sm-6"></div>
+                        <div class="form-group col-sm-6" (change)="onSubmit()" formControlName="amount">
+                          <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayAmortAmount}}>
+                    </div>  
+  </div>
+  </div>
+  <div class="col-sm-2 text-center">
+    <div class="col-sm-12"></div>
+    <div class="col-sm-12"></div>
+    <div class="col-sm-12" style="padding-top:20px">
+        <label class="label-control">Amort type</label>
+    </div>
+    <div class="col-sm-12">
+       <label class="label-control">Amort Start Date/End Date</label>
+   </div>
+   <div class="col-sm-12">
+       <label class="label-control">Amort Bus Day/Calendars</label>
+   </div>
+   <div class="col-sm-12">
+       <label class="label-control">Amort Freq/Marching</label>
+   </div>
+   <div class="col-sm-12">
+       <label class="label-control">Amort RollDay/RollWeek</label>
+   </div>
+   <div class="col-sm-12">
+      <label class="label-control">Amort Amount</label>
+  </div>
+  
+  </div>
+  <div class="col-sm-5 text-center" style="padding-top:20px">
+    <div class="col-sm-6"></div>
+      <div class="form-group col-sm-6">
+          <select class="form-control">
+            <option *ngFor="let cpat of model.cmbRecAmortType"selected>{{cpat}}</option>
+          </select>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12"></div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <input type="text" class="form-control" id="fname" placeholder="Datepicker" bsDatepicker   [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"  value={{model.txtRecAmortStartDate}}>
+          </div>  
+          </div>
+         <div class="form-group col-sm-6">
+            <div class="form-group">
+                <input type="text" class="form-control" id="fname" placeholder="Datepicker" bsDatepicker   [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"  value={{model.txtRecAmortEndDate}}>
+          </div>  
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-sm-12"></div>
+            <div class="form-group col-sm-6">
+                <select class="form-control">
+                  <option *ngFor="let pabd of model.cmbRecAmortBusDay"selected>{{pabd}}</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-6">
+                  <select class="form-control">
+                    <option *ngFor="let cpac of model.cntRecAmortCalendars"selected>{{cpac}}</option>
+                  </select>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-12"></div>
+                <div class="form-group col-sm-6">
+                    <select class="form-control">
+                      <option *ngFor="let cpaf of model.cmbRecAmortFreq"selected>{{cpaf}}</option>
+                    </select>
+                  </div>
+            
+                  <div class="form-group col-sm-6">
+                      <select class="form-control">
+                        <option *ngFor="let cpam of model.cmbRecAmortMarching"selected>{{cpam}}</option>
+                      </select>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12"></div>
+                    <div class="form-group col-sm-6">
+                        <select class="form-control">
+                          <option *ngFor="let cpard of model.cmbRecAmortRollDay"selected>{{cpard}}</option>
+                        </select>
+                      </div>
+                     
+                      <div class="form-group col-sm-6">
+                          <select class="form-control">
+                            <option *ngFor="let cparw of model.cmbRecAmortRollWeek"selected>{{cparw}}</option>
+                          </select>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-sm-6"></div>
+                        <div class="form-group col-sm-6">
+                          <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecAmortAmount}}>
+                    </div>  
+  </div>
+  </div>
+  </div>
+  
+  

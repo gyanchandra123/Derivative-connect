@@ -1,0 +1,15 @@
+VirtualBox GUI VM Selector Window 5.2.18 r124319 win.amd64 (Aug 14 2018 12:39:01) release log
+00:00:00.631703 Log opened 2019-04-20T06:47:36.165620600Z
+00:00:00.631703 Build Type: release
+00:00:00.631703 OS Product: Windows 10
+00:00:00.631703 OS Release: 10.0.17763
+00:00:00.631703 OS Service Pack: 
+00:00:00.662426 DMI Product Name: 2349TFF
+00:00:00.672794 DMI Product Version: ThinkPad T430
+00:00:00.672794 Host RAM: 7889MB (7.7GB) total, 3460MB (3.3GB) available
+00:00:00.672794 Executable: C:\Program Files\Oracle\VirtualBox\VirtualBox.exe
+00:00:00.672794 Process ID: 6644
+00:00:00.672794 Package type: WINDOWS_64BITS_GENERIC
+00:00:00.672794 Qt version: 5.6.2
+00:00:00.705151 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:00.918611 GUI: UIMediumEnumerator: Medium-enumeration finished!

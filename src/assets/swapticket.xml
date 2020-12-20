@@ -1,0 +1,128 @@
+ <swapticket>
+ <Currency>
+ <Cur>AED</Cur>
+ <Cur>ATS</Cur>
+ <Cur>AUD</Cur>
+ <Cur>BEF</Cur>
+ <Cur>BGN</Cur>
+ <Cur>BHD</Cur>
+ <Cur>BRL</Cur>
+ <Cur>BWP</Cur>
+ <Cur>CAD</Cur>
+ <Cur>DEM</Cur>
+ <Cur>EGP</Cur>
+ <Cur>EUR</Cur>
+ <Cur>FIM</Cur>
+ <Cur>GBP</Cur>
+ <Cur>INR</Cur>
+ </Currency>
+ <Tenor>3</Tenor>
+ <Notional>10000000</Notional>
+ <NotionalExchange>
+ <NE>START</NE>
+ <NE>ALL</NE>
+ <NE>ALLNOEND</NE>
+ <NE>BOTH</NE>
+ <NE>ALLNOSTART</NE>
+ <NE>ALLNOSTARTEND</NE>
+ <NE>END</NE>
+ <NE>NONE</NE>
+ </NotionalExchange>
+ <StartDate>22/02/2013</StartDate>
+ <StartStub>22/02/2013</StartStub>
+<StartRoll><sr>Yes</sr><sr>No</sr></StartRoll>
+<EndRoll><er>Yes</er><er>No</er></EndRoll>
+ <EndDate>22/02/2016</EndDate>
+ <EndStub>22/02/2016</EndStub>
+<StartStubMRate>-1</StartStubMRate>
+<EndStubMRate>-1</EndStubMRate>
+<FixedQuote>1.25</FixedQuote>
+<FrontStubManualRate>-1</FrontStubManualRate>
+<GearFactor>1.0</GearFactor>
+<DayCount>
+<dc>Act/360</dc>
+<dc>Act/365F</dc>
+<dc>Act/365.25</dc>
+<dc>Act/ActISDA</dc>
+<dc>Act/ActISDA 251</dc>
+<dc>Equal</dc>
+<dc>Bus/252</dc>
+<dc>Bus/360</dc>
+<dc>FULL</dc>
+<dc>30B/360</dc>
+<dc>30E/360</dc>
+<dc>ISDA30E360</dc>
+<dc>30I/360</dc>
+<dc>30S/360</dc>
+</DayCount>
+<DiscountCurve>
+<dcu>GBPLIBOR</dcu>
+<dcu>GEKLIBOR</dcu>
+<dcu>HKDLIBOR</dcu>
+<dcu>HNLLIBOR</dcu>
+<dcu>INRLIBOR</dcu>
+<dcu>ISKLIBOR</dcu>
+<dcu>JMDLIBOR</dcu>
+<dcu>JPYIBOR</dcu>
+<dcu>KESLIBOR</dcu>
+<dcu>KGSLIBOR</dcu></DiscountCurve>
+<AccrualBusDay>
+<abd>MOD</abd>
+<abd>FOL</abd>
+<abd>PRE</abd>
+<abd>NONE</abd>
+</AccrualBusDay>
+<AccrualCalendars>
+<ac>ABU</ac>
+<ac>ADE</ac>
+<ac>ALM</ac>
+<ac>AMS</ac>
+<ac>AUK</ac>
+<ac>AnB</ac>
+<ac>BAB</ac>
+<ac>BAR</ac>
+<ac>BAS</ac>
+<ac>LON</ac>
+</AccrualCalendars>
+<AccrualFreq>
+<af>Once</af>
+<af>Annual</af>
+<af>Semiannual</af>
+<af>FourthMonthly</af>
+<af>Quarterly</af>
+<af>BiMonthly</af>
+<af>Monthly</af>
+<af>BiWeekly</af>
+<af>Weekly</af>
+<af>Daily</af>
+</AccrualFreq>
+<AccrualMarching>
+<am>Dof A</am>
+<am>Dof M</am>
+<am>Fwd</am>
+<am>Eom</am>
+<am>Bkwd</am>
+<am>IMM</am>
+<am>ED</am>
+</AccrualMarching>
+<AccrualRollDay>0</AccrualRollDay>
+<AccrualRollWeek>
+<arw>MONDAY</arw>
+<arw>TUESDAY</arw>
+<arw>WEDNESDAY</arw>
+<arw>THURSDAY</arw>
+<arw>FRIDAY</arw>
+<arw>SATURDAY</arw>
+<arw>SUNDAY</arw>
+<arw>NO_WEEKDAY</arw>
+</AccrualRollWeek>
+<AmortRollMonth>NO</AmortRollMonth>
+<CompFreq>2</CompFreq>
+<Compounding>
+<c>ADJ/ADJ</c>
+<c>ADJ/FLAT</c>
+<c>FLAT/ADJ</c>
+<c>FLAT/FLAT</c>
+<c>NONE</c>
+</Compounding>
+</swapticket>

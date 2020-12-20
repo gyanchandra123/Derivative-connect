@@ -1,0 +1,18 @@
+.borderclass {
+  border: 2px solid gray;
+  height: 600px;
+  margin: 5px 10px 5px -5px;
+  border-radius: 3px;
+}
+.image--preview {
+  height: 150px;
+  width: 200px;
+  border-radius: 5px;
+}
+.panel-body {
+  background-image: linear-gradient(240deg, black, transparent);
+}
+
+.pre-scrollable {
+  max-height: 551px;
+}

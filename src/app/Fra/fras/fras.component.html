@@ -1,0 +1,397 @@
+<nav class="navbar navbar-inverse" style="background-color: #696969; margin-top: -20px">
+    <div class="container">
+      <div class="navbar-header">
+       </div>
+      <ul class="nav navbar-nav" >
+       
+        <li class="dropdown"><a>Actions <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a  tabindex="-1">New</a></li>
+               <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Save As<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" >New Trade </a></li>
+                <li><a tabindex="-1" >Template Trade</a></li>
+              </ul>
+            </li>
+           <li><a >Save &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctrl+s</a></li>
+            <li><a >Delete</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Reload<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" >Latest</a></li>
+                <li><a tabindex="-1" >History</a></li>
+                <li><a tabindex="-1" >Templates</a></li>
+              </ul>
+            </li>
+            <li><a >Approve</a></li>
+            <li><a >Exit</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a>Business Event <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a >Bought Back</a></li>
+            <li><a >Partial Bought Back</a></li>
+            <li><a >MO Maintenance</a></li>
+            <li><a >Migration</a></li>
+            <li><a >Assignment</a></li>
+            <li><a >Partial Assignment</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a>Flow <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a >Push to MO</a></li>
+            <li><a >Push to FO</a></li>
+            <li><a >Push to BO</a></li>
+            <li><a >Withdraw</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Email<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" >Send Ticket</a></li>
+                <li><a tabindex="-1" >Send CashFlow</a></li>
+                <li><a tabindex="-1" >Send Risk</a></li>
+                <li><a tabindex="-1" >Send PV</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown"><a>Analytics <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a >Calculate PV   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F2</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Calculate Risk<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" >Delta   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+D</a></li>
+                <li><a tabindex="-1" >Gamma   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+G</a></li>
+                <li><a tabindex="-1" >Vega   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+V</a></li>
+                <li><a tabindex="-1" >Theta  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+T</a></li>
+              </ul>
+            <li><a >Calculate PAA   &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F10</a></li>
+            <li><a >CashFlow Report   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F3</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+      </nav>
+
+      <div>
+          <nav class="navbar navbar-inverse " style="border-bottom:2px solid whitesmoke;margin-top:-20px">
+            <ul class="nav navbar-nav" style="padding-top:10px">
+
+              <li> <input type="text" class="form-control"></li>
+              <li> <input type="text" class="form-control"></li>
+              <li> <input type="text" class="form-control"></li>
+                <li class="content" style="margin-top:0px">
+                    Market
+                </li>
+              <li>
+                  <select class="form-control">
+                      <option>Live</option>
+                      <option>EndOfDay</option>
+                      <option>Historic</option>
+                    </select>
+               
+              </li>
+              <li class="content" style="margin-top:0px">
+                   Today
+              </li>
+              <li>
+                  <input type="text" class="form-control" bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value="{{now | date:'dd/MM/yyyy'}}">
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+      <div class="borderclass" style="margin-top: -20px">
+          <div>
+              <nav class="navbar navbar-inverse mynavhead" style="border-bottom:2px solid whitesmoke">
+                <ul class="nav navbar-nav">
+                        <li><button class="btn btn-default" routerLink="/ftradebasic" routerLinkActive="active" style="margin-left:-10px;margin-right:-30px">TradeBasic</button></li>
+                        <li><button class="btn btn-default" routerLink="/ffra" routerLinkActive="active" style="margin-right:5px;margin-left:25px">FraTicket</button></li>
+                        <li><button class="btn btn-default" routerLink="/fquickticket" routerLinkActive="active" style="margin-left:-10px">QuickTicket</button></li>
+                </ul>
+              </nav>
+            </div>
+
+
+            <form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
+            <div *ngIf="model">
+              <div class="fields">  
+              <div class="row">
+                    <div [ngClass]="['form-group']">
+              <label class="control-label col-sm-3 control-align-label contorl-align-text">Currency / Notional
+                </label>
+                        <div class="col-sm-8">
+                            <div class="form-inline">
+                                <select class="form-control col-sm-3" formControlName="cmbCurrency" (change)="onSubmit()">
+                                    <option *ngFor="let currency of model.cmbCurrency">{{currency}}</option>
+                                    
+                                </select>
+                                <input type="text" class="form-control col-sm-3" value={{model.txtNotional}}
+                                [ngStyle]="{'margin-left.px':'10'}" formControlName="txtNotional" (change)="onSubmit()">
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+       
+        
+           
+              <div class="row">
+                  <div [ngClass]="['form-group']">
+      <label class="control-label col-sm-3 control-align-label contorl-align-text">AgreedRate / BuySell</label>
+                  <div class="col-sm-8">
+                      <div class="form-inline">
+                      <input type="text" class="form-control col-sm-3" 
+                          value={{model.txtAgreedRate}} [ngStyle]="{'width.px':'162'}"
+                          formControlName="txtAgreedRate" (change)="onSubmit()">
+                      <select class="form-control col-sm-3"[ngStyle]="{'margin-left.px':'10'}"
+                      formControlName="cmbFraBuySell" (change)="onSubmit()">
+                          <option *ngFor = "let buysell of model.cmbFraBuySell">{{buysell}}</option>
+                      </select>
+                      </div>
+      
+                  </div>
+                  </div>
+              </div>                    
+           
+             <div class="row">
+              <div [ngClass]="['form-group']">
+      <label class="control-label col-sm-3 control-align-table control-align-text">RateType / Tenor</label>
+              <div class="col-sm-8">
+                  <div class="form-inline">
+                      <select class="form-control col-sm-3" formControlName="cmbRateType" (change)="onSubmit()">
+                          <option *ngFor = "let Ratetype of model.cmbRateType">{{Ratetype}}</option>
+                          
+                      </select>
+                      <input type="text" class="form-control col-sm-3" value={{model.txtTenor}}
+                      [ngStyle]="{'margin-left.px':'10'}" formControlName="txtTenor" (change)="onSubmit()">
+                  </div>
+              </div>
+                  </div>
+             </div> 
+             
+             <div class="row">
+                 <div [ngClass]="['form-group']">
+      <label class="control-label col-sm-3 control-align-table control-align-text">StartDate / MaturityDate
+                      </label>
+                      <div class="col-sm-8">
+                          <div class="form-inline">
+                      <input type="text" class="form-control col-sm-3" value={{model.txtStartDate}}
+                       bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+                       formControlName="txtStartDate" (change)="onSubmit()">
+                      <input type="text" class="form-control col-sm-3" value={{model.txtMaturityDate}} [ngStyle]="{'margin-left.px':'10'}"
+                       bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+                       formControlName="txtMaturityDate" (change)="onSubmit()">
+                          </div>
+                      </div>
+                 </div>
+             </div>
+            
+             <div class="row">
+                  <div [ngClass]="['form-group']">
+      <label class="control-label col-sm-3 control-align-table control-align-text">QuoteDate / Calendars / Lag
+                       </label>
+                       <div class="col-sm-8">
+                           <div class="form-inline">
+                       <input type="text" class="form-control col-sm-3" value={{model.txtQuoteDate}} 
+                       bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+                       formControlName="txtQuoteDate" (change)="onSubmit()">
+                       <select class="form-control col-sm-3" [ngStyle]="{'margin-left.px':'10'}"
+                       formControlName="cntQuoteCalendars" (change)="onSubmit()">
+                           <option *ngFor="let quote of model.cntQuoteCalendars">{{quote}}</option>
+                          
+                       </select>
+                       <input type="text" class="form-control colsm-2" value={{model.txtQuoteLag}} 
+                       [ngStyle]="{'margin-left.px':'10'}" formControlName="txtQuoteLag" (change)="onSubmit()">
+                           </div>
+                       </div>
+                  </div>
+              </div>
+             
+              <div class="row">
+                  <div [ngClass]="['form-group']">
+          <label class="control-label col-sm-3 contorl-align-text control-align-label">SettlementDate</label>
+                  <div class="col-sm-8">
+                      <div class="form-inline">
+                          <input type="text" class="form-control" value={{model.txtSettlementDate}}
+                           bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+                           formControlName="txtSettlementDate" (change)="onSubmit()">
+                      </div>
+                  </div>
+                  </div>
+              </div>
+             
+              <div class="row">
+                  <div [ngClass]="['form-group']">
+          <label class="control-label col-sm-3 control-align-label contorl-align-text">DayCount</label>
+                  <div class="col-sm-8">
+                      <div class="form-inline">
+                          <select class="form-control col-sm-3" formControlName="cmbDayCount" (change)="onSubmit()">
+                              <option *ngFor = "let Daycount of model.cmbDayCount">{{Daycount}}</option>
+                          </select>
+                      </div>
+                  </div>
+                  </div>
+              
+              </div>
+               
+               <div class="row">
+                      <div [ngClass]="['form-group']">
+          <label class="control-label col-sm-3 control-align-label contorl-align-text">DiscountCurve</label>
+                      <div class="col-sm-8">
+                          <div class="form-inline">
+                              <select class="form-control col-sm-3" formControlName="cmbDiscountCurve" (change)="onSubmit()">
+                                  <option *ngFor = "let Discount of model.cmbDiscountCurve">{{Discount}}</option>
+                                 
+                              </select>
+                          </div>
+                      </div>
+                      </div>
+                  
+                  </div> 
+                  
+                  <div class="row">
+                          <div [ngClass]="['form-group']">
+                  <label class="control-label col-sm-3 control-align-label contorl-align-text">MarketIndex</label>
+                          <div class="col-sm-8">
+                              <div class="form-inline">
+                                  <select class="form-control col-sm-3" formControlName="cmbMarketIndex" (change)="onSubmit()">
+                                      <option *ngFor = "let Market of model.cmbMarketIndex">{{Market}}</option>
+                                      
+                                  </select>
+                              </div>
+                          </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                              <div [ngClass]="['form-group']">
+                      <label class="control-label col-sm-3 control-align-label contorl-align-text">PayBusDay / Calendars</label>
+                              <div class="col-sm-8">
+                                  <div class="form-inline">
+                                      <select class="form-control col-sm-3" formControlName="cmbPayBusDay" (change)="onSubmit()">
+                                          <option *ngFor = "let Paybus of model.cmbPayBusDay">{{Paybus}}</option>
+                                          
+                                      </select>
+                                      <select class="form-control col-sm-3" [ngStyle]="{'margin-left.px':'10'}"
+                                      formControlName="cntPayCalendars" (change)="onSubmit()">
+                                          <option *ngFor="let cale of model.cntPayCalendars">{{cale}}</option>
+                                          
+                                      </select>
+                                   </div>
+                              </div>
+                              </div>
+                          </div>
+                         
+                          <div class="row">
+                              <div [ngClass]="['form-group']">
+              <label class="control-label col-sm-3 control-align-label control-align-text">PaymentConvention</label>
+                              <div class="col-sm-8">
+                                  <div class="form-inline">
+                                      <select class="form-control col-sm-3" [ngStyle]="{'width.px':'180'}"
+                                      formControlName="cmbPaymentConvention" (change)="onSubmit()">
+                                      <option *ngFor = "let Payconv of model.cmbPaymentConvention">{{Payconv}}</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>  
+                         
+                      <div class="row">
+                          <div [ngClass]="['form-group']">
+              <label class="control-label col-sm-3 control-align-label control-align-text">ResetConvention</label>
+                          <div class="col-sm-8">
+                              <div class="form-inline">
+                                  <select class="form-control col-sm-3" formControlName="cmbResetConvention" (change)="onSubmit()">
+                                      <option *ngFor = "let Resetconv of model.cmbResetConvention">{{Resetconv}}</option>
+                                      
+                                  </select>
+                              </div>
+                          </div>
+                          </div>
+                      </div> 
+                      
+                      <div class="row">
+                          <div [ngClass]="['form-group']">
+          <label class="control-label col-sm-3 control-align-label control-align-text">
+                  FWDRate / Rate Setting Type</label>
+                          <div class="col-sm-8">
+                              <div class="form-inline">
+                                  <input type="text" class="form-control col-sm-3" value={{model.txtFWDRate}}  formControlName="txtFWDRate" (change)="onSubmit()">
+                                  
+                               
+                                  <select class="form-control col-sm-3" [ngStyle]="{'margin-left.px':'10'}"
+                                  formControlName="cmbRateSettingType" (change)="onSubmit()">
+                                      <option *ngFor = "let Rateset of model.cmbRateSettingType">{{Rateset}}</option>
+                                      
+                                  </select>
+                              </div>
+                          </div>
+      
+                          </div>
+                      </div>      
+                      
+          <div class="row">
+              <div [ngClass]="['form-group']">
+              <label class="control-label col-sm-3 control-align-label control-align-text">
+                  ResetType/Precision</label>
+                  <div class="col-sm-8">
+                      <div class="form-inline">
+                          <select class="form-control col-sm-3" formControlName="cmbResetType" (change)="onSubmit()">
+                              <option *ngFor = "let Resettype of model.cmbResetType">{{Resettype}}</option>
+                              
+                          </select>
+                          <input type="text" class="form-control col-sm-3" value={{model.txtPrecision}}
+                              [ngStyle]="{'margin-left.px':'10'}"
+                              formControlName="txtPrecision" (change)="onSubmit()">
+                      </div>
+                  </div>    
+              </div>
+          </div>
+          
+          <br>
+          <hr>
+          <br>
+          <br>
+         
+          <div class="row">
+              <div [ngClass]="['form-group']">
+              <label class="control-label col-sm-3 control-align-label control-align-text">
+                  PV / Currency</label>
+                  <div class="col-sm-8">
+                      <div class="form-inline">
+                          <input type="text" class="form-control col-sm-3 value={{model.txtPV}}">
+                          <select class="form-control col-sm-3" [ngStyle]="{'margin-left.px':'10'}"
+                          formControlName="cmbPVCurrency" (change)="onSubmit()">
+                              <option *ngFor="let cur of model.cmbPVCurrency">{{cur}}</option>
+                           
+                          </select>
+                      </div>
+                  </div>
+              </div>
+          </div>         
+          
+          <div class="row">
+              <div [ngClass]="['form-group']">
+          <label class="control-label col-sm-3 control-align-label control-align-text">
+                  ParellelDelta / Curve</label>
+                  <div class="col-sm-8">
+                      <div class="form-inline">
+                          <input type="text" class="form-control col-sm-3" >
+                          <select class="form-control col-sm-3" [ngStyle]="{'margin-left.px':'10'}"
+                          formControlName="cmbCurve" (change)="onSubmit()">
+                              <option *ngFor = "let curve of model.cmbCurve">{{curve}}</option>
+                              
+                          </select>
+                      </div>
+                  </div>
+      
+              </div>
+          </div>
+     </div>
+     </div>
+     </form>
+     </div>
+        
+                       
+    <router-outlet></router-outlet>
+    
+    
+    
+    

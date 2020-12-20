@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="form-group">
+    <table>
+      <tr>
+        <td ><label style="margin-top: 15px;">Trade Identifier</label></td>
+        <td ><input type="text" name="txtTradeIdentifier" class="form-control"></td>
+        <td ><button class="btn btn-default" style="height: 30px;margin-top: 10px;">GO</button></td>
+        <td ><label style="margin-top: 15px;padding-left: 15px">IRDBlotter</label></td>
+        <td ><select name="cmbIRDBlotterNames" class="form-control" style="width: 90px;">
+            <option></option>
+          </select>
+        </td>
+        <td style="padding-left: 10px;padding-top: 15px; "><input type="radio" name="rbTrade" value="Pricing"><label>Pricing</label></td>
+        <td style="padding-left: 8px;padding-top: 15px; "> <input  type="radio" name="rbTrade" value="TradeCapture"><label>Trade Capture</label></td>
+        <td style="padding-left: 35px;padding-top: 15px;"><label>Market</label></td>
+        <td style="padding-left: 15px;"><select name="cmbMarket" class="form-control">
+            <option>Live</option>
+            <option>EndOfDay</option>
+            <option>Historic</option>
+          </select>
+        </td>
+        <td style="padding-left: 15px;padding-top: 15px;"><label>Today</label></td>
+        <td style="padding-left: 15px;"><input name="txtClose"  type="text"  class="form-control"  bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"  value="{{now | date:'dd/MM/yyyy'}}"></td>
+        
+      </tr>
+    </table>
+  </div>
+  <button routerLink="search" routerLinkActive="active" class="btn btn-default">Search</button>
+  <button routerLink="results" routerLinkActive="active" class="btn btn-default">Results</button>
+ 
+  <router-outlet style="margin-left: 50%;"></router-outlet>
+</div>

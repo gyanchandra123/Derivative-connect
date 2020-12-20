@@ -1,0 +1,89 @@
+<div class="container1 container-bg">
+
+  <div class="bg-color-name">     
+    <div class="row topBorder">
+
+      <div class="col-sm-2">
+        <i class="material-icons material-iconsA">
+          picture_in_picture
+        </i>
+      </div>
+
+      <div class="col-sm-6 pag-text-align">
+        Generate Help
+      </div>
+
+      <div class="col-sm-4">
+        <span>
+          <mat-icon class="onNoClick" (click)="onNoClick()">
+           backspace
+          </mat-icon>
+        </span>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="row">  
+    <div class="col-sm-6 buttonRaised">
+      <span><button color="primary" mat-raised-button class="buttonDefault">Content</button>&nbsp;</span>
+      <span><button color="primary" mat-raised-button class="buttonDefault">Back</button>&nbsp;</span>
+      <span><button color="primary" mat-raised-button class="buttonDefault">Exit</button>&nbsp;</span>
+    </div>
+  </div>
+ 
+
+  <mat-card-content>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="ThirdHeaderDiv">
+          <div class="row">
+            <br>
+            <div class="col-sm-3 firstDivision "><a href="#">SettlementPeriods</a></div>
+            <div class="col-sm-3"><a href="#">CompoundingPeriods</a></div>
+            <div class="col-sm-3"><a href="#">AmortizationPeriods</a></div>
+            <div class="col-sm-3 fourthDivision"><a href="#">TotalPaymentAmount</a></div>
+          </div>
+          <br><br>
+          <div class="row">
+            <div class="col-sm-3 firstDivision"><a href="#">TotalPVAmount</a></div>
+            <div class="col-sm-3"><a href="#">CouponStartDate</a></div>
+            <div class="col-sm-3"><a href="#">CouponEndDate</a></div>
+            <div class="col-sm-3 fourthDivision"><a href="#">CompoundStartDate</a></div>
+          </div>
+          <br><br>
+
+          <div class="row">
+            <div class="col-sm-3 firstDivision"><a href="#">CompoundEndDate</a></div>
+            <div class="col-sm-3"><a href="#">PaymentDate</a></div>
+            <div class="col-sm-3"><a href="#">NOtional</a></div>
+            <div class="col-sm-3 fourthDivision"><a href="#">QuoteDate</a></div>
+          </div>
+          <br><br>
+
+          <div class="row">
+            <div class="col-sm-3 firstDivision"><a href="#">ResetRate</a></div>
+            <div class="col-sm-3"><a href="#">PeriodRate</a></div>
+            <div class="col-sm-3"><a href="#">AccuredInternet</a></div>
+            <div class="col-sm-3 fourthDivision"><a href="#">Insert</a></div>
+          </div>
+          <br><br>
+
+          <div class="row">
+            <div class="col-sm-3 firstDivision"><a href="#">Delete</a></div>
+            <div class="col-sm-3"><a href="#">Reset</a></div>
+            <div class="col-sm-3"><a href="#">StubReset</a></div>
+            <div class="col-sm-3 fourthDivision"><a href="#">Import</a></div>
+            <br><br><br>
+            <div class="col-sm-3 onClick " (click)="onClick()">Ok</div>
+            <div class="col-sm-3  onClick  onCancelClick" (click)="onCancelClick()">Cancel</div>
+          </div>
+ 
+        </div>
+
+        <br />
+      </div>
+
+    </div> 
+  </mat-card-content>
+</div>

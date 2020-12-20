@@ -1,0 +1,163 @@
+<form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
+<div class="form-group" style="border: 2px solid whitesmoke; 
+  width:1140px;margin-left:-11px;height: 400px;">
+   <div *ngIf="model">
+  <div class="fields">
+    <div class="row">
+        <div class="row">
+       <div [ngClass]="['form-group']" >
+          <br>
+          <label class="control-label col-sm-3 contorl-align-label contorl-align-text">DayCount</label>
+            
+        <div class="col-sm-2"> 
+          <select class="form-control"  formControlName="daycount" (change)="onSubmit()">
+              <option *ngFor="let days of model.cmbDayCount">{{days}}</option>
+          </select>
+       
+        </div>
+       </div>
+      </div>
+             
+
+       <div class="row">
+          <div [ngClass]="['form-group']">
+             
+             <label class="control-label col-sm-3 contorl-align-label">DiscountCurve</label>
+               
+           <div class="col-sm-2">
+            <select class="form-control" formControlName="discountCurve" (change)="onSubmit()">
+              <option *ngFor="let disc of model.cmbDiscountCurve">{{disc}}</option>
+             
+            </select>
+           </div>
+          </div>
+       
+      </div>
+
+
+    <div class="row">
+       <div [ngClass]="['form-group']">
+             <label class="control-label col-sm-3 contorl-align-label">PayBusDay/Calendars</label>
+             <div class="col-sm-5"> 
+               <div class="col-sm-3">
+                <select class="form-control" [ngStyle]="{'margin-left.px':'-16'}" formControlName="payBusDay" (change)="onSubmit()">
+                    <option *ngFor="let pbus of model.cmbPayBusDay">{{pbus}}</option>
+               </select>
+              </div>
+              <div class="col-sm-8" >
+               <select  class="form-control" [ngStyle]="{'margin-left.px':'-23'}" formControlName="payCalendars" (change)="onSubmit()" >
+                  <option *ngFor="let paycal of model.cntPayCalendars"> {{paycal }}</option>
+              </select>
+            </div>        
+         </div>
+
+          </div>
+      </div>
+
+
+
+
+
+      <div class="row">
+          <div [ngClass]="['form-group']">
+             
+             <label class="control-label col-sm-3 contorl-align-label">PayFreq/Marching</label>
+             
+             <div class="col-sm-5"> 
+                <div class="col-sm-5">
+                 <select class="form-control" [ngStyle]="{'margin-left.px':'-16'}" formControlName="payFreq" (change)="onSubmit()">
+                 
+                     <option *ngFor="let payfreq of model.cmbPayFreq">{{payfreq}}</option>
+                </select>
+               </div>
+               <div class="col-sm-4" >
+                <select  class="form-control" [ngStyle]="{'margin-left.px':'-23'}" formControlName="payMarching" (change)="onSubmit()">
+               
+                   <option *ngFor="let Marching of model.cmbPayMarching">{{Marching}}</option>
+               </select>
+             </div>        
+            </div>
+          </div>
+       
+      </div>
+
+
+      <div class="row">
+          <div [ngClass]="['form-group']">
+             
+             <label class="control-label col-sm-3 contorl-align-label">PaymentConvention/Currency</label>
+               
+           <div class="col-sm-8">
+             <div class="form-inline">
+                   <select class="form-control" formControlName="paymentConvention" (change)="onSubmit()">
+                    <option *ngFor="let payconv of model.cmbPaymentConvention">{{payconv}}</option>
+                    </select>
+                    
+                    <select  class="form-control" [ngStyle]="{'margin-left.px':'16'}" formControlName="payConvCur" (change)="onSubmit()">
+                    <option *ngFor="let payconversion of model.cmbPaymentConversionCurrency">{{payconversion}}</option>      
+                    </select>
+           </div>
+           </div>
+          </div>
+       
+      </div>
+
+
+
+      <div class="row">
+          <div [ngClass]="['form-group']">
+             
+             <label class="control-label col-sm-3 contorl-align-label">PaymentConversionIndex/Lag</label>
+               
+             <div class="col-sm-5"> 
+                <div class="col-sm-5">
+                 <select class="form-control" [ngStyle]="{'margin-left.px':'-16'}" formControlName="payConvIndex" (change)="onSubmit()">
+                   
+                     <option *ngFor="let payconvindex of model.cmbPaymentConversionIndex">{{payconvindex}}</option>
+                </select>
+               </div>
+               <div class="col-sm-2" >
+                  <input type="text" value={{model.txtPaymentConversionLag}} class="form-control" [ngStyle]="{'margin-left.px':'-26'}" formControlName="payConvLag" (change)="onSubmit()">
+             </div>        
+            </div>
+          </div>
+       
+      </div>
+
+
+
+      <div class="row">
+          <div [ngClass]="['form-group']">
+             
+             <label class="control-label col-sm-3 contorl-align-label">PayRollDay/RollWeek/Lag </label>
+               
+             <div class="col-sm-5"> 
+                <div class="col-sm-3">
+                    <select class="form-control" [ngStyle]="{'margin-left.px':'-16'}" formControlName="payRollDay" (change)="onSubmit()">
+                        <option *ngFor="let rollday of model.cmbPayRollDay">{{rollday}}</option>
+                        </select>
+
+               </div>
+               <div class="col-sm-5" >
+                  <select class="form-control" [ngStyle]="{'margin-left.px':'-26'}" formControlName="payRollWeek" (change)="onSubmit()">
+                    
+                     <option *ngFor="let rollweek of model.cmbPayRollWeek">{{rollweek}}</option>
+                     
+                     </select>
+             </div>        
+             <div class="col-sm-3">
+                <input type="text" value={{model.txtPayLag}} class="form-control" [ngStyle]="{'margin-left.px':'-38'}" formControlName="payLag" (change)="onSubmit()">
+             </div>
+            </div>
+          </div>
+       
+      </div>
+
+</div>
+</div>
+</div>
+</div>
+</form>
+
+
+

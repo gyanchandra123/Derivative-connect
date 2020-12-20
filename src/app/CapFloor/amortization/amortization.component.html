@@ -1,0 +1,127 @@
+<form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
+<div class="form-group" style="border: 2px solid whitesmoke; 
+width:1140px;margin-left:-11px;height: 500px;">
+<div *ngIf="model">
+    <div class="fields">
+    <div class="row">
+        <div class="row">
+       <div [ngClass]="['form-group']" >
+          
+          <label class="control-label col-sm-3 contorl-align-label contorl-align-text">Amort Type</label>
+            <div class="col-sm-5">
+        <div class="col-sm-4"> 
+         <select class="form-control" [ngStyle]="{'margin-left.px':'-16'}" formControlName="amtType" (change)="onSubmit()">
+            <option *ngFor="let amttype of model.cmbAmortType">{{amttype}}</option>
+         </select>  
+        </div>
+        
+        </div>
+       </div>
+      </div>
+
+
+      <div class="row">
+          <div [ngClass]="['form-group']">
+             
+             <label class="control-label col-sm-3 contorl-align-label">AmortStartDate/EndDate</label>
+               
+           <div class="col-sm-8">
+             <div class="form-inline">
+                <input type="text" value={{model.txtAmortStartDate}} class="form-control" bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" formControlName="amtStartDate" (change)="onSubmit()">
+          
+                 <input type="text" value={{model.txtAmortEndDate}} class="form-control" [ngStyle]="{'margin-left.px':'18'}" bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" formControlName="amtEndDate" (change)="onSubmit()">
+           </div>
+           </div>
+          </div>
+       
+      </div>
+
+
+      <div class="row">
+          <div [ngClass]="['form-group']" >
+            
+             <label class="control-label col-sm-3 contorl-align-label contorl-align-text " >
+                AmortBusDay/Calendars </label>
+               
+           <div class="col-sm-8">
+             <div class="form-inline">
+               
+             <select class="form-control col-sm-3" [ngStyle]="{'width.px':'163'}" formControlName="amtBusDay" (change)="onSubmit()">
+                 <option *ngFor="let amtbus of model.cmbAmortBusDay">{{amtbus}}</option>
+                 
+               </select>
+              
+               <select class="form-control col-sm-4" [ngStyle]="{'margin-left.px':'16'}" formControlName="amtCal" (change)="onSubmit()">
+                  <option *ngFor="let amtcal of model.cntAmortCalendars">{{amtcal}}</option>
+               
+                </select>
+           </div>
+           </div>
+          </div>
+         </div>
+
+
+         <div class="row">
+            <div [ngClass]="['form-group']" >
+              
+               <label class="control-label col-sm-3 contorl-align-label contorl-align-text " >
+                  AmortFreq/Marching </label>
+                 
+             <div class="col-sm-8">
+               <div class="form-inline">
+                 
+               <select class="form-control col-sm-3" [ngStyle]="{'width.px':'163'}" formControlName="amtFreq" (change)="onSubmit()">
+                   <option *ngFor="let amtfreq of model.cmbAmortFreq">{{amtfreq}}</option>
+                   
+                 </select>
+                
+                 <select class="form-control col-sm-4" [ngStyle]="{'margin-left.px':'16'}" formControlName="amtMarch" (change)="onSubmit()">
+                    <option *ngFor="let amtmarch of model.cmbAmortMarching">{{amtmarch}}</option>
+                  </select>
+             </div>
+             </div>
+            </div>
+           </div>
+
+
+           <div class="row">
+              <div [ngClass]="['form-group']" >
+                
+                 <label class="control-label col-sm-3 contorl-align-label contorl-align-text " >
+                    AmortRollDay/RollWeek </label>
+                   
+               <div class="col-sm-8">
+                 <div class="form-inline">
+                   
+                 <select class="form-control col-sm-3" [ngStyle]="{'width.px':'163'}" formControlName="amtRollDay" (change)="onSubmit()">
+                     <option *ngFor="let rollday of model.cmbAmortRollDay">{{rollday}}</option>
+                     
+                   </select>
+                  
+                   <select class="form-control col-sm-6" [ngStyle]="{'margin-left.px':'16'}" formControlName="amtRollWeek" (change)="onSubmit()">
+                      <option *ngFor="let rollweek of model.cmbAmortRollWeek">{{rollweek}}</option>
+                    </select>
+               </div>
+               </div>
+              </div>
+             </div>
+
+             <div class="row">
+                <div [ngClass]="['form-group']">
+                   
+                   <label class="control-label col-sm-3 contorl-align-label">AmortAmount</label>
+                     
+                 <div class="col-sm-2">
+                   
+                  <input type="text" class="form-control" value={{model.txtAmortAmount}} formControlName="txtAmortAmount" (change)="onSubmit()">
+                  
+                 </div>
+                </div>
+            </div>
+
+       
+</div>
+</div>
+</div>
+</div>
+</form>

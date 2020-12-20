@@ -1,0 +1,66 @@
+.content-section {
+  position: relative;
+}
+
+.borderclass {
+  border: 2px solid gray;
+  height: 550px;
+  margin: 5px 12px 5px -5px;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.emp__image {
+  height: 200px;
+  width: 200px;
+  border-radius: 3px;
+}
+
+.image--alignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  transition: box-shadow 0.5s ease-out, transform 0.3s ease-out;
+}
+
+.panel:hover {
+  box-shadow: 0 10px 5px 0.5px rgba(0, 0, 0, 0.5);
+  transform: scaleX(1) scaleY(1);
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+.pre-scrollable {
+  max-height: 555px;
+}
+
+.inputSearch {
+  background-color: #303c46;
+  border: 1px solid black;
+  width: 28% !important;
+  border-radius: 4px;
+  padding: 6px;
+  margin-left: 510px;
+}
+
+.inputSearch:focus {
+  color: white;
+}
+
+.btn__changeName {
+  transform: translateX(-32px);
+}
+
+.error__Display {
+  position: absolute;
+  left: 42%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  color: red;
+}

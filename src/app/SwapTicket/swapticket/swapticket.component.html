@@ -1,0 +1,603 @@
+<form [formGroup]="completeForm" (keydown.enter)="$event.preventDefault()">
+  <nav class="navbar navbar-inverse" style="background-color: #696969; margin-top: -20px">
+    <div class="container">
+      <div class="navbar-header">
+      </div>
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"
+            style="margin-top: 10px;margin-left:-23px;margin-right:-30px">Actions <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1">New</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown">Save As<span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1">New Trade </a></li>
+                <li><a tabindex="-1">Template Trade</a></li>
+              </ul>
+            </li>
+            <!--  routerLink="/save" -->
+            <li><a routerLink="/save">Save &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctrl+s</a></li>
+            <li><a>Delete</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown">Reload<span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1">Latest</a></li>
+                <li><a tabindex="-1">History</a></li>
+                <li><a tabindex="-1">Templates</a></li>
+              </ul>
+            </li>
+            <li><a>Approve</a></li>
+            <li><a>Exit</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"
+            style="margin-top: 10px;margin-right:-30px">Business Event <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a>Bought Back</a></li>
+            <li><a>Partial Bought Back</a></li>
+            <li><a>MO Maintenance</a></li>
+            <li><a>Migration</a></li>
+            <li><a>Assignment</a></li>
+            <li><a>Partial Assignment</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"
+            style="margin-top:10px;margin-right:-18px">Flow <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a>Push to MO</a></li>
+            <li><a>Push to FO</a></li>
+            <li><a>Push to BO</a></li>
+            <li><a>Withdraw</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown">Email<span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1">Send Ticket</a></li>
+                <li><a tabindex="-1">Send CashFlow</a></li>
+                <li><a tabindex="-1">Send Risk</a></li>
+                <li><a tabindex="-1">Send PV</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"
+            style="margin-top: 10px;margin-left:-10px;margin-right:-30px">Analytics <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a>Calculate PV
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F2</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown">Calculate
+                Risk<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1">Delta
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+D</a>
+                </li>
+                <li><a tabindex="-1">Gamma &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+G</a></li>
+                <li><a tabindex="-1">Vega
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+V</a>
+                </li>
+                <li><a tabindex="-1">Theta &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+T</a></li>
+              </ul>
+            <li><a>Calculate PAA &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F10</a></li>
+            <li><a>CashFlow Report &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div>
+    <nav class="navbar navbar-inverse " style="border-bottom:2px solid whitesmoke;margin-top:-20px">
+      <ul class="nav navbar-nav" style="padding-top:10px">
+
+        <li> <input type="text" class="form-control"></li>
+        <li> <input type="text" class="form-control"></li>
+        <li> <input type="text" (keyup.enter)="handleEvent()" value={{model.txtModStatus}}
+            [(ngModel)]="model.txtModStatus" class="form-control"></li>
+        <li class="content" style="margin-top:0px">
+          Market
+        </li>
+        <li>
+          <select class="form-control">
+            <option>Live</option>
+            <option>EndOfDay</option>
+            <option>Historic</option>
+          </select>
+
+        </li>
+        <li class="content" style="margin-top:0px">
+          Today
+        </li>
+        <li>
+          <input type="text" class="form-control" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+            value="{{ now | date:'dd/MM/yyyy'}}">
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+  <div class="borderclass" style="margin-top: -20px">
+    <div>
+      <nav class="navbar navbar-inverse mynavhead" style="border-bottom:2px solid whitesmoke">
+        <ul class="nav navbar-nav">
+          <li><button class="btn btn-default" style="margin-left:-8px" routerLink="/tradebasics"
+              routerLinkActive="active">TradeBasic</button></li>
+          <li><button class="btn btn-default" style="margin-left:-5px" routerLink="/swapticket"
+              routerLinkActive="active">SwapTicket</button></li>
+          <li><button class="btn btn-default" style="margin-left:-5px" routerLink="/quicktickets"
+              routerLinkActive="active">QuickTicket</button></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-sm-5">
+
+      <div class="text-center">
+        <label>PAY</label>
+      </div>
+
+      <div class="form-group col-sm-8">
+        <select class="form-control">
+          <option>1 of 1</option>
+
+
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-5">
+
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="legno" placeholder=""
+          value={{model.txtPay}}>
+      </div>
+      <div class="form-group col-sm-7">
+        <select class="form-control" (change)="onSubmit()" formControlName="legtype">
+          <option *ngFor="let cpay of  this.model.cmbPay">{{cpay}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6">
+        <select class="form-control" (change)="onSubmit()" formControlName="currency">
+          <option *ngFor="let cur of model.cmbPayCurrency">{{cur}}</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="tenor" placeholder=""
+          [(ngModel)]="model.txtPayTenor" (keyup.enter)="handleEvent()" value={{model.txtPayTenor}}>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" formControlName="notional" (change)="onSubmit()" placeholder=""
+          [(ngModel)]="model.txtPayNotional" value={{model.txtPayNotional}}>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control" (change)="onSubmit()" formControlName="ne">
+          <option *ngFor="let ne of model.cmbPayNotionalExchange" selected>{{ne}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="startdate"
+          placeholder="Datepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+          value={{model.txtPayStartDate}}>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="startstub"
+          placeholder="Datepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+          value={{model.txtPayStartStub}}>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-sm-12"></div>
+      <div class="form-group col-sm-6">
+        <select class="form-control" (change)="onSubmit()" formControlName="sdrf">
+          <option *ngFor="let sr of model.cmbPayStartDateRollFlag" selected>{{sr}}</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control" (change)="onSubmit()" formControlName="edrf">
+          <option *ngFor="let er of model.cmbPayEndDateRollFlag" selected>{{er}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="enddate" placeholder="Datepicker"
+          bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value={{model.txtPayEndDate}}>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="endstub" placeholder="Datepicker"
+          bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value={{model.txtPayEndStub}}>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="frontstub" placeholder=""
+          value={{model.txtPayFrontstub}}>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="backstub" placeholder=""
+          value={{model.txtPayBackStub}}>
+      </div>
+      <div class="clearfix"></div>
+      <hr>
+      <div class="form-group col-sm-4">
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="fixedquote" placeholder=""
+          value={{model.txtPayFixedQuote}}>
+      </div>
+      <div class="form-group col-sm-4">
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="gearfactor" placeholder=""
+          value={{model.txtPayGearFactor}}>
+      </div>
+      <div class="form-group col-sm-4">
+        <input type="text" class="form-control" (change)="onSubmit()" formControlName="spread" placeholder=""
+          value={{model.txtPaySpread}}>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-sm-6"></div>
+      <div class="form-group col-sm-6">
+        <select class="form-control" (change)="onSubmit()" formControlName="dc">
+          <option *ngFor="let dc of model.cmbPayDayCount" selected>{{dc}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-sm-6"></div>
+      <div class="form-group col-sm-6">
+        <select class="form-control" (change)="onSubmit()" formControlName="dcurve">
+          <option *ngFor="let dcu of model.cmbPayDiscountCurve" selected>{{dcu}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+        <select class="form-control" ((change)="onSubmit()" formControlName="busday">
+          <option *ngFor="let abd of model.cmbPayAccrualBusDay" selected>{{abd}}</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control" (change)="onSubmit()" formControlName="cal">
+          <option *ngFor="let ac of model.cntPayAccrualCalendars" selected>{{ac}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6">
+        <select class="form-control" (change)="onSubmit()" formControlName="freq">
+          <option *ngFor="let af of model.cmbPayAccrualFreq" selected>{{af}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control" (change)="onSubmit()" formControlName="march">
+          <option *ngFor="let am of model.cmbPayAccrualMarching" selected>{{am}}</option>
+
+        </select>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-4">
+        <select class="form-control" (change)="onSubmit()" formControlName="rd">
+          <option *ngFor="let pard of model.cmbPayAccrualRollDay" selected>{{pard}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-4">
+        <select class="form-control" (change)="onSubmit()" formControlName="rw">
+          <option *ngFor="let arw of model.cmbPayAccrualRollWeek" selected>{{arw}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-4">
+        <select class="form-control" (change)="onSubmit()" formControlName="eom">
+          <option *ngFor="let eom of model.cmbPayEndOfMonthIndicator" selected>{{eom}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+
+      <div class="form-group col-sm-6"> </div>
+      <div class="form-group col-sm-6">
+        <select class="form-control" (change)="onSubmit()" formControlName="comp">
+          <option *ngFor="let c of model.cmbPayCompounding" selected>{{c}}</option>
+
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-2 text-center">
+      <div class="col-sm-12"></div>
+      <div class="col-sm-12"></div>
+      <div class="col-sm-12" style="padding-top:130px">
+        <label class="label-control">Currency/Tenor</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">Notional/NotionalExchange</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">StartDate/StartStub</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">StartRoll/EndRoll</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">EndDate/EndStub</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">StartStubM.Rate/EndStubM.Rate</label>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-sm-12" style="padding-top:38px">
+        <label class="label-control">FixedQuote/GearFactor/Spread</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">DayCount</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">DiscountCurve</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">AccuralBUsDay/Calendars</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">AccuralFreq/Marching</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">AccuralRollDay/RollWeek/EOM</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="label-control">Compounding</label>
+      </div>
+    </div>
+
+
+    <!--------------------------------------- RECIEVED DATA ABOVE  :---------------------- -->
+
+    <div class="col-sm-5">
+
+      <div class="text-center">
+        <label>REC</label> <!-- 1 -->
+      </div>
+
+      <div class="form-group col-sm-8"><!-- 2 -->
+        <select class="form-control">
+          <option>1 of 1</option>
+        </select>
+      </div>
+
+
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-5"><!-- 3 -->
+        <input type="text" class="form-control" id="fname" placeholder="" value="1">
+      </div>
+
+      <div class="form-group col-sm-7"><!-- 4 -->
+        <select class="form-control">
+          <option>FIXED</option>
+          <option>FLOAT</option>
+        </select>
+      </div>
+
+
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6"><!-- 5 -->
+        <select class="form-control">
+          <option *ngFor="let cur of model.cmbRecCurrency" selected>{{cur}}</option>
+        </select>
+      </div>
+
+
+      <div class="form-group col-sm-6"><!-- 6 -->
+        <input type="text" class="form-control" placeholder="" [(ngModel)]='name' [ngModelOptions]="{standalone: true}"
+          value={{model.txtRecTenor}}>
+      </div>
+
+      <div class="clearfix"></div>
+
+
+      <div class="form-group col-sm-6"><!-- 7 -->
+        <input type="text" class="form-control" id="fname" placeholder="" (change)="onSubmit()" placeholder=""
+          [(ngModel)]="model.txtRecNotional" value={{model.txtRecNotional}}>
+      </div>
+
+
+      <div class="form-group col-sm-6"><!-- 8 -->
+        <select class="form-control">
+          <option *ngFor="let ne of model.cmbRecNotionalExchange" selected>{{ne}}</option>
+        </select>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6"><!-- 9 -->
+        <input type="text" class="form-control" id="fname" placeholder="Datepicker" bsDatepicker
+          [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value={{model.txtRecStartDate}}>
+      </div>
+
+      <div class="form-group col-sm-6"><!-- 10 -->
+        <input type="text" class="form-control" id="fname" placeholder="Datepicker" bsDatepicker
+          [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value={{model.txtRecStartStub}}>
+      </div>
+
+      <div class="clearfix"></div>
+      <div class="col-sm-12"></div>
+
+
+      <div class="form-group col-sm-6"><!-- 11 -->
+        <select class="form-control">
+          <option *ngFor="let sr of model.cmbRecStartDateRollFlag" selected>{{sr}}</option>
+        </select>
+      </div>
+
+
+      <div class="form-group col-sm-6"><!-- 12 -->
+        <select class="form-control">
+          <option *ngFor="let er of model.cmbRecEndDateRollFlag" selected>{{er}}</option>
+        </select>
+      </div>
+
+
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6"><!-- 13 -->
+        <input type="text" class="form-control" id="fname" placeholder="Datepicker" bsDatepicker
+          [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value={{model.txtRecEndDate}}>
+      </div>
+
+
+      <div class="form-group col-sm-6"><!-- 14 -->
+        <input type="text" class="form-control" id="fname" placeholder="Datepicker" bsDatepicker
+          [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value={{model.txtRecEndStub}}>
+      </div>
+
+
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6"><!-- 15 -->
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecFrontStub}}>
+      </div>
+
+
+      <div class="form-group col-sm-6"><!-- 16 -->
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.legsPnl}}>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <hr>
+      <div class="form-group col-sm-4"><!-- 17 -->
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecFixedQuote}}>
+      </div>
+
+      <div class="form-group col-sm-4"><!-- 18 -->
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecGearFactor}}>
+      </div>
+
+      <div class="form-group col-sm-4"><!-- 19 -->
+        <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecSpread}}>
+      </div>
+      <div class="clearfix"></div>
+
+
+      <div class="form-group col-sm-6"><!-- 20 -->
+        <select class="form-control">
+          <option *ngFor="let dc of model.cmbRecDayCount" selected>{{dc}}</option>
+        </select>
+      </div>
+
+      <div class="col-sm-6"></div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6"><!-- 21 -->
+        <select class="form-control">
+          <option *ngFor="let dcu of model.cmbRecDiscountCurve" selected>{{dcu}}</option>
+        </select>
+      </div>
+
+      <div class="col-sm-6"></div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6"><!-- 22 -->
+        <select class="form-control">
+          <option *ngFor="let abd of model.cmbRecAccrualBusDay" selected>{{abd}}</option>
+        </select>
+      </div>
+
+
+      <div class="form-group col-sm-6"><!-- 23 -->
+        <select class="form-control">
+          <option *ngFor="let ac of model.cntRecAccrualCalendars" selected>{{ac}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-sm-6"><!-- 24 -->
+        <select class="form-control">
+          <option *ngFor="let af of model.cmbRecAccrualFreq" selected>{{af}}</option>
+
+        </select>
+      </div>
+
+      <div class="form-group col-sm-6"><!-- 25 -->
+        <select class="form-control">
+          <option *ngFor="let am of model.cmbRecAccrualMarching" selected>{{am}}</option>
+
+        </select>
+      </div>
+
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-4"><!-- 26 -->
+        <select class="form-control">
+          <option *ngFor="let pard of model.cmbRecAccrualRollDay" selected>{{pard}}</option>
+
+        </select>
+      </div>
+
+
+      <div class="form-group col-sm-4"><!-- 27 -->
+        <select class="form-control">
+          <option *ngFor="let arw of model.cmbRecAccrualRollWeek" selected>{{arw}}</option>
+
+        </select>
+      </div>
+
+      <div class="form-group col-sm-4"><!-- 28 -->
+        <select class="form-control">
+          <option *ngFor="let eom of model.cmbRecEndOfMonthIndicator" selected>{{eom}}</option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+
+
+
+      <div class="form-group col-sm-6"><!-- 29 -->
+        <select class="form-control">
+          <option *ngFor="let c of model.cmbRecCompounding" selected>{{c}}</option>
+
+        </select>
+      </div>
+      <div class="form-group col-sm-6"> </div>
+    </div>
+  </div>
+
+
+  <!--------------------------------------- RECIEVED DATA ABOVE  :---------------------- -->
+
+  <div>
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-12">
+      <div>
+        <nav>
+          <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <ul class="nav navbar-nav" id="myDIV">
+              <li><button class="btn btn-default" style="margin-left:-35px" [routerLink]="['./payment']"
+                  routerLinkActive="active">Payment </button></li>
+
+              <li><button class="btn btn-default" style="margin-left:-5px" [routerLink]="['./reset']"
+                  routerLinkActive="active">Reset </button></li>
+              <li><button class="btn btn-default" style="margin-left:-5px" [routerLink]="['./amortisation']"
+                  routerLinkActive="active">Amortisation </button></li>
+            </ul>
+
+          </div>
+
+        </nav>
+      </div>
+      <div>
+  
+
+
+        <router-outlet></router-outlet>
+
+
+
+        <div class="clearfix"></div>
+
+
+        <div class="col-sm-12">
+          <router-outlet name="schedule"></router-outlet>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</form>

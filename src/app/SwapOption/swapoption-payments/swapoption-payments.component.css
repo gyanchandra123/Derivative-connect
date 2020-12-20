@@ -1,0 +1,55 @@
+
+.labelpayment{
+  margin:-15px }
+  .borderpayment{
+    border: 3px solid whitesmoke;height:300px;margin:0px 10px 20px -15px
+  }
+  .container{
+    padding:20px 0px 20px 40px;width:100%;
+  }
+  .mypayment{
+    margin-left:-37px
+  }
+  .label-control{
+    line-height: 1.5;
+  }
+  input{
+    background-color:#fff;
+      margin-top: 10px;
+      width:80%;
+      height: 28px;
+      font-size:12px;
+      font-weight:bold;
+      box-shadow: 2px 3px #505255;
+  }
+  select
+    {   
+      background-color:#a5a6a8;
+      margin-top: 10px;
+      width:80%;
+      border-radius:0px;
+      height: 28px;
+      font-size:12px;
+      font-weight:bold;
+      box-shadow: 2px 3px #505255;
+    }
+input.form-control
+{
+	background-color:#fff;
+		width:100%;
+		height: 28px;
+		border-radius: 0px;
+		font-size:12px;
+		font-weight:bold;
+	  box-shadow: 2px 3px #505255;
+}
+select.form-control
+	{   
+		background-color:#a5a6a8;
+		width:100%;
+		height: 28px;
+		font-size:12px;
+		font-weight:bold;
+		border-radius: 0px;
+		box-shadow: 2px 3px #505255;
+	}

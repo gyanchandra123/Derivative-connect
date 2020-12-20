@@ -1,0 +1,171 @@
+ Simple Interest:-
+----------------------
+si = initial investment *(1+ (interestRate *no. of periods))
+
+
+compound Interest:
+------------------
+1. interest is earn both from both the initial investment + prevoius period interest.
+Example :-   
+		interest calculation  :
+	----------------------------------------
+		1. 10% interest calculated on the initial investment 
+		2. 10% interest calculated on the previous interest amount.
+
+*** from this we can conclude that the compound interest is the kind of interest that we would like to recieve not pay.
+
+
+2. It is caLculated as Future value	
+
+ 
+Annuity
+----------------
+
+1. it is a series of equal payment that we either recieved or paid.
+2.Example :-   monthly rent payment
+
+3. For a series of payment to be annuity?
+Ans : condition is : the payment should be of equal , period.
+
+4. types :
+--------------------
+	a. annuity due : payment made at the starting of the month.(room rent pay at the date 1 of every month)
+	b. ordinary annuity : payment or recieved at the ending of the month.
+
+present Value : 
+Today's value of money ,from some points in the future.
+
+
+
+ 
+
+ 
+
+example :-
+-----------
+Here $100 = ordinary anuity
+1. suppose we wish to recieved $100 in a year with a discount rate of 10% for 3 years , what would be the present value? 
+ 
+  
+ 
+IntraYearCompunding Interest:  
+ 
+1. means when the inerest is compounded more than once a year like semi-annually.  .
+2.Here , we need to calculate "the semi-anually/.... compounding period rate :(annual rate/no. of periods yearly)"
+ [which is differen from the annual compounding rate]   . 
+
+3. total Number of periods = total years* periods per year.
+Example : we need to calculate the future value [with intra year compoundingS]
+  
+
+Note : - we need the below 2 things :
+a.	Compounding period rate .
+b.	Total number of periods.
+ 
+         
+ 
+Example : to earn $1000 every month for the next  6months, annual interest rate = 10%,
+ 
+Example :- 
+ 
+ 
+
+ 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+Derivative :
+--------------------
+1. what is derivative ?
+Ans : contract develop between 2 entities  based on some underlying assets like : "Turkey"
+
+	contract : pay $300, now then confirmation of delvering 20 turkey is possible in the next 3 months.
+
+
+2. TYpes of derivatve :
+Ans :
+
+	a. future or forward :[the shop will deliver 20 turkey at the end of 3 month]
+		1. here he paid $300 in advance and suppose to recieved 20 turkey at the end of 3 month   
+		2. payment done earlier , and expected to get the products by the end of period.
+
+	b.option : 
+		1. here there are chances that the previous farm may fail by the end of 3 months.
+		2. So, he paid another $50 now , and signed a contract to get 20 turkeys at $15 a turkey by the end of 3 month.
+		3. here he is secured , Why?
+		Ans : he didn't make the complete payment, just by paying some advance money , he is safe to execise the contract.
+
+	c. swap :
+		0. this works on foating interest rate.
+		1. converting/swaping  float interest rate to fixed interest rate?
+	Ans :-   a. Want to recieved $1000 recieved every year
+		 b. but the compounding interest rate varies every year .
+		 c. but the bank ask to pay a present value at a fixed interest rate of 5% .
+		 d. if there is rise or fall of money value due to rate% rise or fall , bank will atke care.
+
+		** HERE THE underlying contract is the swaping of floating interest rate to fixed
+
+note :
+-----------------
+1. we can trade the contract in derivative in 2 ways:
+	a. exchange (exchange in Japan)
+	b. OTC : over the counter(like the trade between me and the chicken farm)
+
+Example : the contract of $300  can be sold/trade to someone in 2 ways
+		a. by lossing : after 2 months , the price of the turkey becomes cheaper. So he will sell the contract to someone by
+				lossing $100 
+
+		b. by gaining : avaibility of turkey is very rare after 2 months , so he can sell the contract to another at $400
+			and tell him that he can sell the turkey at $500 at market.
+
+
+Q. what is the levarage ?
+Ans :- the borrow money to sign a contract .
+
+*** with refernce to exchange derivative : there is a risk to me . why?
+------------------------------------------------------------------------------
+Ans :- 
+	a. if i made the contract by leverage 
+	b. and if the price of the contract goes down , I will be lossing.
+ 
+
+3. TRADE
+----------------
+1. each and every financial contract is called a trade.
+
+
+counter-party risk:-
+------------------------
+
+"the shop keeper run away after taking the contract money".
+
+
+*** In trading there are 3 office -
+-----------------------------------------------
+1. front office desk
+2. middle office desk
+3. back office desk.
+
+
+Q. what is pnemonics?
+
+Q.book?
+
+ 
+Long will benefit : if the market interest rate is higher Like 7% then our borrow rate of 6%
+
+ 
+	
+
+

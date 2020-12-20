@@ -1,0 +1,409 @@
+<div class="container">
+  <div *ngIf="search">
+    <div style="border-right:1px solid black">
+      <div class="form-group col-sm-1">
+        <div>
+          <label for="">Product</label>
+        </div>
+
+        <div>
+          <label for="lname">FirmAccount</label>
+        </div>
+
+        <div>
+          <label for="">EffectiveDate</label>
+        </div>
+
+        <div>
+          <label for="dob">TradeDate</label>
+        </div>
+        <div>
+          <label for="dob">SalesPerson</label>
+        </div>
+        <div>
+          <label for="dob">Customer</label>
+        </div>
+      </div>
+
+      <div class="form-group col-sm-2">
+
+        <div>
+          <select name="productList" [(ngModel)]="productList" (change) = "getProduct(productList)" >
+            <option *ngFor="let product of search.productMultiSelect" value={{product}}>{{product}}</option>
+           
+          </select>
+        </div>
+        <div>
+          <select name="cmbFirmAccount" class="">
+            <option *ngFor="let firmAccount of search.firmAccount">{{firmAccount}}</option>
+          </select>
+        </div>
+        <div>
+          <input type="date" name="txtEffectiveDate" class="">
+        </div>
+        <div>
+          <input type="date" name="txtTradeDate" class="">
+        </div>
+        <div>
+          <select name="cmbSalesPerson" class="">
+            <option *ngFor="let salesPerson of search.salesPerson">{{salesPerson}}</option>
+          </select>
+        </div>
+        <div>
+          <select name="cmbCustomerAccount" class="">
+            <option *ngFor="let customer of search.customer">{{customer}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <p></p>
+    <div class="form-group col-sm-1">
+
+      <div>
+        <label for="">TradeStatus</label>
+      </div>
+
+      <div>
+        <label for="lname">Broker</label>
+      </div>
+
+      <div>
+        <label for="">TerminationDate</label>
+      </div>
+
+      <div>
+        <label for="dob">Trader</label>
+      </div>
+      <div>
+        <label for="dob">Currency</label>
+      </div>
+      <div>
+        <label for="dob">LongName</label>
+      </div>
+    </div>
+    <div class="form-group col-sm-2">
+      <div>
+        <select name="cmbTradeStatus" class="">
+
+          <option *ngFor="let tradeStatus of search.tradeStatus">{{tradeStatus}}</option>
+
+        </select>
+      </div>
+      <div>
+        <select name="cmbBroker" class="">
+          <option *ngFor="let broker of search.broker">{{broker}}</option>
+        </select>
+      </div>
+      <div>
+        <input type="date" name="txtTerminationDate" class="">
+      </div>
+      <div>
+        <select name="cmbTrader" class=" ">
+          <option *ngFor="let trader of search.trader">{{trader}}</option>
+        </select>
+      </div>
+      <div>
+        <select name="cmbCurrency" class="">
+          <option *ngFor="let currency of search.currency">{{currency}}</option>
+        </select>
+      </div>
+      <div>
+
+        <select name="cmbLongName" class="">
+          <option *ngFor="let longName of search.longName">{{longName}}</option>
+        </select>
+      </div>
+    </div>
+    <p></p>
+    <div class="form-group col-sm-1">
+
+      <div>
+        <label for="">TradeType</label>
+      </div>
+
+      <div>
+        <label for="lname">LegalEntity</label>
+      </div>
+
+      <div>
+        <label for="">MatchStatus</label>
+      </div>
+
+      <div>
+        <label for="dob">ExternalSystem</label>
+      </div>
+      <div>
+        <label for="dob">LastVerified</label>
+      </div>
+      <div>
+        <label for="dob">LastModifiedBy</label>
+      </div>
+    </div>
+    <div class="form-group col-sm-2">
+      <div>
+        <select name="cmbTradeType" class="">
+          <option *ngFor="let tradeType of search.tradeType">{{tradeType}}</option>
+        </select>
+      </div>
+      <div>
+        <select name="cmbLegalEntity" class="">
+          <option *ngFor="let legalEntity of search.legalEntity">{{legalEntity}}</option>
+        </select>
+      </div>
+      <div>
+        <select name="cmbMatchStatus" class="">
+          <option *ngFor="let matchStatus of search.matchStatus">{{matchStatus}}</option>
+        </select>
+      </div>
+      <div>
+        <select name="cmbExternalSystem" class="">
+          <option *ngFor="let externalSystem of search.externalSystem">{{externalSystem}}</option>
+        </select>
+      </div>
+      <div>
+        <input type="date" name="txtLatestVerified" class="form-control">
+
+      </div>
+      <div>
+        <input type="text" name="txtLastModifiedBy" class="form-control">
+      </div>
+    </div>
+    <p></p>
+    <div class="form-group col-sm-1">
+
+      <div>
+        <label for="">TradeVersion</label>
+      </div>
+
+      <div>
+        <label for="lname">Location</label>
+      </div>
+
+      <div>
+        <label for="">FlowStatus</label>
+      </div>
+
+      <div>
+        <label for="dob">EarlyTermDate</label>
+      </div>
+      <div>
+        <label for="dob">LastModified</label>
+      </div>
+      <div>
+        <label for="dob">LastVerifiedBy</label>
+      </div>
+    </div>
+    <div class="form-group col-sm-2">
+      <div>
+        <input type="text" name="txtTradeVersion" class="">
+      </div>
+      <div>
+        <select name="cmbLocation" class="">
+          <option *ngFor="let location of search.location">{{location}}</option>
+        </select>
+      </div>
+      <div>
+        <select name="cmbFlowStatus" class="">
+          <option *ngFor="let flowStatus of search.flowStatus">{{flowStatus}}</option>
+        </select>
+      </div>
+      <div>
+        <input type="date" name="txtEarlyTermDate" class="">
+      </div>
+      <div>
+        <input type="text" name="txtLatestModified" class="">
+      </div>
+      <div>
+        <input type="text" name="txtLatesVerifiedBy" class="">
+
+      </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <div class="row">
+      <div class="col-lg-6" style="border-right:2px solid black">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label>Product</label>
+              <select name="productList" class="form-control">
+                <option *ngFor="let product of search.productMultiSelect">{{product}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>FirmAccount</label>
+              <select name="cmbFirmAccount" class="form-control" >
+                <option *ngFor="let firmAccount of search.firmAccount">{{firmAccount}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Effective Date</label>
+              <input type="date" name="txtEffectiveDate" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Trade Date</label>
+              <input type="date" name="txtTradeDate" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Sales Person</label>
+              <select name="cmbSalesPerson" class="form-control">
+                <option *ngFor="let salesPerson of search.salesPerson">{{salesPerson}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Customer</label>
+              <select name="cmbCustomerAccount" class="form-control">
+                <option *ngFor="let customer of search.customer">{{customer}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label>Trade Status</label>
+              <select name="cmbTradeStatus" class="form-control" > 
+                
+                <option *ngFor="let tradeStatus of search.tradeStatus">{{tradeStatus}}</option>
+              
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Broker</label>
+              <select name="cmbBroker" class="form-control">
+                <option *ngFor="let broker of search.broker">{{broker}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Termination Date</label>
+              <input type="date" name="txtTerminationDate" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Trader</label>
+              <select name="cmbTrader" class="form-control">
+                <option *ngFor="let trader of search.trader">{{trader}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Currency</label>
+              <select name="cmbCurrency" class="form-control">
+                <option *ngFor="let currency of search.currency">{{currency}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Long Name</label>
+              <select name="cmbLongName" class="form-control">
+                <option *ngFor="let longName of search.longName">{{longName}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="form-group">
+              <label>Trade Type</label>
+              <select name="cmbTradeType" class="form-control">
+                <option *ngFor="let tradeType of search.tradeType">{{tradeType}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Legal Entity</label>
+              <select name="cmbLegalEntity" class="form-control">
+                <option *ngFor="let legalEntity of search.legalEntity">{{legalEntity}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Match Status</label>
+              <select name="cmbMatchStatus" class="form-control">
+                <option *ngFor="let matchStatus of search.matchStatus">{{matchStatus}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>External System</label>
+              <select name="cmbExternalSystem" class="form-control">
+                <option *ngFor="let externalSystem of search.externalSystem">{{externalSystem}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Latest Verified</label>
+              <input type="date" name="txtLatestVerified" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Last Modified By</label>
+              <input type="text" name="txtLastModifiedBy" class="form-control">
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label>Trade Version</label>
+              <input type="text" name="txtTradeVersion" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Location</label>
+              <select name="cmbLocation" class="form-control">
+                <option *ngFor="let location of search.location" >{{location}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Flow Status</label>
+              <select name="cmbFlowStatus" class="form-control">
+                <option *ngFor="let flowStatus of search.flowStatus">{{flowStatus}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Early Term Date</label>
+              <input type="date" name="txtEarlyTermDate" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Last Modified</label>
+              <input type="text" name="txtLatestModified" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Latest Verified By</label>
+              <input type="text" name="txtLatesVerifiedBy" class="form-control">
+            </div>
+
+          </div>
+        </div>
+      </div> -->
+
+<hr>
+<button routerLink="swap" routerLinkActive="active" class="btn btn-default active">Swap</button>
+<button routerLink="swapOption" routerLinkActive="active" class="btn btn-default">Swap Option</button>
+<button routerLink="fra" routerLinkActive="active" class="btn btn-default">Fra</button>
+<button routerLink="cap-floor" routerLinkActive="active" class="btn btn-default">Cap/Floor</button>
+<br><br>
+
+<router-outlet></router-outlet>

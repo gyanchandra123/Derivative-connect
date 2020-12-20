@@ -1,0 +1,77 @@
+
+export class SwapOptionModel {
+    txtExpiryDate:any;
+    cmbBuyFlag:any; 
+    cmbOptionPosition:any;
+    cmbPricingMethod:any;
+    txtSwapLag:any;
+    cmbSwapLagBusDay:any;
+    txtVolId:any;
+    cmbExercirseFlag:any;
+    cmbOptionStyle:any;
+    cmbOptionType:any;
+    txtStrike:any;
+    txtSwapEndDate:any;
+    txtSwapRef:any;
+    txtSwapStartDate:any;
+    cmbExerciseType:any;
+
+
+ cmbPayCurrency:any;
+ txtPayTenor:any;
+ cmbRecCurrency:any;
+ txtRecTenor:any;
+ txtPayNotional:any;
+ cmbPayNotionalExchange:any;
+ txtRecNotional:any;
+ cmbRecNotionalExchange:any;
+ txtPayStartDate:any;
+ txtPayStartStub:any;
+ txtRecStartDate:any;
+ txtRecStartStub:any;
+ cmbPayStartDateRollFlag:any;
+ cmbPayEndDateRollFlag:any;
+ cmbRecStartDateRollFlag:any;
+ cmbRecEndDateRollFlag:any;
+ txtPayEndDate:any;
+ txtPayEndStub:any;
+ txtRecEndDate:any;
+ txtRecEndStub:any;
+ txtPayFrontstubManual:any;
+ txtPayBackStubManual:any;
+ txtRecFrontStubManual:any;
+ txtRecBackStubManual:any;
+ legsPnl:any;
+ cmbPay:any;
+ cmbRec:any;
+ txtPayFixedQuote:any;
+ txtPayGearFactor:any;
+ txtPaySpread:any;
+ txtRecFixedQuote:any;
+ txtRecGearQuote:any;
+ txtRecSpread:any;
+ cmbPayDayCount:any;
+ cmbRecDayCount:any;
+ cmbPayDiscountCurve:any;
+ cmbRecDiscountCurve:any;
+ cmbPayAccrualBusDay:any;
+ cmbPayAccrualCalendars:any;
+ cmbRecAccrualBusDay:any;
+ cmbRecAccrualCalendars:any;
+ cmbPayAccrualFreq:any;
+ cmbPayAccrualMarching:any;
+ cmbRecAccrualFreq:any;
+ cmbRecAccrualMarching:any;
+ cmbPayAccrualRollDay:any;
+ cmbPayAccrualRollWeek:any;
+ cmbPayEndOfMonthIndicator:any;
+ cmbRecAccrualRollDay:any;
+ cmbRecAccrualRollWeek:any;
+ cmbRecEndOfMonthIndicator:any;
+ cmbPayCompounding:any;
+ cmbPayCompFreq:any;
+ cmbRecCompounding:any;
+ cmbRecCompFreq:any;
+txtRecGearFactor: any;
+}
+    

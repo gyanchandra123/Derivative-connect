@@ -1,0 +1,136 @@
+<!-- accordian functionality through hidden attribute -->
+
+<!-- <div class=" panel panel-primary" [class.panel-success]="optionalRouteEmpId===childEmployeesData.id">
+
+
+
+    <div class="panel-heading">
+        <h3 class="panel-title cursorPointer" (click)='isHidden =!isHidden'>{{childEmployeesData.name }}</h3>
+    </div>
+
+    <div class="panel-body" [hidden] ='isHidden'>
+
+        <div class="col-sm-10">
+            <div class="row image--alignCenter">
+                <div class="col-sm-4">
+                    <img [src]="childEmployeesData.photoPath" alt="employee-image" class="emp__image">
+                </div>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-6">Gender :</div>
+                        <div class="col-sm-6">{{childEmployeesData.gender}}</div>
+
+                        <div class="col-sm-6">Date of Birth :</div>
+                        <div class="col-sm-6">{{childEmployeesData.dateOfBirth|date}}</div>
+
+
+                        <div class="col-sm-6">Contact Preference :</div>
+                        <div class="col-sm-6">{{childEmployeesData.contactPreference}}</div>
+
+                        <div class="col-sm-6">Phone :</div>
+                        <div class="col-sm-6">{{childEmployeesData.phoneNumber}}</div>
+
+                        <div class="col-sm-6">Email :</div>
+                        <div class="col-sm-6">{{childEmployeesData.email}}</div>
+
+                        <div class="col-sm-6">Department :</div>
+                        <div class="col-sm-6" [ngSwitch]='childEmployeesData.department'>
+
+                            <span *ngSwitchCase='1'>Help Desk</span>
+                            <span *ngSwitchCase='2'>Hr</span>
+                            <span *ngSwitchCase='3'>IT</span>
+                            <span *ngSwitchCase='4'>Payroll</span>
+                            <span *ngSwitchDefault>N/A</span>
+                        </div>
+
+                        <div class="col-sm-6">Is active :</div>
+                        <div class="col-sm-6">{{childEmployeesData.isActive}}</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel-footer" [hidden]= 'isHidden'>
+        <button class="btn btn-primary" (click)='viewNextEmploy()'>View</button>
+        <button class="btn btn-success" (click)='editEmployee()'>Edit</button>
+
+        <span *ngIf='confirmDelete'>
+            <span> Are you sure you want to delete ?</span>
+            <button class="btn btn-danger" (click)='deleteEmploy()'>Yes</button>
+            <button class="btn btn-primary" (click)="confirmDelete=false">No</button>
+
+        </span>
+
+        <button class="btn btn-danger" (click)='confirmDelete=true' *ngIf='!confirmDelete'>Delete</button>
+    </div>
+</div> -->
+
+
+<!-- accordian functionality through accordian property -->
+<div>
+<app-accordion [title]="childEmployeesData.name " [hasJustView]="optionalRouteEmpId===childEmployeesData.id"
+[isHidden] ='false'>
+
+    <div class="col-sm-10 myPanelBody ">
+        <div class="row image--alignCenter">
+            <div class="col-sm-4">
+                <img [src]="childEmployeesData.photoPath" alt="employee-image" class="emp__image">
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-6">Gender :</div>
+                    <div class="col-sm-6">{{childEmployeesData.gender}}</div>
+
+                    <div class="col-sm-6">Date of Birth :</div>
+                    <div class="col-sm-6">{{childEmployeesData.dateOfBirth|date}}</div>
+
+
+                    <div class="col-sm-6">Contact Preference :</div>
+                    <div class="col-sm-6">{{childEmployeesData.contactPreference}}</div>
+
+                    <div class="col-sm-6">Phone :</div>
+                    <div class="col-sm-6">{{childEmployeesData.phoneNumber}}</div>
+
+                    <div class="col-sm-6">Email :</div>
+                    <div class="col-sm-6">{{childEmployeesData.email}}</div>
+
+                    <div class="col-sm-6">Department :</div>
+                    <div class="col-sm-6" [ngSwitch]='childEmployeesData.department'>
+
+                        <span *ngSwitchCase='1'>Help Desk</span>
+                        <span *ngSwitchCase='2'>Hr</span>
+                        <span *ngSwitchCase='3'>IT</span>
+                        <span *ngSwitchCase='4'>Payroll</span>
+                        <span *ngSwitchDefault>N/A</span>
+                    </div>
+
+                    <div class="col-sm-6">Is active :</div>
+                    <div class="col-sm-6">{{childEmployeesData.isActive}}</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- panel -footer -->
+    <div class="myPanelFooter">
+        <button class="btn btn-primary" (click)='viewNextEmploy()'>View</button>
+        <button class="btn btn-success" (click)='editEmployee()'>Edit</button>        
+
+        <button class="btn btn-danger delete" (click)='confirmDelete=true' *ngIf='!confirmDelete'>Delete</button>
+        <button *ngIf='confirmDelete' class="marginRight" type="button">
+            <span  > Are you sure you want to delete ?</span>
+            <button class="btn btn-danger" (click)='deleteEmploy()'>Yes</button>
+            <button class="btn btn-primary" (click)="confirmDelete=false">No</button>
+
+        </button>
+    </div>
+   
+
+</app-accordion>
+
+</div>
+ 

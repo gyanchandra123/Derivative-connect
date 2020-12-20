@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapFloorTicket>
+<Currency>
+  <cur>GBP</cur>
+  <cur>AED</cur>
+  <cur>AUS</cur>
+  <cur>BEF</cur>
+  <cur>BGN</cur>
+  <cur>BHD</cur>
+  <cur>BRL</cur>
+  <cur>BWP</cur>
+  <cur>CAD</cur>
+  <cur>CHF</cur>
+  <cur>CLP</cur>
+  <cur>CNY</cur>
+  <cur>COP</cur>
+  <cur>CPI</cur>
+  <cur>CZK</cur>
+  <cur>DEM</cur>
+  <cur>DKK</cur>
+  <cur>EGP</cur>
+  <cur>ERI</cur>
+  <cur>ESB</cur>
+  <cur>ESP</cur>
+  <cur>EUR</cur>
+  <cur>FIM</cur>
+  <cur>FRF</cur>
+  <cur>GRD</cur>
+  <cur>HKD</cur>
+<cur>HUF</cur>
+<cur>IDR</cur>
+<cur>IEP</cur>
+</Currency>
+<Tenor>2</Tenor>
+<Notional>10000000</Notional>
+<CFSubType>
+<id>REGULAR</id>
+<id>XCCY</id>
+<id>FXRESET</id>
+<id>OIS</id>
+<id>BASIS</id>
+<id>OPTION TO ENTER</id>
+<id>OPTION TO CANCEL</id>
+</CFSubType>
+
+<CapStartDate>22/02/2013</CapStartDate>
+<EndDate>22/02/2016</EndDate>
+<CapStartRoll>No</CapStartRoll>
+<EndRoll>No</EndRoll>
+<FrontStubDate>22/02/2013</FrontStubDate>
+
+<BackStubDate>22/02/2016</BackStubDate>
+
+<FrontStubManualRate>-1</FrontStubManualRate>
+<BackStubManualRate>-1</BackStubManualRate>
+
+<BuyFlag>Yes</BuyFlag>
+
+<CapFloorType>CAP</CapFloorType>
+
+
+</CapFloorTicket>

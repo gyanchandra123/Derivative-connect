@@ -1,0 +1,38 @@
+.navbar{
+    border:none;
+    border-radius:5px;
+    margin:-12px 12px 0px -15px;
+    padding: 0px 0px 10px 5px
+  }
+.left-nav{height: 320vh;}
+  
+.content{margin-top:10px;margin-left:10px}
+  
+.borderclass{	border: 3px solid whitesmoke;height:400px;margin:5px 12px 5px -12px;}
+.navbar.mynavhead{
+		margin:0px;
+		padding: 10px 0px 10px 5px
+	}
+  input{
+    background-color:#fff;
+      margin-top: 10px;
+      width:90%;
+      height: 28px;
+      font-size:12px;
+      font-weight:bold;
+      box-shadow: 2px 3px #505255;
+  }
+  select
+    {   
+      background-color:#a5a6a8;
+      margin-top: 10px;
+      width:80%;
+      border-radius:0px;
+      height: 28px;
+      font-size:12px;
+      font-weight:bold;
+      box-shadow: 2px 3px #505255;
+    }
+  
+  
+  

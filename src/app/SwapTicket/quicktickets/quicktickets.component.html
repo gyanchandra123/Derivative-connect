@@ -1,0 +1,169 @@
+<form [formGroup]="completeForm" (ngsubmit)="onSubmit()">
+<nav class="navbar navbar-inverse" style="background-color: #696969; margin-top: -20px">
+
+  <div class="container">
+    <div class="navbar-header">
+     </div>
+    <ul class="nav navbar-nav" >
+     
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="margin-top: 10px;margin-left:-23px;margin-right:-30px">Actions <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a  tabindex="-1">New</a></li>
+             <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Save As<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" >New Trade </a></li>
+              <li><a tabindex="-1" >Template Trade</a></li>
+            </ul>
+          </li>
+         <li><a >Save &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctrl+s</a></li>
+          <li><a >Delete</a></li>
+          <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Reload<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" >Latest</a></li>
+              <li><a tabindex="-1" >History</a></li>
+              <li><a tabindex="-1" >Templates</a></li>
+            </ul>
+          </li>
+          <li><a >Approve</a></li>
+          <li><a >Exit</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="margin-top: 10px;margin-right:-30px">Business Event <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a >Bought Back</a></li>
+          <li><a >Partial Bought Back</a></li>
+          <li><a >MO Maintenance</a></li>
+          <li><a >Migration</a></li>
+          <li><a >Assignment</a></li>
+          <li><a >Partial Assignment</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="margin-top:10px;margin-right:-18px">Flow <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a >Push to MO</a></li>
+          <li><a >Push to FO</a></li>
+          <li><a >Push to BO</a></li>
+          <li><a >Withdraw</a></li>
+          <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Email<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" >Send Ticket</a></li>
+              <li><a tabindex="-1" >Send CashFlow</a></li>
+              <li><a tabindex="-1" >Send Risk</a></li>
+              <li><a tabindex="-1" >Send PV</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"s style="margin-top: 10px;margin-left:-10px;margin-right:-30px" >Analytics <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a >Calculate PV   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F2</a></li>
+          <li class="dropdown-submenu"><a class="dropdown-toggle" tabindex="-1" data-toggle="dropdown" >Calculate Risk<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" >Delta   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+D</a></li>
+              <li><a tabindex="-1" >Gamma   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+G</a></li>
+              <li><a tabindex="-1" >Vega   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+V</a></li>
+              <li><a tabindex="-1" >Theta  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl+T</a></li>
+            </ul>
+          <li><a >Calculate PAA   &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F10</a></li>
+          <li><a >CashFlow Report   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F3</a></li>
+        </ul>
+      </li>
+      </ul>
+    </div>
+    </nav>
+
+    <div>
+        <nav class="navbar navbar-inverse " style="border-bottom:2px solid whitesmoke;margin-top:-20px">
+          <ul class="nav navbar-nav" style="padding-top:10px">
+
+            <li> <input type="text" class="form-control"></li>
+            <li> <input type="text" class="form-control"></li>
+            <li> <input type="text"   (keyup.enter)="handleEvent()" value={{model.txtModStatus}}  [(ngModel)]="model.txtModStatus" class="form-control"></li>
+              <li class="content" style="margin-top:0px">
+                  Market
+              </li>
+            <li>
+                <select class="form-control">
+                    <option>Live</option>
+                    <option>EndOfDay</option>
+                    <option>Historic</option>
+                  </select>
+             
+            </li>
+            <li class="content" style="margin-top:0px">
+                 Today
+            </li>
+            <li>
+              <input type="text" class="form-control"  bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" value="{{ now | date:'dd/MM/yyyy'}}">
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    <div class="borderclass" style="margin-top: -20px">
+        <div>
+            <nav class="navbar navbar-inverse mynavhead" style="border-bottom:2px solid whitesmoke">
+              <ul class="nav navbar-nav">
+                <li><button class="btn btn-default" style="margin-left:-8px"    routerLink="/tradebasics" routerLinkActive="active" >TradeBasic</button></li>
+                <li><button class="btn btn-default"  style="margin-left:-5px"  routerLink="/swapticket" routerLinkActive="active" >SwapTicket</button></li>
+                <li><button class="btn btn-default" style="margin-left:-5px"  routerLink="/quicktickets" routerLinkActive="active" >QuickTicket</button></li>
+              </ul>
+            </nav>
+          </div>
+        
+      <div class="clearfix"></div>
+      <div class="col-sm-10 text-center">
+       
+          <div class="form-group col-sm-2">  
+              <label class="control-label" for="dob">Position Pay/Rec</label>
+           </div>
+           <div class="form-group col-sm-4">
+              <select class="form-control" (change)="onSubmit()" formControlName="qpay">
+                  <option *ngFor="let ps of model.cmbQPaySide"selected>{{ps}}</option>
+                  
+                </select>
+            </div>
+            <div class="form-group col-sm-4">
+              <select class="form-control" (change)="onSubmit()" formControlName="qrec">
+                <option *ngFor="let rs of model.cmbQRecSide"selected>{{rs}}</option>
+              </select>
+          </div>
+      </div>
+      <div class="col-sm-10 text-center">
+          <div class="form-group col-sm-2">  
+              <label class="control-label" for="dob">Currency/Notional</label>
+           </div>
+           <div class="form-group col-sm-4">
+              <select class="form-control" (change)="onSubmit()" formControlName="qcur">
+                <option *ngFor="let c of model.cmbQCurrency"selected>{{c}}</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-4">
+                <input type="text" class="form-control" (change)="onSubmit()" formControlName="not" value={{model.txtQNotional}}>
+              </div>
+      </div>
+      <div class="col-sm-10 text-center">
+          <div class="form-group col-sm-2"> 
+              <label class="control-label" for="dob">Tenor</label>
+           </div>
+           <div class="form-group col-sm-4">
+             
+              <input type="text" class="form-control" (change)="onSubmit()" formControlName="qtenor" placeholder="" [(ngModel)]="model.txtQTenor"  (keyup.enter)="handleEvent()"  value={{model.txtQTenor}}>
+            </div>
+     </div>
+      <div class="col-sm-10 text-center">
+          <div class="form-group col-sm-2">  
+              <label class="control-label" for="dob">StartDate/EndDate</label>
+           </div>
+           <div class="form-group col-sm-4">
+             
+              <input type="text" class="form-control" (change)="onSubmit()" formControlName="startdate" placeholder="Datepicker" bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"    value={{model.txtQStartDate}}>
+            </div>
+            <div class="form-group col-sm-4">
+              <input type="text" class="form-control" (change)="onSubmit()" formControlName="enddate" placeholder="Datepicker" bsDatepicker   [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"   value={{model.txtEndDate}}>
+            </div>
+           
+      </div>
+  
+</div>
+</form>

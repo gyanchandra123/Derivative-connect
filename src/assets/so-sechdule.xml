@@ -1,0 +1,31 @@
+<schedule>
+<Currency>
+ <cur>AED</cur>
+ <cur>ATS</cur>
+ <cur>AUD</cur>
+ <cur>BEF</cur>
+ <cur>BGN</cur>
+ <cur>BHD</cur>
+ <cur>BRL</cur>
+ <cur>BWP</cur>
+ <cur>CAD</cur>
+ <cur>DEM</cur>
+ <cur>EGP</cur>
+ <cur>EUR</cur>
+ <cur>FIM</cur>
+ <cur>GBP</cur>
+ <cur>INR</cur>
+ </Currency>
+ <PayCurve>
+<pcu>GBPLIBOR</pcu>
+<pcu>GEKLIBOR</pcu>
+<pcu>HKDLIBOR</pcu>
+<pcu>HNLLIBOR</pcu>
+<pcu>INRLIBOR</pcu>
+<pcu>ISKLIBOR</pcu>
+<pcu>JMDLIBOR</pcu>
+<pcu>JPYIBOR</pcu>
+<pcu>KESLIBOR</pcu>
+<pcu>KGSLIBOR</pcu>
+</PayCurve>
+</schedule>

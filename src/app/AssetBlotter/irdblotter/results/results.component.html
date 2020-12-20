@@ -1,0 +1,30 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="container">
+  <div class="form-group">
+    <div class="row">
+      <button class="btn btn-default" routerLink="swapresult" routerLinkActive="active" [disabled]="swap">Swap</button>
+      <button class="btn btn-default" routerLink="" routerLinkActive="active" [disabled]="swapoption">SwapOption</button>
+      <button class="btn btn-default" routerLink="" routerLinkActive="active" [disabled]="fra">Fra</button>
+      <button class="btn btn-default" routerLink="" routerLinkActive="active" [disabled]="capfloor">Cap/Floor</button>
+      <button class="btn btn-default" routerLink="" routerLinkActive="active" [disabled]="boand">Bond</button>
+      <button class="btn btn-default" routerLink="" routerLinkActive="active" [disabled]="boandfuture">Bonad Future</button>
+      <button class="btn btn-default" routerLink="" routerLinkActive="active" [disabled]="boandFO">Boand FO</button>
+      <button class="btn btn-default" routerLink="" routerLinkActive="active" [disabled]="MMFuture">MM Future</button>
+      <button class="btn btn-default" routerLink="" routerLinkActive="active" [disabled]="MMFO">MM FO</button>
+      <button class="btn btn-default">|&#8249;</button><button class="btn btn-default">&#8249;</button>
+      <input type="text" name="noOfPages" style="width:30px;" c ><span> of 0 pages</span>
+      <button class="btn btn-default">&#8250;</button><button class="btn btn-default">&#8250;|</button> 
+      <button class="btn btn-default"><i class="fa fa-repeat"></i></button>
+      <span> PV </span>
+      <select style="width:30px;">
+        <option></option>
+      </select>
+      <input type="text" style="width:50px;" >
+
+    </div>
+    <router-outlet style="margin-left: 50%;"></router-outlet>
+   
+  </div>
+</div>

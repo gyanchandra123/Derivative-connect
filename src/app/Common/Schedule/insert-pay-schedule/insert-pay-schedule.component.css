@@ -1,0 +1,125 @@
+.horizontal {
+    border-bottom: 1px solid lightgray;    
+    width:300px;
+    margin-left:3px;
+   /*  border-left: -10px; */
+   
+  }
+  .iconTop{
+    margin-left:-30px;
+  }
+  .labelIndent{
+    margin-left: 10px;
+  }
+  .mat-icon {cursor: pointer;}
+  
+  .mat-icon:hover,.mat-icon:active {
+    color: rgb(29, 90, 170);   
+  }
+  .mat-iconB{
+    margin-left:35px;
+     color: black;
+  }
+  
+  .pag-text-align{
+    padding-left: 7px;
+    font-weight: 500;
+    padding-top: 3px;
+    font-size: 18px;
+  }
+  
+  
+  .material-iconsA{
+    color:#ffbb60;
+    margin-left:-13px;
+  }
+  
+  .centerText{
+    margin-left:10px;
+  }
+  
+  .container-bg{
+    background-color: lightgrey;   
+    width:319px;
+    border: 2px solid grey;
+    border-radius:none;  
+  }
+  
+  .first-raised-button{
+    width:40px;
+    margin-left:20px;
+    background-color: grey;
+    
+  }
+  .first-raised-button:hover{  
+    color: white;
+  }
+  .second-raised-button{
+    background-color: grey;
+  }
+  
+  .second-raised-button:hover{
+    color: white;
+  }
+  
+  .container1{
+    background-color: gainsboro;
+  }
+  
+  .inputField{
+    width:121px;
+    margin-left:8px;
+  }
+  
+  .label-padding{
+    padding-left:38px;
+    
+  }
+  .form-width{
+    width:webkit-fill-available;
+  }
+  
+  .headingA{
+    background-color:white;height:28px;  
+    margin-left: 0px;
+    width: 319px;
+    border-radius:2px; 
+    border-bottom:0px;
+    padding-left:-6px;
+  }
+  
+  .centerText{
+    width:55%;
+    color: black;
+    margin-left: 13px;
+    padding-left: 1px;
+  }
+
+
+  .inputTag
+{
+   background-color:#fff;
+   width:100%;
+    height: 28px;
+    border-radius: 0px;
+    font-size:14px;
+    font-weight:bold;
+   box-shadow: 2px 3px #505255;
+}
+
+.buttonDefault
+    { 
+		background: grey;
+		color: white;
+		/* margin-bottom: 10px;
+		margin-left:20px; */
+		font-weight:bold;
+      border-radius: 1px;
+      height: 32px;
+    box-shadow: 2px 4px #505255;
+    
+  }
+  
+  .fontSize{
+    font-size: 14px;
+ }

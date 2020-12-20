@@ -1,0 +1,9 @@
+.table-bordered{
+    border:2px solid;
+    
+}
+
+.form-control{
+    border-radius: 0px;
+}
+

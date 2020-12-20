@@ -1,0 +1,107 @@
+.bg-color-name{
+    background-color:slategrey;height: 30px;
+  }
+  
+  
+    .container-bg{
+      background-color: lightgrey;      
+      height: 524px;
+      border-radius:2px;
+      margin:2px;
+   }
+  
+   .firstHeaderDiv{
+    background-color: rgb(114, 114, 190);
+    width: 1089px;
+    height: 20px;
+   }
+  .textmain1{
+      padding-left: 200px;
+      padding-bottom: -20px
+    }
+  
+    .table-bordered {
+      border: 2px solid #fff !important;
+  }
+  .mat-dialog-container{
+    overflow: hidden !important;
+    border:2px solid white;
+  }
+  th, td {
+      
+      text-align: center;
+    }
+  
+    .tableHeading{
+      border: 1px solid black;
+    }
+  
+    /* .firstDiv{
+        margin-left:210 px;
+    } */
+  
+    .hrBorder{
+        border: 1px solid  red;
+        margin-top: -10px;
+    }
+  
+    .pag-text-align{
+      padding-left:-80px;
+      font-weight:600;
+      padding-top:3px;
+      font-size: 15px;
+      margin-left: -150px;
+      color:white;
+  }
+  
+  .material-iconsA{
+    color:white;
+    margin-left: 6px;
+    margin-top: 2px;
+  }
+    
+  mat-icon{
+    margin-left:440px;
+  }
+  
+  .mat-icon {cursor: pointer;}
+    
+  .mat-icon:hover,.mat-icon:active {
+    color: black;   
+  }
+  .swapHeadingAlign{
+    margin-left:400px;
+    font-weight:600;
+  }
+  .mat-iconB{
+    padding-left: 25px;
+    color: white;
+    margin-top: 3px;
+  }
+  .bottomBorder{
+    margin-top: -18px;
+    margin-bottom: -5px;
+  }
+  
+  .mat-raised-button{
+    margin-bottom:20px;
+  } 
+   
+  .paymentButton ,.paymentButtonB{
+    margin-left:951px;
+    background-color: #0021bb;
+    color: white;
+  }
+
+  .buttonDefault
+    { 
+		background: grey;
+		color: white;
+		/* margin-bottom: 10px;
+		margin-left:20px; */
+		font-weight:bold;
+      border-radius: 1px;
+      height: 32px;
+    box-shadow: 2px 4px #505255;
+    
+	}

@@ -1,0 +1,114 @@
+<div class="container">
+    <div class="row">
+  
+      <div class="col-sm-6">
+  
+  
+        <div class="row">
+          <div class="col-sm-3">
+            <label>Sub Product</label>
+          </div>
+          <div class="col-sm-3">
+            <select name="cmbSubProductCaps" class="form-control">
+              <option *ngFor = "let subProductCaps of capFloor.subProductCaps">{{subProductCaps}}</option>
+            </select>
+          </div>
+  
+          <div class="col-sm-3">
+            <label>Currency</label>
+          </div>
+          <div class="col-sm-3">
+            <select name="cmbCurrencyCaps" class="form-control">
+              <option *ngFor = "let currencyCaps of capFloor.currencyCaps">{{currencyCaps}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-sm-3">
+        <label>National</label>
+      </div>
+      <div class="col-sm-3">
+        <input type="text" name="txtNotionalCaps" class="form-control">
+      </div>
+      <!--Row 1 Ending-->
+    </div>
+  
+    <div class="row">
+  
+      <div class="col-sm-4">
+        <label>Day Count</label>
+        <select name="cmbDayCountCaps" class="form-control">
+          <option *ngFor = "let dayCountCaps of capFloor.dayCountCaps">{{dayCountCaps}}</option>
+        </select>
+      </div>
+  
+      <div class="col-sm-4">
+          <label>Amort Type</label>
+          <select name="cmbAmortTypeCaps" class="form-control">
+            <option *ngFor = "let amortTypeCaps of capFloor.amortTypeCaps">{{amortTypeCaps}}</option>
+          </select>
+        </div>
+    <!--Row 2 Ending-->
+    </div>
+  
+    <div class="row">
+  
+        <div class="col-sm-6">
+          <label>Accural Freq</label>
+          <select name="cmbAccrualFreqCaps" class="form-control">
+            <option *ngFor = "let accrualFreqCaps of capFloor.accrualFreqCaps">{{accrualFreqCaps}}</option>
+          </select>
+        </div>
+    
+        <div class="col-sm-6">
+            <label>Reset Freq</label>
+            <select name="cmbResetFreqCaps" class="form-control">
+              <option *ngFor = "let resetFreqCaps of capFloor.resetFreqCaps">{{resetFreqCaps}}</option>
+            </select>
+          </div>
+      <!--Row 3 Ending-->
+      </div>
+  
+      <div class="row">
+  
+          <div class="col-sm-6">
+            <label>Cap Floor Type</label>
+            <select name="cmbCapFloorTypeCaps" class="form-control">
+              <option *ngFor = "let floorTypeCaps of capFloor.floorTypeCaps">{{floorTypeCaps}}</option>
+            </select>
+          </div>
+      
+          <div class="col-sm-6">
+              <label>Strike</label>
+              <input type="text" name="txtStrikeCaps" class="form-control">
+            </div>
+        <!--Row 4 Ending-->
+        </div>
+  
+        <div class="row">
+  
+            <div class="col-sm-6">
+              <label>Discount Curve</label>
+              <select name="cmbDiscountCurveCaps" class="form-control">
+                <option *ngFor = "let discountCurveCaps of capFloor.discountCurveCaps">{{discountCurveCaps}}</option>
+              </select>
+            </div>
+        
+            <div class="col-sm-6">
+                <label>Market Index</label>
+                <select name="cmbMarketIndexCaps" class="form-control">
+                  <option *ngFor = "let marketIndexCaps of capFloor.marketIndexCaps">{{marketIndexCaps}}</option>
+              </select>
+              </div>
+          <!--Row 5 Ending-->
+          </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <button class="btn btn-default" style="margin-top: 20px;">clear</button>
+      </div>
+      <div class="col-sm-6">
+          <button class="btn btn-default" style="margin-top: 20px;">search</button>
+        </div>
+    
+  </div>

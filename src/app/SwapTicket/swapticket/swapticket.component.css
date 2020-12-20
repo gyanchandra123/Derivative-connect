@@ -1,0 +1,40 @@
+.navbar{
+ 
+  border:none;
+  border-radius:0px;
+}
+.navbar-nav li{padding-left:10px}
+li input{width:150px}
+li select{width:150px}
+
+.dropdown-submenu {
+  position: relative;
+}
+ .dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+.content{margin-top:10px;margin-left: 20px}
+
+.sidebar{
+  height:1700px;
+}
+
+.text-center{
+  margin-top: 15px;
+}
+
+ .label-control{
+  margin-top: 2px;
+ padding-bottom: 0px;
+
+} 
+
+.borderclass{
+  border:2px solid whitesmoke; height:850px;
+}
+.navbar.mynavhead{
+  margin:0px;
+  padding: 10px 0px 10px 5px
+}

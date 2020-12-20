@@ -1,0 +1,72 @@
+<div class="container1">
+  <div class="row headingA">
+    <div class="col-sm-1 ">
+      <i class="material-icons material-iconsA">
+        picture_in_picture
+      </i>
+    </div>
+
+    <div class="col-xs-10 centerText">
+      <b>Swap Pay Reset Schedule</b>
+    </div>
+    <div class="col-sm-1">
+      <mat-icon class="mat-iconB" (click)="onCancelClick()">
+        backspace
+      </mat-icon>
+    </div>
+
+  </div>
+
+
+  <div class="container-bg">
+    <div class="row">
+      <div class="col-sm-2">
+        <b>Insert</b>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-10 ">
+        <form class="form-horizontal" (submit)="onSubmit()">
+
+          <div class="form-group" style="width:-webkit-fill-available;">
+
+            <div class="row">
+              <div class="col-sm-6 labelIndent">
+                <label for="inputPassword" class="control-label col-sm-12 fontSize"> Reset Date</label>
+              </div>
+              <div class="col-sm-5 startDate">
+                <input class="form-control inputAlign inputTag" placeholder="enter reset date" type="text" id="inputPassword">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-6 labelIndent">
+                <label for="inputPassword" class="control-label col-sm-12 fontSize"> Reset Rate</label>
+              </div>
+              <div class="col-sm-5 startDate">
+                <input class="form-control inputAlign inputTag" placeholder="enter reset rate" type="text" id="inputPassword">
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <div class="col-xs-3">
+              <button type="submit" mat-raised-button class="first-raised-button buttonDefault" >Ok </button>
+            </div>
+            <div class="col-xs-3 col-xs-offset-2 ">
+              <button mat-raised-button class="second-raised-button buttonDefault" (click)="onCancel()">Cancel &nbsp; &nbsp;
+                &nbsp;</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <br>
+  </div>
+
+</div>

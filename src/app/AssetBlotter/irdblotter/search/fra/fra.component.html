@@ -1,0 +1,57 @@
+<br>
+<div class="container " >
+
+  <div class="row form-inline centered text-center">
+    <label class="col-sm-2 col-form-label text-left mar">Currency</label>
+    <select name="cmbCurrencyFra" class="form-control size">
+      <option *ngFor = "let currencyFra of fra.currencyFra">{{currencyFra}}</option>
+    </select>
+  </div>
+
+  <div class="row form-inline centered text-center">
+    <label class="col-sm-2 col-form-label text-left ">National</label>
+    <input type="text" name="txtNotionalFra"  class="form-control size">
+  </div>
+
+  <div class="row form-inline centered text-center">
+    <label class="col-sm-2 col-form-label text-left ">Day Count</label>
+    <select name="cmbDayCountFra" class="form-control size">
+      <option *ngFor = "let dayCountFra of fra.dayCountFra">{{dayCountFra}}</option>
+    </select>
+  </div>
+
+  <div class="row form-inline centered text-center">
+    <label class="col-sm-2 col-form-label text-left">Rate Type</label>
+    <select name="cmbRateTypeFra" class="form-control size">
+      <option *ngFor = "let rateTypeFra of fra.rateTypeFra">{{rateTypeFra}}</option>
+    </select>
+  </div>
+
+  <div class="row form-inline centered text-center">
+    <label class="col-sm-2 col-form-label text-left ">Discount Curve</label>
+    <select name="cmbDiscountCurveFra" class="form-control size">
+      <option *ngFor = "let discountCurveFra of fra.discountCurveFra">{{discountCurveFra}}</option>
+    </select>
+  </div>
+
+  <div class="row form-inline centered text-center">
+    <label class="col-sm-2 col-form-label text-left">Agreed Rate</label>
+    <input type="text" name="txtAgreedRateFra" class="form-control size">
+  </div>
+
+  <div class="row form-inline centered text-center">
+    <label class="col-lg-2 col-form-label text-left ">Market Index</label>
+    <select name="cmbMarketIndexFra" class="form-control size">
+      <option *ngFor = "let marketIndexFra of fra.marketIndexFra">{{marketIndexFra}}</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <button class="btn btn-default" style="margin-top: 20px;">clear</button>
+    </div>
+    <div class="col-lg-6">
+        <button class="btn btn-default" style="margin-top: 20px;">search</button>
+      </div>
+  </div>
+</div>

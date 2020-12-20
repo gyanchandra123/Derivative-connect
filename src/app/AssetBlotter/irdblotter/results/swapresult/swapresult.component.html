@@ -1,0 +1,15 @@
+
+<div *ngIf="columns"  style="overflow-x:auto; margin-right:80px;height:500px;">
+  
+<table >
+  <th>&nbsp;</th><th>&nbsp;</th>
+  <th *ngFor="let column of columns">{{column}}</th>
+
+  <tr *ngFor="let rows of data">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td *ngFor="let col of rows">{{col}}</td>
+
+  </tr>
+</table>
+</div>

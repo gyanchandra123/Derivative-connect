@@ -1,0 +1,17 @@
+<CustomerAccount>
+<LoginName>Ram Bollu</LoginName>
+<FirstName>Ram</FirstName>
+<LastName>Bollu</LastName>
+<Business>Bonds</Business>
+<ModifiedTimeStamp>05/02/2012 10:20PM</ModifiedTimeStamp>
+<VerifiedTimeStamp>05/02/2012 10:20PM</VerifiedTimeStamp>
+<Role>Sales Person</Role>
+<Department>
+<dep>Front Office</dep>
+<dep>Back Office</dep>
+<dep>Middle Office</dep>
+<dep>Technology</dep>
+</Department>
+<LastModifiedBy>Hari B</LastModifiedBy>
+<LastVerifiedBy>Hari B</LastVerifiedBy>
+</CustomerAccount>

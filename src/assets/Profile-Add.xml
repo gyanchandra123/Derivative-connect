@@ -1,0 +1,35 @@
+<ProfileAdd>
+<LoginName>Ram Bollu</LoginName>
+<FirstName>Ram</FirstName>
+<LastName>Bollu</LastName>
+<Password>vishist</Password>
+<SwapDefault>Ram.Swap.Default.xml</SwapDefault>
+<SWODefault>Ram.Swaption.Default.xml</SWODefault>
+<PVAutoCalc>
+<pv>No</pv>
+<pv>Yes</pv>
+</PVAutoCalc>
+<ThresholdPv>120000 </ThresholdPv>
+<Business>Bonds</Business>
+<ModifiedTimeStamp>05/02/2012 10:10PM</ModifiedTimeStamp>
+<VerifiedTimeStamp>05/02/2012 10:20PM</VerifiedTimeStamp>
+<AccessType>Approver</AccessType>
+<Status>Active</Status>
+<Role>Sales Person</Role>
+<Domain>EUR</Domain>
+<FraDefault>FRA.Default.xml</FraDefault>
+<CapFloorDefault>CAPFLOOR.Default.xml</CapFloorDefault>
+<Administrator>
+<admin>No</admin>
+<admin>Yes</admin>
+</Administrator>
+<Department>
+<dep>Front Office</dep>
+<dep>Back Office</dep>
+<dep>Middle Office</dep>
+<dep>Technology</dep>
+</Department>
+<LastModifiedBy>Hari B</LastModifiedBy>
+<LastVerifiedBy>Hari B</LastVerifiedBy>
+</ProfileAdd>
+

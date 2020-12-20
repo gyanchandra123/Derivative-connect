@@ -1,0 +1,51 @@
+<div class="row content-section borderclass">
+    <div class="clearfix"></div>
+    <div class="col-sm-5">
+        <div class="col-sm-4"><label class="control-label">Booking Type</label></div>
+        <div class="col-sm-8">
+          <select class="">
+            <option *ngFor="let book of model.bookingType">{{book}}</option>
+          </select>
+        </div>
+    <div class="clearfix"></div>
+        <div class="col-sm-4"><label class="control-label">Flow Status</label></div>
+        <div class="col-sm-8">
+          <select class="">
+            <option *ngFor="let flow of model.flowStatus">{{flow}}</option>
+          </select>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-4"><label class="control-label">Orig Trade Ref</label></div>
+        <div class="col-sm-8"><input type="text" value={{model.originTradeRef}}></div>
+        <div class="clearfix"></div>
+        <div class="col-sm-4"><label class="control-label">Last Modified By</label></div>
+        <div class="col-sm-8"><input type="text" value={{model.lastModifiedBy}}></div>
+        <div class="clearfix"></div>
+        <div class="col-sm-4"><label class="control-label">Last Verified By</label></div>
+        <div class="col-sm-8"><input type="text" value={{model.lastVerifiedBy}}></div>
+    </div>
+    <div class="col-sm-2"> <div class="lineclass"></div></div>
+    <div class="col-sm-5">
+        <div class="col-sm-4"><label class="control-label">Match Status</label></div>
+        <div class="col-sm-8">
+          <select class="">
+            <option *ngFor="let match of model.matchStatus">{{match}}</option>
+          </select>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-4"><label class="control-label">Operations Ref</label></div>
+        <div class="col-sm-8">
+          <select class="">
+            <option *ngFor="let op of model.operationRef">{{op}}</option>
+          </select>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-4"><label class="control-label">Alternate Ref</label></div>
+        <div class="col-sm-8"><input type="text" value={{model.alternativeRef}}></div>
+        <div class="clearfix"></div>
+        <div class="col-sm-4"><label class="control-label">Last Modified</label></div>
+        <div class="col-sm-8"><input type="text" value={{model.lastModified}}></div>
+        <div class="clearfix"></div>
+        <div class="col-sm-4"><label class="control-label">Last Verified</label></div>
+        <div class="col-sm-8"><input type="text" value={{model.lastVerified}}></div>
+    </div>

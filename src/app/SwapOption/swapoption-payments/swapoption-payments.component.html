@@ -1,0 +1,162 @@
+<div class="borderpayment">
+<div class="container mypayment ">
+  <div class="col-sm-5">
+         <div class="clearfix"></div>
+         <div class="form-group col-sm-5">
+            <select class="form-control">
+              <option *ngFor="let pb of model.cmbPayPayBusDay" selected>{{pb}}</option>
+              
+            </select>
+          </div>
+         <div class="form-group col-sm-7">
+          <select class="form-control">
+            <option *ngFor="let pc of model.cntPayPayCalendars" selected>{{pc}}</option>
+            
+          </select>
+        </div>
+       
+        <div class="clearfix"></div>
+       
+        <div class="form-group col-sm-6">
+           <select class="form-control">
+             <option *ngFor="let pf of model.cmbPayPayFreqPnl"selected>{{pf}}</option>
+            
+           </select>
+         </div>
+         <div class="form-group col-sm-6">
+            <select class="form-control">
+              <option *ngFor="let pm of model.cmbPayPayMarching"selected>{{pm}}</option>
+             
+            </select>
+          </div>
+      <div class="clearfix"></div>
+      <div class="form-group col-sm-6">
+          <select class="form-control">
+            <option *ngFor="let pco of model.cmbPayPaymentConvention"selected>{{pco}}</option>
+           
+          </select>
+        </div>
+     <div class="form-group col-sm-6">
+         <select class="form-control">
+           <option *ngFor="let pcc of model.cmbPayPaymentConversionCurrency"selected>{{pcc}}</option>
+         </select>
+       </div>
+   <div class="clearfix"></div>
+   <div class="form-group col-sm-6">
+      <select class="form-control">
+        <option *ngFor="let pci of model.cmbPayPaymentConversionIndex"selected>{{pci}}</option>
+       
+      </select>
+    </div>
+       <div class="form-group col-sm-6">
+           <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayPaymentConversionLag}}>
+     </div>
+    
+           <div class="clearfix"></div>
+          
+           <div class="form-group col-sm-4">
+               <select class="form-control">
+                 <option *ngFor="let rollday of model.cmbPayPayRollDay">{{rollday}}</option>
+                
+               </select>
+             </div>
+             <div class="form-group col-sm-4">
+                 <select class="form-control">
+                   <option *ngFor="let rw of model.cmbPayRollWeek"selected>{{rw}}</option>
+                  
+                 </select>
+               </div>
+               <div class="form-group col-sm-4">
+                  <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtPayLag}}>
+            </div>
+              
+  </div>
+  <div class="col-sm-2 labelpayment">
+      <div class="col-sm-12"><br>
+          <label class="label-control">PayBusDay/Calendars</label>
+      </div>
+      <div class="col-sm-12">
+         <label class="label-control">PayFreq/Marching</label>
+      </div>
+     <div class="col-sm-12">
+         <label class="label-control">PaymentConvention/Currency</label>
+     </div>
+     <div class="col-sm-12">
+         <label class="label-control">PaymentConversionIndex/Lag</label>
+     </div>
+     <div class="col-sm-12">
+         <label class="label-control">PayRollDay/RollWek/Lag</label>
+     </div>
+  </div>
+  <div class="col-sm-5">
+    <div class="clearfix"></div>
+    <div class="form-group col-sm-5">
+       <select class="form-control">
+         <option *ngFor="let pbd of model.cmbRecPayBusDay"selected>{{pbd}}</option>
+         
+       </select>
+     </div>
+    <div class="form-group col-sm-7">
+     <select class="form-control">
+       <option *ngFor="let pc of model.cntRecPayCalendars"selected>{{pc}}</option>
+       
+     </select>
+   </div>
+  
+   <div class="clearfix"></div>
+  
+   <div class="form-group col-sm-6">
+      <select class="form-control">
+        <option *ngFor="let pf of model.cmbRecPayFreqPnl"selected>{{pf}}</option>
+       
+      </select>
+    </div>
+    <div class="form-group col-sm-6">
+       <select class="form-control">
+         <option *ngFor="let pm of model.cmbRecPayMarching"selected>{{pm}}</option>
+        
+       </select>
+     </div>
+  <div class="clearfix"></div>
+  <div class="form-group col-sm-6">
+     <select class="form-control">
+       <option *ngFor="let pco of model.cmbRecPaymentConvention"selected>{{pco}}</option>
+      
+     </select>
+   </div>
+  <div class="form-group col-sm-6">
+    <select class="form-control">
+      <option *ngFor="let pcc of model.cmbRecPaymentConversionCurrency"selected>{{pcc}}</option>
+    </select>
+  </div>
+  <div class="clearfix"></div>
+  <div class="form-group col-sm-6">
+  <select class="form-control">
+   <option *ngFor="let pci of model.cmbRecPaymentConversionIndex"selected>{{pci}}</option>
+  
+  </select>
+  </div>
+  <div class="form-group col-sm-6">
+      <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecPaymentConversionLag}}>
+  </div>
+  
+      <div class="clearfix"></div>
+     
+      <div class="form-group col-sm-4">
+          <select class="form-control">
+              <option *ngFor="let rollday of model.cmbRecPayRollDay">{{rollday}}</option>
+           
+          </select>
+        </div>
+        <div class="form-group col-sm-4">
+            <select class="form-control">
+              <option *ngFor="let rw of model.cmbRecRollWeek"selected>{{rw}}</option>
+             
+            </select>
+          </div>
+          <div class="form-group col-sm-4">
+             <input type="text" class="form-control" id="fname" placeholder="" value={{model.txtRecLag}}>
+       </div>
+      </div>   
+
+    </div>

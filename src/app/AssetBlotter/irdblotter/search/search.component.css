@@ -1,0 +1,28 @@
+input{
+	background-color:#fff;
+		margin-top: 10px;
+		width:80%;
+		height: 28px;
+		font-size:12px;
+		font-weight:bold;
+		box-shadow: 2px 3px #505255;
+}
+select
+	{   
+		background-color:#a5a6a8;
+		margin-top: 10px;
+		width:80%;
+		border-radius:0px;
+		height: 28px;
+		font-size:12px;
+		 font-weight:bold;
+     box-shadow: 2px 3px #505255;  
+    }
+    
+		select option {
+			color: black;
+		}
+
+		select option:first-child{
+			color: black;
+		} 
